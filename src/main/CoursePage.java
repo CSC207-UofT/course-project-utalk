@@ -6,11 +6,12 @@ public class CoursePage {
     private ArrayList<Student> student_list;
     private ArrayList<PostPage> post_page_List;
 
-    CoursePage(Course course, ArrayList<Professor> professor_list) {
+    CoursePage(Course course) {
         this.course = course;
-        this.professor_list = professor_list;
+        this.professor_list = new ArrayList<>();
         this.student_list = new ArrayList<>();
-        this.post_page_List = new PostPage(course);
-
+        ArrayList<PostPage> post_lst = new ArrayList<>();
+        post_lst.add(new PostPage(course.course_start_year));
+        this.post_page_List = post_lst;
     }
 }

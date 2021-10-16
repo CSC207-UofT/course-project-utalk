@@ -4,11 +4,12 @@ An entity class Course with course code and course created year.
 public class Course {
     private String course_code;
     private String course_description;
-    private String course_start_year;
+    public String course_start_year;
 
     /** instantiate Course objects
      * @param code course code
      * @param description the description for this course
+     * @param year the start year for the course
      */
     Course(String code, String description, String year){
         course_code = code;

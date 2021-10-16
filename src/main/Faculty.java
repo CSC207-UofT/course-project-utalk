@@ -6,11 +6,10 @@ public class Faculty extends User implements CreateCourse{
     }
 
     @Override
-    public void creat_course(String course_name, String description, String year, ArrayList<Professor> professors_list)
+    public void creat_course(String course_name, String description, String year)
     {
         Course new_course = new Course(course_name, description, year);
-        CoursePage course_page = new CoursePage(new_course, professors_list);
+        CoursePage course_page = new CoursePage(new_course);
     }
 
-    }
 }
