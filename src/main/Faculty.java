@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Faculty extends User implements CreateCourse{
-    Faculty(int identifier, String name, String password){
+    Faculty(String identifier, String name, String password){
         super(identifier, name, password);
     }
 
