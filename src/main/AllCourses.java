@@ -1,9 +1,10 @@
-import java.util.ArrayList;
 import java.util.Dictionary;
+import java.util.HashMap;
 
 public class AllCourses {
-    static Dictionary<Course, CoursePage> linked_page;
-    void add_to_list(Course course, CoursePage course_page){
-        linked_page.put(course, course_page);
+    static Dictionary<String, CoursePage> linked_page;
+    static void add_to_list(String course_name, CoursePage course_page){
+        linked_page.put(course_name, course_page);
     }
+
 }

@@ -10,5 +10,6 @@ public class Professor extends User implements Registeration{
     @Override
     public void register(int identifier, String user_name, String password) {
         Professor new_professor = new Professor(identifier, user_name, password);
+        AllProfessor.prof_dict.put(user_name, new_professor);
     }
 }
