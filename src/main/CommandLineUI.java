@@ -5,7 +5,7 @@ import java.util.Scanner;
  * A beautiful user interface for logging in.
  */
 public class CommandLineUI {
-    public void runLogin(LoginController controller) {
+    public void runLogin(Signup controller) {
         boolean flag = true;
         while (flag) {
             System.out.println("Usertype: \n Please enter either faculty, officer, or student.");
