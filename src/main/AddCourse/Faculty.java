@@ -3,7 +3,7 @@ package AddCourse;
 import basics.Course;
 import basics.User;
 
-public class Faculty extends User implements CreateCourse{
+public class Faculty extends User implements CreateCourse, UpdateCourse{
     public Faculty(String identifier, String name, String password){
         super(identifier, name, password);
     }
@@ -17,4 +17,12 @@ public class Faculty extends User implements CreateCourse{
     }
 
 
+    @Override
+    public void update_course_info(String course_code, String course_info, String course_year) {
+        if (UpdateCourse.linked_page.containsKey(course_code)){
+            linked_page.get(course_code).info_added = course_info;
+            PostPage new_postpage = new PostPage(course_year);
+            linked_page.get(course_code).post_page_List.add(new_postpage);
+        }
+    }
 }

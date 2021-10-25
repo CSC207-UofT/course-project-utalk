@@ -4,8 +4,8 @@ package basics;
  An entity class basics.Course with course code and course created year.
  **/
 public class Course {
-    private String course_code;
-    private String course_description;
+    final String course_code;
+    final String course_description;
     public String course_start_year;
 
     /** instantiate basics.Course objects

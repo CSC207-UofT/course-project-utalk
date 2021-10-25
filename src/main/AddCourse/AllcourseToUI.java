@@ -14,4 +14,13 @@ public class AllcourseToUI {
             return false;
         }
     }
+
+    public boolean update_course(String code, String info, String year){
+        if (Status.user instanceof Faculty) {
+            ((Faculty)Status.user).update_course_info(code, info, year);
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

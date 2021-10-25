@@ -7,15 +7,17 @@ import basics.Student;
 import java.util.ArrayList;
 
 public class CoursePage {
-    private Course course;
+    final Course course;
+    public String info_added;
     private ArrayList<Professor> professor_list;
     private ArrayList<Student> student_list;
-    private ArrayList<PostPage> post_page_List;
+    public ArrayList<PostPage> post_page_List;
 
-    CoursePage(Course course) {
+    public CoursePage(Course course) {
         this.course = course;
         this.professor_list = new ArrayList<>();
         this.student_list = new ArrayList<>();
+        this.info_added = "";
         ArrayList<PostPage> post_lst = new ArrayList<>();
         post_lst.add(new PostPage(course.course_start_year));
         this.post_page_List = post_lst;
