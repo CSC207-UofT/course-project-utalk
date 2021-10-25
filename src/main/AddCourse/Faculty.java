@@ -1,7 +1,10 @@
-import java.util.ArrayList;
+package AddCourse;
+
+import basics.Course;
+import basics.User;
 
 public class Faculty extends User implements CreateCourse{
-    Faculty(String identifier, String name, String password){
+    public Faculty(String identifier, String name, String password){
         super(identifier, name, password);
     }
 
@@ -10,7 +13,6 @@ public class Faculty extends User implements CreateCourse{
     {
         Course new_course = new Course(course_name, description, year);
         CoursePage course_page = new CoursePage(new_course);
-        AllCourses.add_to_list(course_name, course_page);
         AllCourses.linked_page.put(course_name, course_page);
     }
 

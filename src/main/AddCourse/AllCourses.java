@@ -1,5 +1,6 @@
+package AddCourse;
+
 import java.util.Dictionary;
-import java.util.HashMap;
 
 public class AllCourses {
     static Dictionary<String, CoursePage> linked_page;

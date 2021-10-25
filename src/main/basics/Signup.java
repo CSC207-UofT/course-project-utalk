@@ -1,3 +1,5 @@
+package basics;
+
 import java.util.Objects;
 
 
@@ -14,15 +16,15 @@ public class Signup {
         switch (result) {
             case SUCCESS:
                 System.out.println("Success");
-                return new String("Success login");
+                return "Success login";
             case FAILURE:
                 System.out.println("Login fails, please try again");
-                return new String("Fail");
+                return "Fail";
             case WRONG:
                 System.out.println("id not exists, please try again");
-                return new String("id not exists");
+                return "id not exists";
         }
-        return new String("");
+        return "";
     }
 
     public void register(String type, String username, String id, String password) {
