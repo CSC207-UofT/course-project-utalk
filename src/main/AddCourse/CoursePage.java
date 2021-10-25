@@ -1,3 +1,9 @@
+package AddCourse;
+
+import basics.Course;
+import basics.Professor;
+import basics.Student;
+
 import java.util.ArrayList;
 
 public class CoursePage {

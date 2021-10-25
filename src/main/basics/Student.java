@@ -1,3 +1,7 @@
+package basics;
+
+import AddCourse.CoursePage;
+
 import java.util.ArrayList;
 
 public class Student extends User{
@@ -7,8 +11,8 @@ public class Student extends User{
     private String user_name;
     private String password;
     // Do we need to restate the instance attribute for student?
-    Student(String student_number, String student_name, String password){
-        super(student_number, student_name, password);
+    public Student(String student_name, String identifier, String password){
+        super(student_name, identifier, password);
         this.password = password;
         student_comments = new ArrayList<>();
     }
@@ -16,7 +20,7 @@ public class Student extends User{
 
     }
 
-//    @Override
+    //    @Override
 //    public String toString(){
 //        return identifier + ":" + user_name;
 //    }
