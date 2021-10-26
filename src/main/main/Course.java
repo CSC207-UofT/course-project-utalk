@@ -1,3 +1,4 @@
+package main;
 /**
  An entity class Course with course code and course created year.
  **/

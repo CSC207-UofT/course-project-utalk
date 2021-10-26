@@ -1,3 +1,4 @@
+package main;
 import java.util.ArrayList;
 
 public class Faculty extends User implements CreateCourse{

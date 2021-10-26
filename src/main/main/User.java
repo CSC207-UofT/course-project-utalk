@@ -1,3 +1,5 @@
+package main;
+
 public class User {
     private String identifier;
     private String user_name;

@@ -1,5 +1,5 @@
 // the class store student objects
-
+package main;
 import java.util.HashMap;
 import java.util.Map;
 
