@@ -7,7 +7,7 @@ import basics.Student;
 import java.util.ArrayList;
 
 public class CoursePage {
-    final Course course;
+    public final Course course;
     public String info_added;
     private ArrayList<Professor> professor_list;
     private ArrayList<Student> student_list;
