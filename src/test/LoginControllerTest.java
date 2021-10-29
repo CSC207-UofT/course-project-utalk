@@ -1,3 +1,7 @@
+import basics.AllStudent;
+import basics.LoginUser;
+import basics.Signup;
+
 import java.util.Objects;
 
 class LoginControllerTest {
