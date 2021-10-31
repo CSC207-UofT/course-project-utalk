@@ -1,6 +1,9 @@
-## Utalk Basics
+## Utalk Hanqi
 
-This is a program for students taken the same courses to discuss with other students and view the past discussions from people who have taken this courses. 
+This is the branch for member Hanqi of Utalk. 
 
-MD (Markdown) files use [Markdown formatting](https://guides.github.com/features/mastering-markdown/): 
-these look very much like .txt files, so you can write them in a very similar way.
+For Phase1, I am responsible for the AddCourse method, UpdateCourse and EditCourse. 
+
+I choose to combine the latter two by checking whether the year == current_year to deduce whether the client wants to edit info or start a new course semester. 
+As all three methods take in the same input: course_code, course_year, course_description, I use the facade design pattern to implement these methods. I create two classes for AddCourse and UpdateCourse and let the Faculty call instances of them to complete the add_course and update_course method. 
+(TBC: decisions for Getinput and GetinputIn) 
