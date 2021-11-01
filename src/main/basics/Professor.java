@@ -7,11 +7,25 @@ import AddCourse.PostPage;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Professor extends User implements Add_Comment,Delete_Comment{
+public class Professor extends User implements Add_Comment,Delete_Comment,Edit_Comment{
     private String user_name;
     Professor(String identifier, String user_name, String password){
         super(identifier, user_name, password);
         ArrayList<Course> taught_courses = new ArrayList<>();
+    }
+
+    @Override
+    public String edit_comment(String new_content, int comment_id, String course_code ){
+        CoursePage coursepage = AllCourses.linked_page.get(course_code);
+        Comment comment = coursepage.post_page_List.get(-1).comments.get(comment_id);
+        if (comment.user_name.equals(user_name) & comment.status){
+            comment.content = new_content;
+            return "edid successfully";
+        }
+        else{
+            return "you can not edit this comment";
+        }
+
     }
 
     @Override
