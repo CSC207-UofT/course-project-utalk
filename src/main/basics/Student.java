@@ -6,7 +6,7 @@ import AddCourse.CoursePage;
 import java.util.ArrayList;
 import java.time.LocalDate;
 
-public class Student extends User implements Add_Comment{
+public class Student extends User implements Add_Comment,Delete_Comment{
     private ArrayList<Comment> student_comments;
     private ArrayList<CoursePage> student_course;
     private String identifier;
@@ -17,6 +17,19 @@ public class Student extends User implements Add_Comment{
         super(student_name, identifier, password);
         this.password = password;
         student_comments = new ArrayList<>();
+    }
+
+    @Override
+    public String delete_comment(int comment_id, String course_code){
+        CoursePage coursepage = AllCourses.linked_page.get(course_code);
+        Comment comment = coursepage.post_page_List.get(-1).comments.get(comment_id);
+        if (comment.user_name.equals(user_name)){
+            comment.status = false;
+            return "delete successfully";
+        }
+        else{
+            return "you can not delete this comment";
+        }
     }
 
 
