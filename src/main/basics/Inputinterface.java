@@ -1,3 +1,5 @@
+package basics;
+
 /**
  * The input boundary for the login use case.
  */

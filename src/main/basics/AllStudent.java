@@ -1,4 +1,4 @@
-// the class store student objects
+package basics;// the class store student objects
 
 import java.util.HashMap;
 import java.util.Map;

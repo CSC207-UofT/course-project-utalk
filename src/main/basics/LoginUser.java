@@ -1,3 +1,5 @@
+package basics;
+
 import java.util.Map;
 
 public class LoginUser implements Inputinterface {
@@ -9,7 +11,7 @@ public class LoginUser implements Inputinterface {
     }
 
     public LoginUser(AllStudent students) {
-        this.group = AllStudent.students;
+        group = AllStudent.students;
     }
 
     @Override

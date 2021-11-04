@@ -1,5 +1,8 @@
+package AddCourse;
+
+import basics.Comment;
+
 import java.util.ArrayList;
-import java.util.Date;
 
 public class PostPage {
     ArrayList<Comment> comment_list;
