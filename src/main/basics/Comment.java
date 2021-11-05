@@ -13,6 +13,7 @@ public class Comment {
         this.comment = comment;
         comment_id += 1;
         this.id = comment_id;
+        this.replies = new ArrayList<>();
     }
 }
 

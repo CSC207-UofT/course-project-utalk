@@ -1,8 +1,12 @@
 package basics;
 
 import AddCourse.CoursePage;
-
+import AddCourse.PostPage;
+import Comment.AddComment;
+import Comment.DeleteComment;
+import Comment.EditComment;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Student extends User implements AddComment, EditComment{
     private ArrayList<Comment> student_comments;
@@ -30,28 +34,85 @@ public class Student extends User implements AddComment, EditComment{
         return password.equals(this.password);
     }
 
-    public void addComment(Course course, String semester, Comment comment){
-        this.student_comments.add(comment);
-        if (courses.contains(course)){
-            CoursePage cp = AllCourses.linked_page.get(course.getCourse_code());
-            PostPage pp = cp.getPostPage(course.course_start_year);
-            pp.comment_list.add(comment);
+
+    /**
+     * Method for editing comments
+     * Returns true if the comment has been edited successfully
+     * Returns false otherwise
+     */
+    public boolean editComment(PostPage pp, Comment c, String edit) {
+        if (!this.student_comments.contains(c)){
+            return false;
+        }
+        else{
+            Comment d = new Comment(c.student_id, edit);
+            pp.swapComment(c, d);
+            return true;
         }
     }
 
-    public void editComment(Course course, String semester, Comment comment, String edit) {
-        comment.comment = edit;
+    /**
+     * Method for adding comments to the PostPage
+     * Returns true if the comment has been added successfully
+     * Returns false otherwise
+     */
+    public boolean addComment(String semester, PostPage pp, Comment c) {
+        if (!pp.getSemester().equals(semester)){
+            return false;
+        }
+        else{
+            pp.addComment(c);
+            this.student_comments.add(c);
+            return true;
+        }
+
+    }
+    /**
+     * Method for adding replies to a comment
+     * Returns true if the reply has been added successfully
+     * Returns false otherwise
+     */
+    public boolean addComment(String semester, PostPage pp, Comment c, Comment reply) {
+        if (!pp.getSemester().equals(semester)) {
+            return false;
+        }
+        else{
+            c.replies.add(reply);
+            this.student_comments.add(reply);
+            return true;
+        }
     }
 
-    public static void main(String[] args) {
-        Course csc = new Course("CSC", "blah", "2019");
-        CoursePage cp = new CoursePage(csc);
-        Student s = new Student("S", "S", "123");
-        System.out.print(s.student_comments);
-        //AllCourses.linked_page.put("CSC", cp);
-        AllCourses.add_to_list("CSC", cp);
-        Comment c = new Comment(1, "wtf");
-        s.addComment(csc, "2019", c);
-        System.out.print(s.student_comments);
+    /**
+     * Method for deleting comments
+     * Returns true if the comment has been deleted successfully
+     * Returns false otherwise
+
+    public boolean deleteComment(PostPage pp, Comment c) {
+        if (!this.student_comments.contains(c)){
+            return false;
+        }
+        else{
+            pp.deleteComment(c);
+            this.student_comments.remove(c);
+            return true;
+        }
     }
+
+     * Method for deleting replies to a comment
+     * Returns true if the reply has been deleted successfully
+     * Returns false otherwise
+
+    public boolean deleteComment(PostPage pp, Comment c, Comment reply) {
+        if (!this.student_comments.contains(c)) {
+            return false;
+        }
+        else{
+            pp.deleteReply(c, reply);
+            this.student_comments.remove(reply);
+            return true;
+        }
+      }
+         */
+
 }
