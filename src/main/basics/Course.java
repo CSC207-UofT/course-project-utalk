@@ -18,7 +18,4 @@ public class Course {
         course_description = description;
         course_start_year = year;
     }
-    public String getCourse_code(){
-        return this.course_code;
-    }
 }

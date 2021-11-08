@@ -8,10 +8,9 @@ import Comment.EditComment;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class Student extends User implements AddComment, EditComment{
+public class Student extends User implements AddComment, EditComment, DeleteComment{
     private ArrayList<Comment> student_comments;
     private ArrayList<CoursePage> student_course;
-    private ArrayList<Course> courses;
     private String identifier;
     private String user_name;
     private String password;
@@ -36,25 +35,32 @@ public class Student extends User implements AddComment, EditComment{
 
 
     /**
-     * Method for editing comments
-     * Returns true if the comment has been edited successfully
-     * Returns false otherwise
+     * Method for adding a comment
+     * @param semester the current semester
+     * @param pp the PostPage the Comment is being added to
+     * @param c an instance of the class Comment
+     * @param edit an instance of String
+     * @return true if the comment has been edited successfully
      */
-    public boolean editComment(PostPage pp, Comment c, String edit) {
-        if (!this.student_comments.contains(c)){
+    public boolean editComment(String semester, PostPage pp, Comment c, String edit) {
+        if(!pp.getSemester().equals(semester)){
+            return false;
+        }
+        else if (!this.student_comments.contains(c)){
             return false;
         }
         else{
-            Comment d = new Comment(c.student_id, edit);
-            pp.swapComment(c, d);
+            c.editComment(edit);
             return true;
         }
     }
 
     /**
-     * Method for adding comments to the PostPage
-     * Returns true if the comment has been added successfully
-     * Returns false otherwise
+     * Method for adding a comment
+     * @param semester the current semester
+     * @param pp the PostPage the Comment is being added to
+     * @param c an instance of the class Comment
+     * @return true if the comment has been added successfully
      */
     public boolean addComment(String semester, PostPage pp, Comment c) {
         if (!pp.getSemester().equals(semester)){
@@ -65,19 +71,22 @@ public class Student extends User implements AddComment, EditComment{
             this.student_comments.add(c);
             return true;
         }
-
     }
+
     /**
      * Method for adding replies to a comment
-     * Returns true if the reply has been added successfully
-     * Returns false otherwise
+     * @param semester the current semester
+     * @param pp the PostPage the Comment is being added to
+     * @param c an instance of the class Comment
+     * @param reply a reply to the Comment c
+     * @return true if the comment has been added successfully
      */
     public boolean addComment(String semester, PostPage pp, Comment c, Comment reply) {
         if (!pp.getSemester().equals(semester)) {
             return false;
         }
         else{
-            c.replies.add(reply);
+            c.addReply(reply);
             this.student_comments.add(reply);
             return true;
         }
@@ -85,11 +94,17 @@ public class Student extends User implements AddComment, EditComment{
 
     /**
      * Method for deleting comments
-     * Returns true if the comment has been deleted successfully
-     * Returns false otherwise
+     * @param semester the current semester
+     * @param pp the PostPage the Comment is being deleted from
+     * @param c the Comment to be deleted
+     * @return true if the comment is deleted and false otherwise
+     */
 
-    public boolean deleteComment(PostPage pp, Comment c) {
-        if (!this.student_comments.contains(c)){
+    public boolean deleteComment(String semester, PostPage pp, Comment c) {
+        if (!pp.getSemester().equals(semester)) {
+            return false;
+        }
+        else if (!this.student_comments.contains(c)){
             return false;
         }
         else{
@@ -98,21 +113,4 @@ public class Student extends User implements AddComment, EditComment{
             return true;
         }
     }
-
-     * Method for deleting replies to a comment
-     * Returns true if the reply has been deleted successfully
-     * Returns false otherwise
-
-    public boolean deleteComment(PostPage pp, Comment c, Comment reply) {
-        if (!this.student_comments.contains(c)) {
-            return false;
-        }
-        else{
-            pp.deleteReply(c, reply);
-            this.student_comments.remove(reply);
-            return true;
-        }
-      }
-         */
-
 }

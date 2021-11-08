@@ -9,6 +9,5 @@ import basics.Comment;
  * Returns false otherwise
  */
 public interface DeleteComment {
-    boolean deleteComment(PostPage pp, Comment c);
-    boolean deleteComment(PostPage pp, Comment c, Comment reply);
+    boolean deleteComment(String semester, PostPage pp, Comment c);
 }

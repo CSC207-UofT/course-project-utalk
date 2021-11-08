@@ -8,9 +8,9 @@ public class PostPage {
     ArrayList<Comment> comment_list;
     String semester;
 
-    PostPage(String semester_1) {
+    public PostPage(String semester) {
         this.comment_list = new ArrayList<>();
-        semester = semester_1;
+        this.semester = semester;
     }
 
     public String getSemester(){
@@ -20,21 +20,19 @@ public class PostPage {
     public void addComment(Comment c){
         this.comment_list.add(c);
     }
-    public void swapComment(Comment c, Comment d){
-        int i = this.comment_list.indexOf(c);
-        this.comment_list.remove(i);
-        this.comment_list.add(i, d);
-    }
 
-    public void deleteComment(Comment c){
-        this.comment_list.remove(c);
+    public boolean deleteComment(Comment c){
+        if(this.comment_list.contains(c)){
+            c.editComment("deleted");
+            return true;
+        }
+        else{
+            for(Comment cmt: this.comment_list){
+                if (cmt.deleteReply(c)){
+                    return true;
+                }
+            }
+            return false;
+        }
     }
-
-    /** Think we should move Faculty, PostPage, CoursePage into basics
-    public void deleteReply(Comment c, Comment reply){
-        int i = this.comment_list.indexOf(c);
-        Comment d = this.comment_list.get(i);
-        d.replies.remove(reply);
-    }
-    */
 }

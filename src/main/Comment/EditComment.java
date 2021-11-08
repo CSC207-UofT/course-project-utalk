@@ -9,5 +9,5 @@ import basics.Comment;
  * Returns false otherwise
  */
 public interface EditComment {
-    boolean editComment(PostPage pp, Comment c, String edit);
+    boolean editComment(String semester, PostPage pp, Comment c, String edit);
 }

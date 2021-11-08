@@ -11,12 +11,4 @@ public class Professor extends User{
         this.taught_courses = new ArrayList<>();
         this.comments = new HashMap<>();
     }
-    public void addComment(Course course, String semester, Comment comment){
-        this.comments.put(comment.id, comment);
-        if (taught_courses.contains(course)){
-            CoursePage cp = AllCourses.linked_page.get(course);
-            PostPage pp = cp.getPostPage(course.course_start_year);
-            pp.comment_list.add(comment);
-        }
-    }
 }
