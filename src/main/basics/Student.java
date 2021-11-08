@@ -2,13 +2,11 @@ package basics;
 
 import AddCourse.CoursePage;
 import AddCourse.PostPage;
-import Comment.AddComment;
-import Comment.DeleteComment;
-import Comment.EditComment;
-import java.util.ArrayList;
-import java.util.Objects;
+import Comment.Commentable;
 
-public class Student extends User implements AddComment, EditComment, DeleteComment{
+import java.util.ArrayList;
+
+public class Student extends User implements Commentable{
     private ArrayList<Comment> student_comments;
     private ArrayList<CoursePage> student_course;
     private String identifier;
