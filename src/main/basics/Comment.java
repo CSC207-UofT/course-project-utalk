@@ -21,4 +21,3 @@ public class Comment {
         this.status = true;
         replies = new ArrayList<>();
     }
-}
