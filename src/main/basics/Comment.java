@@ -1,17 +1,23 @@
 package basics;
-
-import java.util.ArrayList;
-
+import AddCourse.AllCourses;
+import AddCourse.PostPage;
+import java.util.ArrayList;import java.time.LocalDate;
 public class Comment {
-    static int comment_id;
+    boolean status;
     int id;
-    int student_id;
-    String comment;
+    String user_name;
+    String content;
+    LocalDate time;
+    String course_code;
     ArrayList<Comment> replies;
-    Comment(int student_id, String comment) {
-        this.student_id = student_id;
-        this.comment = comment;
-        comment_id += 1;
-        this.id = comment_id;
+    Comment(String user_name, String content, LocalDate time, String course_code) {
+
+        this.user_name = user_name;
+        this.content = content;
+        this.time = time;
+        PostPage postpage = AllCourses.linked_page.get(course_code).post_page_List.get(-1);
+        postpage.current_id += 1;
+        this.id = postpage.current_id;
+        this.status = true;
+        replies = new ArrayList<>();
     }
-}
