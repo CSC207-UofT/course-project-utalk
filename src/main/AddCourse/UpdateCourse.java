@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public class UpdateCourse {
     public void update_course_info(String course_code, String course_info, String course_year) {
-        Map<String, CoursePage> link_page = AllCourses.linked_page;
+        Map<String, CoursePage> link_page = AllCourses.coursePageHashMap;
         if (link_page.containsKey(course_code)){
             CoursePage coursepage = link_page.get(course_code);
             link_page.get(course_code).info_added = course_info;

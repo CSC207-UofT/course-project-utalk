@@ -7,51 +7,50 @@ import AddCourse.CoursePage;
 import java.util.ArrayList;
 import java.time.LocalDate;
 
-public class Student extends User implements Add_Comment,Delete_Comment,Edit_Comment{
+public class Student extends User implements Add_Comment,Delete_Comment,Edit_Comment {
     private ArrayList<Comment> student_comments;
     private ArrayList<CoursePage> student_course;
     private String identifier;
     private String user_name;
     private String password;
+
     // Do we need to restate the instance attribute for student?
-    public Student(String student_name, String identifier, String password){
+    public Student(String student_name, String identifier, String password) {
         super(student_name, identifier, password);
         this.password = password;
         student_comments = new ArrayList<>();
     }
 
     @Override
-    public String edit_comment(String new_content, int comment_id, String course_code ){
-        CoursePage coursepage = AllCourses.linked_page.get(course_code);
+    public String edit_comment(String new_content, int comment_id, String course_code) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
         Comment comment = coursepage.post_page_List.get(-1).comments.get(comment_id);
-        if (comment.user_name.equals(user_name) & comment.status){
+        if (comment.user_name.equals(user_name) & comment.status) {
             comment.content = new_content;
-            return "edid successfully";
-        }
-        else{
+            return "edit successfully";
+        } else {
             return "you can not edit this comment";
         }
 
     }
 
     @Override
-    public String delete_comment(int comment_id, String course_code){
-        CoursePage coursepage = AllCourses.linked_page.get(course_code);
+    public String delete_comment(int comment_id, String course_code) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
         Comment comment = coursepage.post_page_List.get(-1).comments.get(comment_id);
-        if (comment.user_name.equals(user_name)){
+        if (comment.user_name.equals(user_name)) {
             comment.status = false;
             return "delete successfully";
-        }
-        else{
+        } else {
             return "you can not delete this comment";
         }
     }
 
 
     @Override
-    public void add_comment( String content, LocalDate time, String Course_code) {
+    public void add_comment(String content, LocalDate time, String Course_code) {
         Comment comment = new Comment(user_name, content, time, Course_code);
-        CoursePage coursepage = AllCourses.linked_page.get(Course_code);
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(Course_code);
         coursepage.post_page_List.get(-1).comments.put(comment.id, comment);
 
 
@@ -59,12 +58,23 @@ public class Student extends User implements Add_Comment,Delete_Comment,Edit_Com
 
     public void add_comment(String content, LocalDate time, String Course_code, int reply_to_id) {
         Comment comment = new Comment(user_name, content, time, Course_code);
-        CoursePage coursepage = AllCourses.linked_page.get(Course_code);
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(Course_code);
         coursepage.post_page_List.get(-1).comments.get(reply_to_id).replies.add(comment);
     }
-        void add_course(String course_name){
+
+    public void enroll_course(String course_code) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
+        student_course.add(coursepage);
+        coursepage.student_list.add(this);
+    }
+
+    public void delete_course(String course_code) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
+        student_course.remove(coursepage);
+        coursepage.student_list.remove(this);
 
     }
+
 
     //    @Override
 //    public String toString(){
@@ -74,36 +84,5 @@ public class Student extends User implements Add_Comment,Delete_Comment,Edit_Com
     public boolean passwordMatches(String password) {
         return password.equals(this.password);
     }
-
-=======
-package basics;
-
-import AddCourse.CoursePage;
-
-import java.util.ArrayList;
-
-public class Student extends User{
-    private ArrayList<Comment> student_comments;
-    private ArrayList<CoursePage> student_course;
-    private String identifier;
-    private String user_name;
-    private String password;
-    // Do we need to restate the instance attribute for student?
-    public Student(String student_name, String identifier, String password){
-        super(student_name, identifier, password);
-        this.password = password;
-        student_comments = new ArrayList<>();
-    }
-    void add_course(String course_name){
-
-    }
-
-    //    @Override
-//    public String toString(){
-//        return identifier + ":" + user_name;
-//    }
-//
-    public boolean passwordMatches(String password) {
-        return password.equals(this.password);
-    }
+}
 

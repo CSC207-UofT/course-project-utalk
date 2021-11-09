@@ -4,6 +4,6 @@ import java.util.Map;
 import java.util.HashMap;
 
 public class AllCourses {
-    public static Map<String, CoursePage> linked_page = new HashMap<>();
+    public static Map<String, CoursePage> coursePageHashMap = new HashMap<>();
 
 }
