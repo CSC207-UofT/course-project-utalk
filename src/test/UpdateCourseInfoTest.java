@@ -2,7 +2,6 @@ import AddCourse.AllCourses;
 import AddCourse.AllcourseToUI;
 import AddCourse.Faculty;
 import basics.Status;
-import AddCourse.AllCourses;
 
 public class UpdateCourseInfoTest {
     public static void main(String[] args) {
@@ -13,7 +12,7 @@ public class UpdateCourseInfoTest {
 
         assert allcourseToUI.update_course("CSC207", "software design", "Winter2022");
 
-        assert AllCourses.linked_page.get("CSC207").post_page_List.size() == 2;
+        assert AllCourses.coursePageHashMap.get("CSC207").post_page_List.size() == 2;
 
     }
 }
