@@ -3,22 +3,21 @@ package basics;
 
 import AddCourse.AllCourses;
 import AddCourse.CoursePage;
+import AddCourse.PostPage;
 
 import java.util.ArrayList;
 import java.time.LocalDate;
 
 public class Student extends User implements Add_Comment,Delete_Comment,Edit_Comment {
-    private ArrayList<Comment> student_comments;
     private ArrayList<CoursePage> student_course;
-    private String identifier;
-    private String user_name;
     private String password;
 
     // Do we need to restate the instance attribute for student?
     public Student(String student_name, String identifier, String password) {
         super(student_name, identifier, password);
         this.password = password;
-        student_comments = new ArrayList<>();
+        ArrayList<Comment> student_comments = new ArrayList<>();
+        ArrayList<CoursePage> student_course = new ArrayList<>();
     }
 
     @Override
@@ -50,8 +49,9 @@ public class Student extends User implements Add_Comment,Delete_Comment,Edit_Com
     @Override
     public void add_comment(String content, LocalDate time, String Course_code) {
         Comment comment = new Comment(user_name, content, time, Course_code);
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(Course_code);
-        coursepage.post_page_List.get(-1).comments.put(comment.id, comment);
+        PostPage postpage = AllCourses.coursePageHashMap.get(Course_code).post_page_List.get(-1);
+        postpage.comments.put(comment.id, comment);
+        postpage.posts.add(comment);
 
 
     }
