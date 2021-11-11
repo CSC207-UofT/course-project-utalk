@@ -9,8 +9,8 @@ import java.util.ArrayList;
 public class CoursePage {
     public final Course course;
     public String info_added;
-    private ArrayList<Professor> professor_list;
-    private ArrayList<Student> student_list;
+    public ArrayList<Professor> professor_list;
+    public ArrayList<Student> student_list;
     public ArrayList<PostPage> post_page_List;
 
     public CoursePage(Course course) {
