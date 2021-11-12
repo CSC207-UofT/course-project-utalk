@@ -10,10 +10,6 @@ public class LoginUser implements Inputinterface {
         SUCCESS, FAILURE, WRONG
     }
 
-    public LoginUser(AllStudent students) {
-        group = AllStudent.students;
-    }
-
     @Override
     public ResultOutput login(String type, String username, String id, String password) {
         if (type.equals("student")) {

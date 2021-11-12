@@ -7,6 +7,17 @@ import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class delete_user_new {
+    public static String file_path = "data_base.csv";
+    public static void delete_all_user(){
+        try {
+            FileWriter fw = new FileWriter(file_path, false);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+
+=======
     public static String file_path = "data_base.txt";
     static Scanner scanner;
     public static void remove_record(String remove_user_name){
@@ -45,4 +56,3 @@ public class delete_user_new {
             System.out.println("error");
         }
     }
-}
