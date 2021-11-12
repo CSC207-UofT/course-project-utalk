@@ -9,6 +9,7 @@ import java.time.LocalDate;
 
 public class Student extends User implements Add_Comment,Delete_Comment,Edit_Comment {
     private ArrayList<CoursePage> student_course;
+
     private final String password;
 
     // Do we need to restate the instance attribute for student?
