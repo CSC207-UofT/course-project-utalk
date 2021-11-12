@@ -3,6 +3,7 @@ import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Objects;
 import java.util.Scanner;
+import AddCourse.GetCourseUI;
 
 public class commandUI_new {
     public static void main(String[] args) {
@@ -11,6 +12,7 @@ public class commandUI_new {
 
         //put functions below.
         register_signin_ui();
+
 
     }
 
