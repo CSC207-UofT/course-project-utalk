@@ -12,6 +12,8 @@ class LoginControllerTest {
         controller.register("student", "Steven", "wangz", "zhijun");
         String outpt = controller.runLogin("student", "Steven", "wangz", "zhijun");
         assert Objects.equals(outpt, "Successfully login");
+
+
     }
 
 }

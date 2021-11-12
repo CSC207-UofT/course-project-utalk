@@ -22,4 +22,17 @@ public class Comment {
         this.status = true;
         replies = new ArrayList<>();
     }
-}
+
+    public void Print_Comment(int indentation){
+        if (status) {
+            System.out.println(" ".repeat(indentation) + content+ "/n" );
+        }
+        if (! replies.isEmpty()){
+            for( Comment comment : replies){
+                comment.Print_Comment(indentation + 1);
+        }
+
+
+
+    }
+}}
