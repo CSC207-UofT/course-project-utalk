@@ -111,6 +111,3 @@ public class commandUI_new {
             }
         }
     }
-
-
-}

@@ -5,6 +5,7 @@ import basics.Professor;
 import basics.Student;
 
 import java.util.ArrayList;
+import java.util.Map;
 
 public class CoursePage {
     public final Course course;
@@ -21,5 +22,18 @@ public class CoursePage {
         ArrayList<PostPage> post_lst = new ArrayList<>();
         post_lst.add(new PostPage(course.course_start_year));
         this.post_page_List = post_lst;
+    }
+
+    public void page_presenter() {
+        Map<String, Object> info_map = this.course.course_info();
+        System.out.println("Course: " + info_map.get("code") + "\n" + "Year: " + info_map.get("year"));
+        System.out.println("======================================================================\n");
+        System.out.println("Professor(s): \n");
+        for (Professor prof: this.professor_list) {
+            System.out.println(prof.user_name() + ", ");
+        }
+        System.out.println("\n" + "Course Information:" + "\n");
+        System.out.println(info_map.get("description") + "\n");
+        System.out.println(this.info_added);
     }
 }
