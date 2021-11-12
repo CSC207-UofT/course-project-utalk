@@ -36,4 +36,9 @@ public class CoursePage {
         System.out.println(info_map.get("description") + "\n");
         System.out.println(this.info_added);
     }
+    public void comment_presenter() {
+        for(PostPage page: this.post_page_List){
+            page.Print_comments();
+        }
+    }
 }
