@@ -10,13 +10,14 @@ import java.util.ArrayList;
 public class Professor extends User implements Add_Comment,Delete_Comment,Edit_Comment {
 
     private ArrayList<CoursePage> taught_courses;
-    private String identifier;
-    private String user_name;
-    private String password;
+
+
 
     Professor(String identifier, String user_name, String password) {
         super(identifier, user_name, password);
+
         ArrayList<CoursePage> taught_courses = new ArrayList<>();
+        ArrayList<Comment> comments = new ArrayList<>();
     }
 
     @Override
@@ -35,8 +36,11 @@ public class Professor extends User implements Add_Comment,Delete_Comment,Edit_C
     @Override
     public void add_comment(String content, LocalDate time, String Course_code) {
         Comment comment = new Comment(user_name, content, time, Course_code);
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(Course_code);
-        coursepage.post_page_List.get(-1).comments.put(comment.id, comment);
+
+        PostPage postpage = AllCourses.coursePageHashMap.get(Course_code).post_page_List.get(-1);
+        postpage.comments.put(comment.id, comment);
+        postpage.posts.add(comment);
+
 
 
     }

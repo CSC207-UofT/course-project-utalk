@@ -1,5 +1,7 @@
 package basics;
 
+import java.util.*;
+
 /**
  An entity class basics.Course with course code and course created year.
  **/
@@ -17,5 +19,13 @@ public class Course {
         course_code = code;
         course_description = description;
         course_start_year = year;
+    }
+
+    public Map<String, Object> course_info(){
+        Map<String, Object> mp = new HashMap<>(){};
+        mp.put("code", this.course_code);
+        mp.put("description", this.course_description);
+        mp.put("year", this.course_start_year);
+        return mp;
     }
 }

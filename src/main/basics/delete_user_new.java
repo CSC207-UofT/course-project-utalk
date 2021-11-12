@@ -1,24 +1,13 @@
 package basics;
 
-import java.io.*;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class delete_user_new {
-    public static String file_path = "data_base.csv";
-    public static void delete_all_user(){
-        try {
-            FileWriter fw = new FileWriter(file_path, false);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-
-
-
-
-
+    public static String file_path = "data_base.txt";
     static Scanner scanner;
     public static void remove_record(String remove_user_name){
         String temp_file = "temp.csv";
