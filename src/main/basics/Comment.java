@@ -25,8 +25,8 @@ public class Comment {
 
     public void Print_Comment(int indentation){
         if (status) {
-            System.out.println(" ".repeat(indentation)  + this.user_name +  "posted:" + "\n");
-            System.out.println(" ".repeat(indentation + 1) + content+ "\n" );
+            System.out.println(" ".repeat(indentation)  + this.user_name + "posted:" + "\n");
+            System.out.println(" ".repeat(indentation + 1) + this.id + content+ "\n" );
         }
         if (! replies.isEmpty()){
             for( Comment comment : replies){

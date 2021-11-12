@@ -6,18 +6,18 @@ import AddCourse.PostPage;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Professor extends User implements Add_Comment,Delete_Comment,Edit_Comment {
 
     private ArrayList<CoursePage> taught_courses;
-
+    private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
 
 
     Professor(String identifier, String user_name, String password) {
         super(identifier, user_name, password);
-
+        HashMap<String, ArrayList<Comment>> comments= new HashMap<>();
         ArrayList<CoursePage> taught_courses = new ArrayList<>();
-        ArrayList<Comment> comments = new ArrayList<>();
     }
 
     @Override
@@ -40,7 +40,7 @@ public class Professor extends User implements Add_Comment,Delete_Comment,Edit_C
         PostPage postpage = AllCourses.coursePageHashMap.get(Course_code).post_page_List.get(-1);
         postpage.comments.put(comment.id, comment);
         postpage.posts.add(comment);
-
+        comments.get(Course_code).add(comment);
 
 
     }
@@ -49,6 +49,7 @@ public class Professor extends User implements Add_Comment,Delete_Comment,Edit_C
         Comment comment = new Comment(user_name, content, time, Course_code);
         CoursePage coursepage = AllCourses.coursePageHashMap.get(Course_code);
         coursepage.post_page_List.get(-1).comments.get(reply_to_id).replies.add(comment);
+        comments.get(Course_code).add(comment);
     }
 
     @Override
@@ -72,6 +73,8 @@ public class Professor extends User implements Add_Comment,Delete_Comment,Edit_C
         CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
         taught_courses.add(coursepage);
         coursepage.professor_list.add(this);
+        ArrayList<Comment> comment = new ArrayList<>();
+        comments.put(course_code, comment);
     }
 
     public void delete_course(String course_code) {
@@ -79,5 +82,11 @@ public class Professor extends User implements Add_Comment,Delete_Comment,Edit_C
         taught_courses.remove(coursepage);
         coursepage.professor_list.remove(this);
 
+    }
+    @Override
+    public void user_comment(String course) {
+        for(Comment comment: this.comments.get(course)) {
+            comment.Print_Comment(0);
+        }
     }
 }

@@ -12,5 +12,7 @@ public class User {
     public String user_name(){
         return this.user_name;
     }
+    public void user_comment(String course) {
+    }
 
 }
