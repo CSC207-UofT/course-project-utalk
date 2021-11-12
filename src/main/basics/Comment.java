@@ -20,4 +20,4 @@ public class Comment {
         this.id = postpage.current_id;
         this.status = true;
         replies = new ArrayList<>();
-    }
+    }}
