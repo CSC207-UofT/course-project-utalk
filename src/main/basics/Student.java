@@ -10,14 +10,23 @@ import java.time.LocalDate;
 
 public class Student extends User implements Add_Comment,Delete_Comment,Edit_Comment {
     private ArrayList<CoursePage> student_course;
-    private String password;
+
+    private ArrayList<Comment> student_comments;
 
     // Do we need to restate the instance attribute for student?
     public Student(String student_name, String identifier, String password) {
         super(student_name, identifier, password);
-        this.password = password;
+
         ArrayList<Comment> student_comments = new ArrayList<>();
         ArrayList<CoursePage> student_course = new ArrayList<>();
+    }
+
+    public void print_comment(){
+
+        for (Comment comment : student_comments){
+            comment.Print_Comment(0);
+
+        }
     }
 
     @Override
@@ -79,10 +88,6 @@ public class Student extends User implements Add_Comment,Delete_Comment,Edit_Com
     //    @Override
 //    public String toString(){
 //        return identifier + ":" + user_name;
-//    }
 //
-    public boolean passwordMatches(String password) {
-        return password.equals(this.password);
-    }
 }
 

@@ -22,6 +22,7 @@ public class Professor extends User implements Add_Comment,Delete_Comment,Edit_C
 
     @Override
     public String edit_comment(String new_content, int comment_id, String course_code) {
+
         CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
         Comment comment = coursepage.post_page_List.get(-1).comments.get(comment_id);
         if (comment.user_name.equals(user_name) & comment.status) {
