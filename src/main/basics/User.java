@@ -9,5 +9,8 @@ public class User {
         this.user_name = user_name;
         this.password = password;
     }
+    public String user_name(){
+        return this.user_name;
+    }
 
 }
