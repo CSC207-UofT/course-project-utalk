@@ -9,6 +9,7 @@ import java.util.Map;
 public class PostPage {
     public Map<Integer, Comment> comments ;
 
+
     String semester;
     public int current_id;
 

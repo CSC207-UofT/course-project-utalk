@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class Professor extends User implements Add_Comment,Delete_Comment,Edit_Comment{
-    private String user_name;
+
     Professor(String identifier, String user_name, String password){
         super(identifier, user_name, password);
         ArrayList<Course> taught_courses = new ArrayList<>();
@@ -20,7 +20,7 @@ public class Professor extends User implements Add_Comment,Delete_Comment,Edit_C
         Comment comment = coursepage.post_page_List.get(-1).comments.get(comment_id);
         if (comment.user_name.equals(user_name) & comment.status){
             comment.content = new_content;
-            return "edid successfully";
+            return "edit successfully";
         }
         else{
             return "you can not edit this comment";
