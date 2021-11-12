@@ -1,9 +1,7 @@
 package basics;
-import java.sql.SQLOutput;
+
 import java.util.ArrayList;
-import java.util.Objects;
 import java.util.Scanner;
-import AddCourse.GetCourseUI;
 
 public class commandUI_new {
     public static void main(String[] args) {
@@ -15,9 +13,6 @@ public class commandUI_new {
 
 
     }
-
-
-
 
 
 
@@ -33,7 +28,10 @@ public class commandUI_new {
                 register_new.register_ui();
 
             }
-            case "2" -> {System.out.println("PLease follow the orders to log in (wait for me debugging this function)");}
+            case "2" -> {System.out.println("PLease follow the orders to log in.");
+                log_in_new.log_in();
+                //insert other func
+            }
             case "9" -> {
                 System.out.println("Are you sure you wish to quit? PLease type in 'yes' to quit.");
                 Scanner c = new Scanner(System.in);

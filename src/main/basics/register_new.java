@@ -44,7 +44,7 @@ public class register_new {
             if (password1.equals(password2)) {
                 while (true) {
                     System.out.println("What is your identity?");
-                    System.out.println("1: student. 2: professor. 3: registrar");
+                    System.out.println("1: student. 2: professor. 3: faculty");
                     Scanner sc = new Scanner(System.in);
                     String type = sc.nextLine();
                     switch (type) {
@@ -53,8 +53,8 @@ public class register_new {
                             long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
-                            register_user("asd", username, password1, "student", "true");
-                            System.out.println("You have successfully sign up and have logged in as student \"" + username + "\"");
+                            register_user("1", username, password1, "student", "true");
+                            System.out.println("You have successfully sign up as student \"" + username + "\"");
                             commandUI_new.register_signin_ui();
                             break;
                         }
@@ -64,19 +64,19 @@ public class register_new {
                             long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
-                            register_user("asd", username, password1, "professor", "true");
-                            System.out.println("You have successfully sign up and have logged in as professor \"" + username + "\"");
+                            register_user("12", username, password1, "professor", "true");
+                            System.out.println("You have successfully sign up as professor \"" + username + "\"");
                             commandUI_new.register_signin_ui();
                             break;
 
                         }
                         case "3":
-                        case "registrar": {
+                        case "faculty": {
                             long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
-                            register_user("asd", username, password1, "registrar", "true");
-                            System.out.println("You have successfully sign up and have logged in as registrar \"" + username + "\"");
+                            register_user("123", username, password1, "Faculty", "true");
+                            System.out.println("You have successfully sign up as faculty \"" + username + "\"");
                             commandUI_new.register_signin_ui();
                             break;
 

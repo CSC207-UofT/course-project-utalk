@@ -1,11 +1,9 @@
 package AddCourse;
 
 
-import basics.Status;
-
-import java.io.InputStream;
 import java.util.Objects;
-import java.util.Scanner;
+
+import static basics.commandUI_new.register_signin_ui;
 
 public class GetCourseUI {
     public GetCourseUI() {
@@ -25,17 +23,23 @@ public class GetCourseUI {
         System.out.println("""
                 Choose which operation you want to make:\s
                  1: add course 2: update course\s
-                 Please enter 1 or 2""");
+                 Please enter 1 or 2, enter quit to return to the main menu""");
         String input_str = input_help.getinput(System.in).nextLine();
-        while (!(input_str.equals("1")||input_str.equals("2"))){
-            System.out.println("Please enter 1 or 2");
+        if (input_str.equals("quit")){
+            register_signin_ui();
+        }
+        while (!(input_str.equals("1")||input_str.equals("2")||input_str.equals("quit"))){
+            System.out.println("Please enter 1 or 2, or type quit to quit");
             input_str = input_help.getinput(System.in).nextLine();
+        }
+        if (Objects.equals(input_str, "quit")){
+            register_signin_ui();
         }
         CreateandUpdate createandUpdate = new CreateandUpdate();
         String[] args = GetCourseUI.loaddata();
         if (Objects.equals(input_str, "1")){
             createandUpdate.runaddcourse(args);
-        } else{
+        } else {
             createandUpdate.updatecourseinfo(args);
         }
     }
