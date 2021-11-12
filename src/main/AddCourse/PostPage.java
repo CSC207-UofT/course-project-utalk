@@ -12,6 +12,7 @@ public class PostPage {
     public ArrayList<Comment> posts;
 
 
+
     String semester;
     public int current_id;
 
