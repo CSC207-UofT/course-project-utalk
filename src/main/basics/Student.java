@@ -5,7 +5,6 @@ import AddCourse.AllCourses;
 import AddCourse.CoursePage;
 import AddCourse.PostPage;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.time.LocalDate;
 import java.util.HashMap;

@@ -1,7 +1,10 @@
 package basics;
 import java.io.*;
-
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class register_new {
@@ -118,21 +121,39 @@ public class register_new {
         return result;
     }
 
-    public static void list_to_csv(List<List<String>> list){
+    public static void list_to_csv(List<List<String>> list) {
         /*
         This function will renew the database file by that List<List<String>>.
          */
         delete_user_new.delete_all_user();
         int i = 0;
-        if(list == null || list.size() == 0){
+        if (list == null || list.size() == 0) {
             System.out.println("This list is empty or null.");
-        }
-        else {
+        } else {
             while (list.get(i) != null) {
                 register_user(list.get(i).get(0), list.get(i).get(1), list.get(i).get(2), list.get(i).get(3), list.get(i).get(4));
                 i += 1;
             }
         }
-
-
     }
+
+    public static void register_user(String id, String user_name, String password, String type, String status){
+
+        try{
+            FileWriter fw = new FileWriter(file_path, true);
+            BufferedWriter bw = new BufferedWriter(fw);
+            PrintWriter pw = new PrintWriter(bw);
+            pw.println(String.valueOf(id) + ',' + user_name + ',' + password + ',' + String.valueOf(type) + ',' + status);
+            pw.flush();
+            pw.close();
+            System.out.println("registered successfully!");
+
+        }
+        catch (Exception E)
+        {
+            System.out.println("Fail to register!");
+        }
+    }
+
+
+}

@@ -15,20 +15,21 @@ public class commandUI_new {
     }
 
 
-
     //developer password is qiao123
-    public static void register_signin_ui(){
+    public static void register_signin_ui() {
         //this is command UI function for register and sign in.
         System.out.println("================================================================================================================================");
         System.out.println("What would you like to do next? \n 1: register \n 2: login \n 9: quit program. \n10: administrator privileges");
         Scanner scan = new Scanner(System.in);
         String enter = scan.nextLine();
         switch (enter) {
-            case "1" -> {System.out.println("Please follow the orders to register");
+            case "1" -> {
+                System.out.println("Please follow the orders to register");
                 register_new.register_ui();
 
             }
-            case "2" -> {System.out.println("PLease follow the orders to log in.");
+            case "2" -> {
+                System.out.println("PLease follow the orders to log in.");
                 log_in_new.log_in();
                 //insert other func
             }
@@ -36,24 +37,23 @@ public class commandUI_new {
                 System.out.println("Are you sure you wish to quit? PLease type in 'yes' to quit.");
                 Scanner c = new Scanner(System.in);
                 String word = c.nextLine();
-                if (word.equals("yes")){
+                if (word.equals("yes")) {
                     System.out.println("Quit program successfully");
                     System.exit(0);
-                }
-                else {
+                } else {
                     System.out.println("You did not quit the program.\n");
                     register_signin_ui();
                 }
 
             }
-            case "10"-> {
+            case "10" -> {
                 System.out.println("Please enter developer password.");
                 Scanner a = new Scanner(System.in);
                 String password = a.nextLine();
                 if ("qiao123".equals(password)) {
                     //The line below eliminates infinite loop warning. Please don't remove it.
                     //noinspection InfiniteLoopStatement
-                    while(true) {
+                    while (true) {
                         System.out.println("""
                                 administrator privileges:\s
                                  1: check all users\s
@@ -64,28 +64,25 @@ public class commandUI_new {
                         switch (number) {
                             case "1" -> {
                                 System.out.println("[id, username, password, type, status]");
-                                for(ArrayList<String> item : register_new.csv_to_list()){
+                                for (ArrayList<String> item : register_new.csv_to_list()) {
                                     System.out.println(item);
                                 }
                                 System.out.println("\n================================================================================================================================\n");
                                 System.out.println("What would you like to do next?");
                             }
-                            case "2" ->{
+                            case "2" -> {
                                 System.out.println("Be careful! \nAre you sure you wish to delete the whole database? yes/no");
                                 Scanner scc = new Scanner(System.in);
                                 String result = scc.nextLine();
-                                if(result.equals("yes")){
+                                if (result.equals("yes")) {
                                     delete_user_new.delete_all_user();
                                     System.out.println("As you wish.");
                                     System.out.println("Database deleted.");
-                                    System.out.println("\n================================================================================================================================");
-                                    System.out.println("What would you like to do next?");
-                                }
-                                else{
+                                } else {
                                     System.out.println("You did not delete the database");
-                                    System.out.println("\n================================================================================================================================");
-                                    System.out.println("What would you like to do next?");
                                 }
+                                System.out.println("\n================================================================================================================================");
+                                System.out.println("What would you like to do next?");
                             }
                             case "10" -> {
                                 System.out.println("\n================================================================================================================================");
@@ -111,3 +108,4 @@ public class commandUI_new {
             }
         }
     }
+}
