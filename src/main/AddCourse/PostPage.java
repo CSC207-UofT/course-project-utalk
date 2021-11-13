@@ -3,36 +3,29 @@ package AddCourse;
 import basics.Comment;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class PostPage {
-    ArrayList<Comment> comment_list;
+    public Map<Integer, Comment> comments;
+    public ArrayList<Comment> posts;
+
+
     String semester;
+    public int current_id;
 
-    public PostPage(String semester) {
-        this.comment_list = new ArrayList<>();
-        this.semester = semester;
+    PostPage(String semester_1) {
+        this.comments = new HashMap<>();
+        posts = new ArrayList<>();
+        semester = semester_1;
+        current_id = 0;
+
     }
 
-    public String getSemester(){
-        return this.semester;
-    }
-
-    public void addComment(Comment c){
-        this.comment_list.add(c);
-    }
-
-    public boolean deleteComment(Comment c){
-        if(this.comment_list.contains(c)){
-            c.editComment("deleted");
-            return true;
-        }
-        else{
-            for(Comment cmt: this.comment_list){
-                if (cmt.deleteReply(c)){
-                    return true;
-                }
-            }
-            return false;
+    void Print_comments() {
+        for (Comment comment : posts) {
+            comment.Print_Comment(0);
         }
     }
 }

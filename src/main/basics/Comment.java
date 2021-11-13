@@ -1,45 +1,38 @@
 package basics;
-
-import java.util.ArrayList;
-
+import AddCourse.AllCourses;
+import AddCourse.PostPage;
+import java.util.ArrayList;import java.time.LocalDate;
 public class Comment {
-    static int comment_id;
+    boolean status;
     int id;
-    int student_id;
-    String comment;
+    String user_name;
+    String content;
+    LocalDate time;
+    String course_code;
     ArrayList<Comment> replies;
-    Comment(int student_id, String comment) {
-        this.student_id = student_id;
-        this.comment = comment;
-        comment_id += 1;
-        this.id = comment_id;
-        this.replies = new ArrayList<>();
-    }
-    public void editComment(String edit){
-        this.comment = edit;
+
+    Comment(String user_name, String content, LocalDate time, String course_code) {
+
+        this.user_name = user_name;
+        this.content = content;
+        this.time = time;
+        PostPage postpage = AllCourses.coursePageHashMap.get(course_code).post_page_List.get(-1);
+        postpage.current_id += 1;
+        this.id = postpage.current_id;
+        this.status = true;
+        replies = new ArrayList<>();
     }
 
-    public void addReply(Comment c){
-        this.replies.add(c);
-    }
-
-    /**
-     * Recursive method for deleting comments
-     * @param c the Comment to be deleted
-     * @return true if the comment is deleted and false otherwise
-     */
-    public boolean deleteReply(Comment c) {
-        if (this.replies.contains(c)) {
-            c.editComment("deleted");
-            return true;
-        } else {
-            for (Comment cmt : this.replies) {
-                if (cmt.deleteReply(c)) {
-                    return true;
-                }
+    public void Print_Comment(int indentation){
+        if (status) {
+            System.out.println(" ".repeat(indentation)  + this.user_name + "posted:" + "\n");
+            System.out.println(" ".repeat(indentation + 1) + this.id + content+ "\n" );
+        }
+        if (! replies.isEmpty()){
+            for( Comment comment : replies){
+                System.out.println(" ".repeat(indentation + 2)  + this.user_name +  "replied:" + "\n");
+                comment.Print_Comment(indentation + 3);
             }
-            return false;
         }
     }
 }
-
