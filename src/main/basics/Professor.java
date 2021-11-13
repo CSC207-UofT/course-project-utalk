@@ -4,82 +4,48 @@ import AddCourse.AllCourses;
 import AddCourse.CoursePage;
 import AddCourse.PostPage;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Professor extends User implements Add_Comment,Delete_Comment,Edit_Comment {
+public class Professor extends CommentableUser{
 
-    private ArrayList<CoursePage> taught_courses;
-    private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
+    private ArrayList<CoursePage> taughtCourses;
+    private HashMap<String, ArrayList<Comment>> comments;
 
 
-    Professor(String identifier, String user_name, String password) {
-        super(identifier, user_name, password);
-        HashMap<String, ArrayList<Comment>> comments= new HashMap<>();
-        ArrayList<CoursePage> taught_courses = new ArrayList<>();
+    Professor(String identifier, String userName, String password) {
+        super(identifier, userName, password);
+        this.comments = new HashMap<>();
+        this.taughtCourses = new ArrayList<>();
     }
 
-    @Override
-    public String edit_comment(String new_content, int comment_id, String course_code) {
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        Comment comment = coursepage.post_page_List.get(-1).comments.get(comment_id);
-        if (comment.user_name.equals(user_name) & comment.status) {
-            comment.content = new_content;
-            return "edit successfully";
-        } else {
-            return "you can not edit this comment";
-        }
-
-    }
-
-    @Override
-    public void add_comment(String content, LocalDate time, String Course_code) {
-        Comment comment = new Comment(user_name, content, time, Course_code);
-
-        PostPage postpage = AllCourses.coursePageHashMap.get(Course_code).post_page_List.get(-1);
-        postpage.comments.put(comment.id, comment);
-        postpage.posts.add(comment);
-        comments.get(Course_code).add(comment);
-
-
-    }
-
-    public void add_comment(String content, LocalDate time, String Course_code, int reply_to_id) {
-        Comment comment = new Comment(user_name, content, time, Course_code);
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(Course_code);
-        coursepage.post_page_List.get(-1).comments.get(reply_to_id).replies.add(comment);
-        comments.get(Course_code).add(comment);
-    }
-
-    @Override
-    public String delete_comment(int comment_id, String course_code) {
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
+    public String deleteComment(int commentId, String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
         if (!coursepage.professor_list.contains(this)) {
-            return "you are not professor of this course";
+            return "You are not professor of this course";
         } else {
-            PostPage postpage = coursepage.post_page_List.get(-1);
-            if (comment_id > postpage.current_id) {
-                return "wrong id";
+            int index = coursepage.post_page_List.size();
+            PostPage postpage = coursepage.post_page_List.get(index - 1);
+            if (commentId > postpage.current_id) {
+                return "Wrong id";
             } else {
-                postpage.comments.get(comment_id).status = false;
-                return "delete successfully";
+                postpage.comments.get(commentId).status = false;
+                return "Deleted successfully";
             }
         }
-
     }
 
-    public void enroll_course(String course_code) {
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        taught_courses.add(coursepage);
+    public void enrollCourse(String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
+        taughtCourses.add(coursepage);
         coursepage.professor_list.add(this);
         ArrayList<Comment> comment = new ArrayList<>();
-        comments.put(course_code, comment);
+        comments.put(courseCode, comment);
     }
 
-    public void delete_course(String course_code) {
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        taught_courses.remove(coursepage);
+    public void deleteCourse(String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
+        taughtCourses.remove(coursepage);
         coursepage.professor_list.remove(this);
 
     }
