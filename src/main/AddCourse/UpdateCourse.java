@@ -13,6 +13,7 @@ public class UpdateCourse {
                 PostPage new_postpage = new PostPage(course_year);
                 link_page.get(course_code).post_page_List.add(new_postpage);
             }
+            System.out.println("Course has been updated successfully.");
         } else {
             System.out.println("The course has not been created yet.");
         }
