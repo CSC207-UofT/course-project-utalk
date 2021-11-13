@@ -3,7 +3,7 @@ package basics;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class CommentableUser extends User{
+public abstract class CommentableUser extends User implements EnrollCourse, DeleteCourse{
     protected HashMap<String, ArrayList<Comment>> comments;
 
     protected CommentableUser(String identifier, String user_name, String password) {
@@ -12,8 +12,10 @@ public class CommentableUser extends User{
     }
 
     public void addCourseComments(String courseCode){
-        ArrayList<Comment> a = new ArrayList<>();
-        this.comments.put(courseCode, a);
+        if (!this.containsCourseCode(courseCode)) {
+            ArrayList<Comment> a = new ArrayList<>();
+            this.comments.put(courseCode, a);
+        }
     }
 
     public ArrayList<Comment> getCourseComments(String courseCode){
@@ -28,5 +30,10 @@ public class CommentableUser extends User{
     }
 
 
+    @Override
+    abstract public void deleteCourse(String courseCode);
+
+    @Override
+    abstract public void enrollCourse(String courseCode);
 
 }

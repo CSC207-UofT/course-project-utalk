@@ -20,16 +20,19 @@ public class CommentAdder{
         PostPage postpage = coursepage.post_page_List.get(index - 1);
         postpage.comments.put(comment.id, comment);
         postpage.posts.add(comment);
-        this.commentableUser.comments.get(courseCode).add(comment);
+        this.commentableUser.addCourseComments(courseCode);
+        this.commentableUser.getCourseComments(courseCode).add(comment);
 
 
     }
 
-    public void addComment(String content, LocalDate time, String courseCode, int reply_to_id) {
+    public void addComment(String content, LocalDate time, String courseCode, int replyToId) {
         Comment comment = new Comment(this.commentableUser.getUserName(), content, time, courseCode);
         CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
-        coursepage.post_page_List.get(-1).comments.get(reply_to_id).replies.add(comment);
-        this.commentableUser.comments.get(courseCode).add(comment);
+        PostPage postpage = coursepage.post_page_List.get(coursepage.post_page_List.size() - 1);
+        postpage.comments.get(replyToId).replies.add(comment);
+        this.commentableUser.addCourseComments(courseCode);
+        this.commentableUser.getCourseComments(courseCode).add(comment);
     }
 
 }

@@ -4,33 +4,48 @@ import AddCourse.AllCourses;
 import AddCourse.CoursePage;
 import AddCourse.PostPage;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Professor extends CommentableUser{
 
-    private ArrayList<CoursePage> taught_courses;
-    private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
+    private ArrayList<CoursePage> taughtCourses;
+    private HashMap<String, ArrayList<Comment>> comments;
 
 
-    Professor(String identifier, String user_name, String password) {
-        super(identifier, user_name, password);
-        HashMap<String, ArrayList<Comment>> comments= new HashMap<>();
-        ArrayList<CoursePage> taught_courses = new ArrayList<>();
+    Professor(String identifier, String userName, String password) {
+        super(identifier, userName, password);
+        this.comments = new HashMap<>();
+        this.taughtCourses = new ArrayList<>();
     }
 
-    public void enroll_course(String course_code) {
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        taught_courses.add(coursepage);
+    public String deleteComment(int commentId, String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
+        if (!coursepage.professor_list.contains(this)) {
+            return "You are not professor of this course";
+        } else {
+            int index = coursepage.post_page_List.size();
+            PostPage postpage = coursepage.post_page_List.get(index - 1);
+            if (commentId > postpage.current_id) {
+                return "Wrong id";
+            } else {
+                postpage.comments.get(commentId).status = false;
+                return "Deleted successfully";
+            }
+        }
+    }
+
+    public void enrollCourse(String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
+        taughtCourses.add(coursepage);
         coursepage.professor_list.add(this);
         ArrayList<Comment> comment = new ArrayList<>();
-        comments.put(course_code, comment);
+        comments.put(courseCode, comment);
     }
 
-    public void delete_course(String course_code) {
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        taught_courses.remove(coursepage);
+    public void deleteCourse(String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
+        taughtCourses.remove(coursepage);
         coursepage.professor_list.remove(this);
 
     }

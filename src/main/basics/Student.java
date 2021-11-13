@@ -5,35 +5,44 @@ import AddCourse.AllCourses;
 import AddCourse.CoursePage;
 import AddCourse.PostPage;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.time.LocalDate;
 import java.util.HashMap;
 
 public class Student extends CommentableUser{
-    private ArrayList<String> student_course;
+    private ArrayList<String> studentCourse;
     private String password;
-    private HashMap<String, ArrayList<Comment>> student_comments = new HashMap<>();
+    private HashMap<String, ArrayList<Comment>> studentComments;
 
-    // Do we need to restate the instance attribute for student?
     public Student(String student_name, String identifier, String password) {
         super(student_name, identifier, password);
         this.password = password;
-        HashMap<String, ArrayList<Comment>> student_comments= new HashMap<>();
-        ArrayList<String> student_course = new ArrayList<>();
+        this.studentComments= new HashMap<>();
+        this.studentCourse = new ArrayList<>();
     }
 
-    public void enroll_course(String course_code) {
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        student_course.add(course_code);
+    public String deleteComment(int commentId, String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
+        PostPage postPage = coursepage.post_page_List.get(coursepage.post_page_List.size() - 1);
+        Comment comment = postPage.comments.get(commentId);
+        if (comment.user_name.equals(user_name)) {
+            comment.status = false;
+            return "Deleted successfully";
+        } else {
+            return "You can not delete this comment";
+        }
+    }
+
+    public void enrollCourse(String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
+        studentCourse.add(courseCode);
         coursepage.student_list.add(this);
         ArrayList<Comment> comments = new ArrayList<>();
-        student_comments.put(course_code, comments);
+        studentComments.put(courseCode, comments);
     }
 
-    public void delete_course(String course_code) {
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        student_course.remove(coursepage);
+    public void deleteCourse(String courseCode) {
+        CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
+        studentCourse.remove(coursepage);
         coursepage.student_list.remove(this);
 
     }
@@ -44,7 +53,7 @@ public class Student extends CommentableUser{
     }
     @Override
     public void user_comment(String course) {
-        for(Comment comment: this.student_comments.get(course)) {
+        for(Comment comment: this.studentComments.get(course)) {
             comment.Print_Comment(0);
         }
     }
