@@ -1,8 +1,8 @@
 package basics;
 import java.io.*;
-
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -12,27 +12,28 @@ public class register_new {
     public static String file_path = "data_base.csv";
     static int ID = 0;
 
-    public static void register_ui() {
+    public static void register_ui(){
         ID = ID + 1;
         ArrayList<ArrayList<String>> current_list = csv_to_list();
         System.out.println("Please enter your new user name. or enter 'quit' to go back to main menu.");
         Scanner scan = new Scanner(System.in);
         String username = scan.nextLine();
-        if (username.equals("quit")) {
+        if(username.equals("quit")){
             //quit to main menu
             commandUI_new.register_signin_ui();
         }
         // Now we want to check whether this username already exists or not.
         ArrayList<String> user_name_list = new ArrayList<>();
-        for (ArrayList<String> item : current_list) {
+        for(ArrayList<String> item: current_list){
             user_name_list.add(item.get(1));
         }
 
-        if (user_name_list.contains(username)) {
+        if (user_name_list.contains(username)){
             System.out.println("This user name already exist. Please sign in or change another username.");
             System.out.println("================================================================================================================================");
             register_ui();
-        } else {
+        }
+        else{
             //Valid username. Now ask for password.
             System.out.println("Please enter password.");
             String password1 = scan.nextLine();
@@ -47,11 +48,10 @@ public class register_new {
                     switch (type) {
                         case "1":
                         case "student": {
-                            int randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
-
+                            long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
-                            register_user(Integer.toString(randomID), username, password1, "student", "false");
+                            register_user("1", username, password1, "student", "true");
                             System.out.println("You have successfully sign up as student \"" + username + "\"");
                             commandUI_new.register_signin_ui();
                             break;
@@ -59,10 +59,10 @@ public class register_new {
 
                         case "2":
                         case "professor": {
-                            int randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
+                            long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
-                            register_user(Integer.toString(randomID), username, password1, "professor", "false");
+                            register_user("12", username, password1, "professor", "true");
                             System.out.println("You have successfully sign up as professor \"" + username + "\"");
                             commandUI_new.register_signin_ui();
                             break;
@@ -70,10 +70,10 @@ public class register_new {
                         }
                         case "3":
                         case "faculty": {
-                            int randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
+                            long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
-                            register_user(Integer.toString(randomID), username, password1, "Faculty", "false");
+                            register_user("123", username, password1, "Faculty", "true");
                             System.out.println("You have successfully sign up as faculty \"" + username + "\"");
                             commandUI_new.register_signin_ui();
                             break;
@@ -85,7 +85,10 @@ public class register_new {
                         }
                     }
                 }
-            } else {
+            }
+
+
+            else{
                 System.out.println("You have entered different password. Request denied.");
                 System.out.println("================================================================================================================================");
                 register_new.register_ui();
@@ -93,23 +96,21 @@ public class register_new {
         }
 
     }
-
-    public static ArrayList<String> str_to_arraylist(String string, String split_by) {
+    public static ArrayList<String> str_to_arraylist(String string, String split_by){
         ArrayList<String> result = new ArrayList<>();
-        for (String item : string.split(",")) {
+        for (String item : string.split(",")){
             result.add(item);
         }
         return result;
     }
-
-    public static ArrayList<ArrayList<String>> csv_to_list() {
+    public static ArrayList<ArrayList<String>> csv_to_list(){
         //Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
         String line = "";
         ArrayList<ArrayList<String>> result = new ArrayList<>();
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file_path));
-            while ((line = br.readLine()) != null) {
+            while((line = br.readLine()) != null){
                 result.add(str_to_arraylist(line, ","));
                 //result.add(Collections.singletonList(line));
 
@@ -120,7 +121,7 @@ public class register_new {
         return result;
     }
 
-    public static void list_to_csv(ArrayList<ArrayList<String>> list) {
+    public static void list_to_csv(List<List<String>> list) {
         /*
         This function will renew the database file by that List<List<String>>.
          */
@@ -128,18 +129,13 @@ public class register_new {
         int i = 0;
         if (list == null || list.size() == 0) {
             System.out.println("This list is empty or null.");
-        }
-        else {
-            while (i < list.size()) {
+        } else {
+            while (list.get(i) != null) {
                 register_user(list.get(i).get(0), list.get(i).get(1), list.get(i).get(2), list.get(i).get(3), list.get(i).get(4));
                 i += 1;
             }
         }
-
-
-
     }
-
 
     public static void register_user(String id, String user_name, String password, String type, String status){
 
@@ -150,6 +146,7 @@ public class register_new {
             pw.println(String.valueOf(id) + ',' + user_name + ',' + password + ',' + String.valueOf(type) + ',' + status);
             pw.flush();
             pw.close();
+            System.out.println("registered successfully!");
 
         }
         catch (Exception E)
@@ -160,3 +157,4 @@ public class register_new {
 
 
 }
+
