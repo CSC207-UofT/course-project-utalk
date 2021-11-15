@@ -1,7 +1,6 @@
 package basics;
 import AddCourse.AllCourses;
 import AddCourse.PostPage;
-
 import java.util.ArrayList;import java.time.LocalDate;
 public class Comment {
     boolean status;
