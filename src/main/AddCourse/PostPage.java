@@ -20,7 +20,6 @@ public class PostPage {
         posts = new ArrayList<>();
         semester = semester_1;
         current_id = 0;
-
     }
 
     void Print_comments() {

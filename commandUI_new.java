@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class commandUI_new {
-    public static register_new register_new = new register_new();
     public static void main(String[] args) {
         //This is the header of the program.
         System.out.println("\n================================================================================================================================\nWelcome to U talk!\n\n");
@@ -20,31 +19,29 @@ public class commandUI_new {
     public static void register_signin_ui() {
         //this is command UI function for register and sign in.
         System.out.println("================================================================================================================================");
-
-        System.out.println("What would you like to do next? \n 1: register \n 2: login \n  9: quit program. \n10: administrator privileges");
+        System.out.println("What would you like to do next? \n 1: register \n 2: log in \n 3: log out\n 9: quit program. \n10: administrator privileges");
         Scanner scan = new Scanner(System.in);
         String enter = scan.nextLine();
         switch (enter) {
             case "1" -> {
                 System.out.println("Please follow the orders to register");
                 register_new.register_ui();
+                System.out.println("registered successfully");
 
             }
             case "2" -> {
                 System.out.println("PLease follow the orders to log in.");
                 log_in_new.log_in();
-                //insert other func
+            }
+            case "3" -> {
+                System.out.println("Please follow the orders to log out.");
+                log_out_new.log_out_ui();
             }
             case "9" -> {
                 System.out.println("Are you sure you wish to quit? PLease type in 'yes' to quit.");
                 Scanner c = new Scanner(System.in);
                 String word = c.nextLine();
                 if (word.equals("yes")) {
-                    ArrayList<ArrayList<String>> new_lst = register_new.csv_to_list();
-                    //for (ArrayList<String> user : new_lst){
-                      //  if user[]
-                    //}
-
                     System.out.println("Quit program successfully");
                     System.exit(0);
                 } else {
@@ -85,11 +82,13 @@ public class commandUI_new {
                                     delete_user_new.delete_all_user();
                                     System.out.println("As you wish.");
                                     System.out.println("Database deleted.");
+                                    System.out.println("\n================================================================================================================================");
+                                    System.out.println("What would you like to do next?");
                                 } else {
                                     System.out.println("You did not delete the database");
+                                    System.out.println("\n================================================================================================================================");
+                                    System.out.println("What would you like to do next?");
                                 }
-                                System.out.println("\n================================================================================================================================");
-                                System.out.println("What would you like to do next?");
                             }
                             case "10" -> {
                                 System.out.println("\n================================================================================================================================");
