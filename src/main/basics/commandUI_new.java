@@ -20,7 +20,8 @@ public class commandUI_new {
     public static void register_signin_ui() {
         //this is command UI function for register and sign in.
         System.out.println("================================================================================================================================");
-        System.out.println("What would you like to do next? \n 1: register \n 2: login \n 9: quit program. \n10: administrator privileges");
+
+        System.out.println("What would you like to do next? \n 1: register \n 2: login \n  9: quit program. \n10: administrator privileges");
         Scanner scan = new Scanner(System.in);
         String enter = scan.nextLine();
         switch (enter) {

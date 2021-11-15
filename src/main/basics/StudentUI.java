@@ -1,5 +1,7 @@
 package basics;
 
+
+import AddCourse.CoursePage;
 import AddCourse.CreateandUpdate;
 import AddCourse.GetCourseUI;
 import AddCourse.GetInputIn;
@@ -49,7 +51,9 @@ public class StudentUI {
         } else if (Objects.equals(input_str, "2")) {
             ((Student) Status.user).delete_course(course_code);
         } else if (Objects.equals(input_str, "3")){
-            // place holder for wang's part
+            System.out.println("Please enter your the course code to see your comments");
+            String coursecode = input_help.getinput(System.in).nextLine();
+            Status.user.user_comment(coursecode);
         } else if (Objects.equals(input_str, "4")){
             String[] args = load_comment();
             if (args[1] == "None") {
