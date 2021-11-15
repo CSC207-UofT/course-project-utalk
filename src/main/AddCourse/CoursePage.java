@@ -37,7 +37,8 @@ public class CoursePage {
         System.out.println(this.info_added);
     }
     public void comment_presenter() {
-        System.out.println("");
-
+        for(PostPage page: this.post_page_List){
+            page.Print_comments();
+        }
     }
 }
