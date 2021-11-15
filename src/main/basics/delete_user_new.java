@@ -15,7 +15,6 @@ public class delete_user_new {
 
     }
 
-
     static Scanner scanner;
 
     public static void remove_record(String remove_user_name) {
