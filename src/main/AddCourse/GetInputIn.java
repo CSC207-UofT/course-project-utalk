@@ -1,7 +1,5 @@
 package AddCourse;
 
-import basics.Inputinterface;
-
 import java.io.InputStream;
 import java.util.Scanner;
 

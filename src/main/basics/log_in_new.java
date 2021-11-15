@@ -11,6 +11,7 @@ import java.util.Scanner;
 
 public class log_in_new {
     static String file_path = "data_base.csv";
+    public static register_new register_new = new register_new();
 
 
     public static void log_in(){
@@ -31,14 +32,6 @@ public class log_in_new {
                     //we have found this user.
                     if (user.get(2).equals(password)){
                         //password correct. change status.
-                        ArrayList<ArrayList<String>> current_list = register_new.csv_to_list();
-                        for (int i = 0; i<current_list.size(); i += 1){
-                            if (current_list.get(i).get(1).equals(user.get(1))){
-                                //found this person.
-                                current_list.get(i).set(4, "true");
-                            }
-                        }
-                        register_new.list_to_csv(current_list);
                         System.out.println("Log in successfully");
                         Status.read_status();
                     }
@@ -56,20 +49,8 @@ public class log_in_new {
                         }
                         else if(password2.equals(user.get(2))){
                             // password correct at last.
-                            ArrayList<ArrayList<String>> current_list = register_new.csv_to_list();
-                            for (int i = 0; i<current_list.size(); i += 1){
-                                if (current_list.get(i).get(1).equals(user.get(1))){
-                                    //found this person.
-                                    current_list.get(i).set(4, "true");
-                                }
-                            }
-                            //save this list to current file
-                            register_new.list_to_csv(current_list);
-
                             System.out.println("Log in successfully");
                             Status.read_status();
-
-                            GetCourseUI.get_method();
 
                         }
 
