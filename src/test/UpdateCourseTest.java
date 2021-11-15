@@ -4,7 +4,7 @@ import AddCourse.Faculty;
 import AddCourse.GetCourseUI;
 import basics.Status;
 
-public class EditCourseTest {
+public class UpdateCourseTest {
     public static void main(String[] args) {
         Status.user = new Faculty("1", "faculty1", "1");
 

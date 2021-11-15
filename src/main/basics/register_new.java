@@ -2,6 +2,7 @@ package basics;
 import java.io.*;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -47,40 +48,33 @@ public class register_new implements InvertStatus{
                     Scanner sc = new Scanner(System.in);
                     String type = sc.nextLine();
                     switch (type) {
-                        case "1":
-                        case "student": {
+                        case "1", "student" -> {
                             long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
                             register_user("1", username, password1, "Student", "true");
                             System.out.println("You have successfully sign up as student \"" + username + "\"");
                             commandUI_new.register_signin_ui();
-                            break;
                         }
-
-                        case "2":
-                        case "professor": {
+                        case "2", "professor" -> {
                             long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
                             register_user("12", username, password1, "Professor", "true");
                             System.out.println("You have successfully sign up as professor \"" + username + "\"");
                             commandUI_new.register_signin_ui();
-                            break;
 
                         }
-                        case "3":
-                        case "faculty": {
+                        case "3", "faculty" -> {
                             long randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
                             register_user("123", username, password1, "Faculty", "true");
                             System.out.println("You have successfully sign up as faculty \"" + username + "\"");
                             commandUI_new.register_signin_ui();
-                            break;
 
                         }
-                        default: {
+                        default -> {
                             System.out.println("this is not a valid input. please re-enter.");
                             System.out.println("\n================================================================================================================================");
                         }
@@ -92,23 +86,21 @@ public class register_new implements InvertStatus{
             else{
                 System.out.println("You have entered different password. Request denied.");
                 System.out.println("================================================================================================================================");
-                register_new.register_ui();
+                register_ui();
             }
         }
 
     }
     public static ArrayList<String> str_to_arraylist(String string, String split_by){
         ArrayList<String> result = new ArrayList<>();
-        for (String item : string.split(",")){
-            result.add(item);
-        }
+        Collections.addAll(result, string.split(","));
         return result;
     }
 
     @Override
     public ArrayList<ArrayList<String>> csv_to_list(){
         //Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
-        String line = "";
+        String line;
         ArrayList<ArrayList<String>> result = new ArrayList<>();
 
         try {
@@ -124,7 +116,7 @@ public class register_new implements InvertStatus{
         return result;
     }
 
-    public static void list_to_csv(List<List<String>> list) {
+    public static void list_to_csv(ArrayList<ArrayList<String>> list) {
         /*
         This function will renew the database file by that List<List<String>>.
          */
@@ -146,7 +138,7 @@ public class register_new implements InvertStatus{
             FileWriter fw = new FileWriter(file_path, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            pw.println(String.valueOf(id) + ',' + user_name + ',' + password + ',' + String.valueOf(type) + ',' + status);
+            pw.println(id + ',' + user_name + ',' + password + ',' + type + ',' + status);
             pw.flush();
             pw.close();
             System.out.println("registered successfully!");

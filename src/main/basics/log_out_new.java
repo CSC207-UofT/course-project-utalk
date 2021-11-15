@@ -10,8 +10,8 @@ public class log_out_new {
         if (current_list.size() == 0){
             return false;
         }
-        for (int i = 0; i < current_list.size(); i += 1){
-            if (current_list.get(i).get(1).equals(username)){
+        for (ArrayList<String> strings : current_list) {
+            if (strings.get(1).equals(username)) {
                 //found this user.
                 return true;
             }
@@ -23,15 +23,16 @@ public class log_out_new {
 
 
     public static void log_out_user(String username){
-        ArrayList<ArrayList<String>> current_list = register_new.csv_to_list();
+        register_new registerNew = new register_new();
+        ArrayList<ArrayList<String>> current_list = registerNew.csv_to_list();
         if (! contains_user(current_list, username)){
             System.out.println("There is no such user. Please re-check your username or sign up first.");
             commandUI_new.register_signin_ui();
         }
-        for (int i = 0; i < current_list.size(); i += 1){
-            if (current_list.get(i).get(1).equals(username)){
+        for (ArrayList<String> strings : current_list) {
+            if (strings.get(1).equals(username)) {
                 //we located this user.
-                current_list.get(i).set(4, "false");
+                strings.set(4, "false");
             }
         }
         register_new.list_to_csv(current_list);
@@ -40,7 +41,8 @@ public class log_out_new {
 
 
     public static void log_out_ui(){
-        ArrayList<ArrayList<String>> current_list = register_new.csv_to_list();
+        register_new registerNew = new register_new();
+        ArrayList<ArrayList<String>> current_list = registerNew.csv_to_list();
         System.out.println("please type in your username");
         Scanner sc = new Scanner(System.in);
         String current_username = sc.nextLine();

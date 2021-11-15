@@ -30,9 +30,12 @@ public class CoursePage {
         System.out.println("======================================================================\n");
         System.out.println("Professor(s): \n");
         for (Professor prof: this.professor_list) {
-            System.out.println(prof.user_name() + ", ");
+            System.out.println(prof.getUserName() + ", ");
         }
-        System.out.println("\n" + "Course Information:" + "\n");
+        System.out.println("""
+
+                Course Information:
+                """);
         System.out.println(info_map.get("description") + "\n");
         System.out.println(this.info_added);
     }
