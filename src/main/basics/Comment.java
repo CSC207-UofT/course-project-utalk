@@ -1,21 +1,23 @@
 package basics;
 import AddCourse.AllCourses;
 import AddCourse.PostPage;
+import java.util.Date;
+
 import java.util.ArrayList;import java.time.LocalDate;
 public class Comment {
     boolean status;
     int id;
     String user_name;
     String content;
-    LocalDate time;
+    Date time;
     String course_code;
     ArrayList<Comment> replies;
 
-    Comment(String user_name, String content, LocalDate time, String course_code) {
+    Comment(String user_name, String content, String course_code) {
 
         this.user_name = user_name;
         this.content = content;
-        this.time = time;
+        this.time = java.util.Calendar.getInstance().getTime();
         PostPage postpage = AllCourses.coursePageHashMap.get(course_code).post_page_List.get(-1);
         postpage.current_id += 1;
         this.id = postpage.current_id;
@@ -25,15 +27,14 @@ public class Comment {
 
     public void Print_Comment(int indentation){
         if (status) {
-            System.out.println(" ".repeat(indentation) + content+ "/n" );
+            System.out.println(" ".repeat(indentation)  + this.user_name + "posted:" + "\n");
+            System.out.println(" ".repeat(indentation + 1) + this.id + content+ "\n" );
         }
         if (! replies.isEmpty()){
             for( Comment comment : replies){
-                comment.Print_Comment(indentation + 1);
+                System.out.println(" ".repeat(indentation + 2)  + this.user_name +  "replied:" + "\n");
+                comment.Print_Comment(indentation + 3);
             }
-
-
-
         }
     }
 }
