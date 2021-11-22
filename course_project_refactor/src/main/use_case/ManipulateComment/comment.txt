@@ -1,0 +1,2 @@
+Please put all the methods related to comments here.
+Use the template design pattern if applicable.
