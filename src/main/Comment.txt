@@ -1,0 +1,11 @@
+Comment 1:
+Currently, we use the recursive tree for comment storage.
+Nonethelss, it's not so efficient as our layer might be huge and we didn't support multi-replies to the same post. 
+Based on 263 data structure, I will consider revise it. 
+
+Comment 2: 
+I have revise the problem in Phase 1 that presenter class implemented in enities. 
+I will cooperate with Kuang to add more test cases
+
+Comment 3:
+As commentable user is a good staregty to implement funuctions for professor and students
