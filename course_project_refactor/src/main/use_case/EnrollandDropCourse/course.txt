@@ -1,1 +1,0 @@
-Please put all the methods related to enroll and drop course here.
