@@ -20,10 +20,9 @@ public class FacultyUI {
         return new String[]{code, info, year};
     }
     public static void get_method(){
-        System.out.println("""
-            Choose which operation you want to make:\s
-             1: add course 2: update course\s
-             Please enter 1 or 2, enter quit to return to the main menu""");
+        System.out.println(" Choose which operation you want to make:\n " +
+                "1: add course 2: update course Please enter 1 or 2, \n" +
+                "enter quit to return to the main menu");
         String input_str = input_help.getinput(System.in).nextLine();
         if (input_str.equals("quit")){
             // TODO: revise it after general UI has been revised
