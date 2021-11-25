@@ -1,5 +1,5 @@
 package interface_adaptor.Presenter;
-
+/*
 import entity.PostPage;
 import entity.Comment;
 import entity.Professor;
@@ -23,3 +23,4 @@ public class Printer {
         }
     }
 }
+*/

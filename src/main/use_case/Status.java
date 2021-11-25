@@ -1,5 +1,5 @@
 package use_case;
-
+/*
 import entity.Faculty;
 import entity.Professor;
 import entity.Student;
@@ -18,8 +18,7 @@ public class Status {
     public static User user;
     public static ReadIn invert;
     public static GetMethod read_status() {
-        /* precondition: there is one person logged and exactly one "true" in the status column
-         */
+
         // TODO: fix this based on the new csv_to_list
         // TODO: explain why we do not throw exceptions
         invert = new ReadCsv();
@@ -41,3 +40,4 @@ public class Status {
         }
     return null;}
 }
+*/

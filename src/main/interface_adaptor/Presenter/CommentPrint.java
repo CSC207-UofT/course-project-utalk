@@ -1,5 +1,5 @@
 package interface_adaptor.Presenter;
-
+/*
 import entity.Comment;
 
 public class CommentPrint {
@@ -18,3 +18,4 @@ public class CommentPrint {
     }
 
 }
+*/
