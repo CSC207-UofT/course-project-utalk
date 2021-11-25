@@ -5,15 +5,27 @@ import java.util.HashMap;
 
 public class Professor extends User {
 
-    private ArrayList<String> taught_courses;
+
+    private ArrayList<String> taughtCourses;
     private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
 
 
-    public Professor(String identifier, String user_name, String password) {
-        super(identifier, user_name, password);
+    public Professor(String identifier, String userName, String password) {
+        super(identifier, userName, password);
         HashMap<String, ArrayList<Comment>> comments= new HashMap<>();
-        ArrayList<String> taught_courses = new ArrayList<>();
+        ArrayList<String> taughtCourses = new ArrayList<>();
     }
-    // getter, setter here
+    // Getter
+    public ArrayList<String> getTaughtCourses() {
+        return taughtCourses;
+    }
+    public HashMap<String, ArrayList<Comment>> getComments() {
+        return comments;
+    }
+
+    // Setter
+    public void setTaughtCourses(ArrayList<String> teachCourse) {
+        this.taughtCourses = teachCourse;
+    }
 
 }

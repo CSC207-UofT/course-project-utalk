@@ -22,7 +22,7 @@ public class Course {
         course_start_year = year;
     }
 
-    public Map<String, Object> course_info(){
+    public Map<String, Object> course_info_getter(){
         // this function transfer data to presenter
         Map<String, Object> mp = new HashMap<>(){};
         mp.put("code", this.course_code);
