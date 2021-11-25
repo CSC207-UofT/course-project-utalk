@@ -1,4 +1,5 @@
 package interface_adaptor.Presenter;
+/*
 import use_case.JavaStorage.AllCourses;
 import entity.CoursePage;
 import entity.Professor;
@@ -21,3 +22,4 @@ public class CoursePagePresenter {
         System.out.println(cour.info_added);
     }
 }
+*/
