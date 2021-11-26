@@ -1,9 +1,11 @@
 package interface_adaptor.Presenter;
-/*
+
 import entity.PostPage;
+
 import entity.Comment;
 import entity.Professor;
 import entity.Student;
+
 
 public class Printer {
     private final CommentPrint printer = new CommentPrint();
@@ -18,9 +20,8 @@ public class Printer {
         }
     }
     public void UserCommentPresenter(String course, Student student) {
-        for(Comment comment: student.student_comments.get(course)) {
+        for(Comment comment: student.getCourseComments(course)) {
             printer.CommentPrinter(comment, 0);
         }
     }
 }
-*/
