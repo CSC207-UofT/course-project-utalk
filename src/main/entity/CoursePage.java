@@ -1,5 +1,7 @@
 package entity;
 
+import entity.Course;
+
 import java.util.ArrayList;
 
 public class CoursePage {
@@ -17,5 +19,36 @@ public class CoursePage {
         ArrayList<PostPage> post_lst = new ArrayList<>();
         post_lst.add(new PostPage(course.course_start_year));
         this.post_page_List = post_lst;
+    }
+
+    public ArrayList<String> studentList() {
+        ArrayList<String> std_lst = new ArrayList<>();
+        for (Student std: student_list) {
+            std_lst.add(std.getUserName());
+        }
+        return std_lst;
+    }
+    public ArrayList<String> professorList() {
+        ArrayList<String> prof_lst = new ArrayList<>();
+        for (Professor professor: professor_list) {
+            prof_lst.add(professor.getUserName());
+        }
+        return prof_lst;
+    }
+
+    public Boolean isProfessor(String userName){
+        ArrayList<String> prof_lst = this.professorList();
+        return prof_lst.contains(userName);
+    }
+    public Boolean isStudent(String userName){
+        ArrayList<String> std_lst = this.studentList();
+        return std_lst.contains(userName);
+    }
+
+    public PostPage getPostPage(int id) {
+        return post_page_List.get(id);
+    }
+    public int getLength(){
+        return post_page_List.size();
     }
 }

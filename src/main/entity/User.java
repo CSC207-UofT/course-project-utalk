@@ -10,8 +10,5 @@ public abstract class User {
         this.user_name = user_name;
         this.password = password;
     }
-    public String getUserName(){
-        return this.user_name;
-    }
-
+    public abstract String getUserName();
 }

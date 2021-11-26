@@ -1,17 +1,73 @@
 package entity;
 
-import java.util.HashSet;
 
 public class Comment {
-    public HashSet<Comment> replies;
-    public String user_name;
-    public boolean status;
-    public String content;
-    public Integer id;
+    private final String id;
+    private final String author;
+    private String comment;
+    private HashMap<Integer, Comment> replies;
+    private int replyID;
+    private boolean status;
 
-    public void Print_Comment(int i) {
+    Comment(String username, String comment) {
+        this.author = username;
+        this.comment = comment;
+        this.id = UUID.randomUUID().toString();
+        this.replies = new HashMap<>();
+        this.replyID = 1;
+        this.status = false;
     }
-    // in our previous implementation comment is recursively implemented, I suggest to use tree data structure to
-    // implement, maybe AVL tree is better, but it's still a binary tree data structure.
 
+    public String getComment() {
+        return this.comment;
+    }
+
+    public void editComment(String edit) {
+        this.comment = edit;
+    }
+
+    /** Add comment c into replies, increase replyID by 1.
+     * @param c the comment that will be added to replies
+     */
+    public void addReply(Comment c) {
+        this.replies.put(this.replyID, c);
+        this.replyID += 1;
+    }
+
+    public boolean hasReply(int index) {
+        return this.replies.containsKey(index);
+    }
+
+    public Comment getReply(int index) {
+        if (hasReply(index)) {
+            return this.replies.get(index);
+        }
+        return null;
+    }
+
+
+    public String getId() {
+        return this.id;
+    }
+
+    public String getAuthor() {
+        return this.author;
+    }
+
+    public Boolean getStatus() {
+        return this.status;
+    }
+
+    public void changeStatus() {
+        status = !status;
+    }
+
+    public boolean existReply() {
+        return this.replyID != 1;
+    }
+
+    public int getReplyID() {
+        return this.replyID;
+    }
 }
+

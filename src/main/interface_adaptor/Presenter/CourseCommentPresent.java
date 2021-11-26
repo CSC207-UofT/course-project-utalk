@@ -1,7 +1,9 @@
 package interface_adaptor.Presenter;
-import use_case.JavaStorage.AllCourses;
+
 import entity.CoursePage;
 import entity.PostPage;
+import use_case.JavaStorage.AllCourses;
+
 
 import java.util.ArrayList;
 
