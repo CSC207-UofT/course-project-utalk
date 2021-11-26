@@ -1,7 +1,5 @@
 package entity;
 
-import java.util.HashMap;
-import java.util.UUID;
 
 public class Comment {
     private final String id;
@@ -46,6 +44,7 @@ public class Comment {
         }
         return null;
     }
+
 
     public String getId() {
         return this.id;

@@ -1,4 +1,5 @@
 package interface_adaptor.Presenter;
+
 import entity.CoursePage;
 import entity.PostPage;
 import use_case.JavaStorage.AllCourses;
