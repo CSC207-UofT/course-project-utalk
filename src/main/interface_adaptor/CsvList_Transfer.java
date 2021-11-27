@@ -23,7 +23,7 @@ public class CsvList_Transfer {
         //This is helper method.
         //This function transfer from str to arraylist.
         ArrayList<String> result = new ArrayList<>();
-        for (String item : string.split(",")) {
+        for (String item : string.split(split_by)) {
             result.add(item);
         }
         return result;
