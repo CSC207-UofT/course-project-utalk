@@ -18,9 +18,19 @@ public class Student extends CommentableUser{
     }
 
 
+
+    @Override
+    public ArrayList<Comment> getCourseComments(String course) {
+        return studentComments.get(course);
+    }
+
     @Override
     public String getUserName() {
         return this.user_name;
+    }
+
+    public ArrayList<String> getstudentCourses() {
+        return studentCourse;
     }
 
     public HashMap<String, ArrayList<Comment>> getStudentComments() {
