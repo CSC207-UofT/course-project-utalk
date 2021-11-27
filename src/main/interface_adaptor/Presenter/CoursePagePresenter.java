@@ -6,8 +6,13 @@ import use_case.JavaStorage.AllCourses;
 
 import java.util.Map;
 
+/**
+ * Present the CoursePage
+ */
 public class CoursePagePresenter {
-    // properly present the course page, the main method takes the string of course as input
+    /** Present coursePage including course information and comments.
+     * @param course The name of course we want to present
+     */
     public void CoursePresenter(String course) {
         CoursePage cour = AllCourses.coursePageHashMap.get(course);
         Map<String, Object> info_map = cour.course.courseInfoGetter();
@@ -23,5 +28,7 @@ public class CoursePagePresenter {
                 """);
         System.out.println(info_map.get("description") + "\n");
         System.out.println(cour.info_added);
+        CommentPrint commentPrint = new CommentPrint();
+        commentPrint.PagePrinter(cour.getPostPage(-1));
     }
 }
