@@ -9,6 +9,12 @@ import entity.Student;
 public class Dropcourses {
 
 
+    /**
+     * Remove the course from your course list, If it does not exist it will return warning
+     *
+     * @param course_name the course you want to remove from your course list
+     * @param professor the name of the current user
+     */
     public void drop_course(String course_name, Professor professor)
     {
 
@@ -23,6 +29,12 @@ public class Dropcourses {
     }
 
 
+    /**
+     * Remove the course from your course list, If it does not exist it will return warning
+     *
+     * @param course_name the course you want to remove from your course list
+     * @param student the name of the current user
+     */
     public void drop_course(String course_name, Student student)
     {
 

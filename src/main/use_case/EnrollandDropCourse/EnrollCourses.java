@@ -7,6 +7,13 @@ import entity.User;
 import entity.Student;
 
 public class EnrollCourses {
+
+    /**
+     * Add the course to your course list, If it does not exist it will return warning
+     *
+     * @param course_name the course you want to add to your course list
+     * @param professor the name of the current user
+     */
     public void Teaching_course(String course_name, Professor professor)
     {
 
@@ -18,6 +25,12 @@ public class EnrollCourses {
         }
     }
 
+    /**
+     * Add the course to your course list, If it does not exist it will return warning
+     *
+     * @param course_name the course you want to add to your course list
+     * @param student the name of the current user
+     */
     public void enroll_course(String course_name, Student student)
     {
 
