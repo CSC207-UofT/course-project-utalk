@@ -1,5 +1,7 @@
 package entity;
 
+import java.util.HashMap;
+import java.util.UUID;
 
 public class Comment {
     private final String id;
@@ -15,7 +17,7 @@ public class Comment {
         this.id = UUID.randomUUID().toString();
         this.replies = new HashMap<>();
         this.replyID = 1;
-        this.status = false;
+        this.status = true;
     }
 
     public String getComment() {
@@ -44,7 +46,6 @@ public class Comment {
         }
         return null;
     }
-
 
     public String getId() {
         return this.id;

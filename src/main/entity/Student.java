@@ -6,7 +6,7 @@ import java.util.HashMap;
 public class Student extends CommentableUser{
     private ArrayList<String> studentCourse;
     private String password;
-    private HashMap<String, ArrayList<Comment>> studentComments = new HashMap<>();
+    private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
 
     public Student(String identifier, String user_name, String password) {
         super(identifier, user_name, password);
@@ -17,10 +17,6 @@ public class Student extends CommentableUser{
         return "Student";
     }
 
-    @Override
-    public ArrayList<Comment> getCourseComments(String course) {
-        return studentComments.get(course);
-    }
 
     @Override
     public String getUserName() {
@@ -28,11 +24,12 @@ public class Student extends CommentableUser{
     }
 
     public HashMap<String, ArrayList<Comment>> getStudentComments() {
-        return studentComments;
+        return comments;
     }
 
     public void setStudentComments(HashMap<String, ArrayList<Comment>> student_comments) {
-        this.studentComments = student_comments;
+        this.comments = student_comments;
     }
+
 
 }
