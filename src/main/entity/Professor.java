@@ -30,21 +30,17 @@ public class Professor extends CommentableUser {
         return comments;
     }
 
+    /**
+     * @return String "Professor" as an indicator of this class.
+     */
     @Override
     public String getClassString() {
         return "Professor";
     }
 
-    @Override
-    public ArrayList<Comment> getCourseComments(String course) {
-        return comments.get(course);
-    }
-
-    @Override
-    public String getUserName() {
-        return this.user_name;
-    }
-
+    /**
+     * @param teachCourse A list of course that professor taught
+     */
     // Setter
     public void setTaughtCourses(ArrayList<String> teachCourse) {
         this.taughtCourses = teachCourse;

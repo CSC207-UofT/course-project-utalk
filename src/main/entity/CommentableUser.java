@@ -1,7 +1,6 @@
 package entity;
 
 import use_case.JavaStorage.AllCourses;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -18,24 +17,36 @@ public abstract class CommentableUser extends User{
     }
 
     /**
-     * @param courseName
+     * @param courseName The name of course
      * @return true if user can add comment, otherwise return false.
      */
     public boolean canAddComment(String courseName){
         CoursePage cp = AllCourses.coursePageHashMap.get(courseName);
         String s = this.getClassString();
-        switch(s) {
-            case "Student":
-                return cp.isStudent(this.getUserName());
-            case "Professor":
-                return cp.isProfessor(this.getUserName());
-        }
-        return false;
+        return switch (s) {
+            case "Student" -> cp.isStudent(this.getUserName());
+            case "Professor" -> cp.isProfessor(this.getUserName());
+            default -> false;
+        };
     }
 
     public abstract String getClassString();
 
-    public abstract ArrayList<Comment> getCourseComments(String course);
+    /**
+     * @param course The course that contains comments
+     * @return CommentableUser's comments on that course.
+     */
+    public ArrayList<Comment> getCourseComments(String course) {
+        if (comments.containsKey(course)) {
+            return comments.get(course);
+        }
+        return null;
+    }
 
-    public abstract String getUserName();
+    /**
+     * @return The name of specific CommentableUser.
+     */
+    public String getUserName() {
+        return this.user_name;
+    }
 }
