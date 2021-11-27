@@ -7,13 +7,12 @@ import entity.Professor;
 import entity.Student;
 
 
+/**
+ * Printer class contains all print function for Student, Professor calss
+ */
 public class Printer {
     private final CommentPrint printer = new CommentPrint();
-    public void PostPagePrinter(PostPage postPage) {
-        for (Comment comment : postPage.posts) {
-            printer.CommentPrinter(comment, 0);
-        }
-    }
+
     public void ProfessorCommentPresenter(String course, Professor professor) {
         for(Comment comment: professor.getCourseComments(course)) {
             printer.CommentPrinter(comment, 0);
@@ -24,4 +23,5 @@ public class Printer {
             printer.CommentPrinter(comment, 0);
         }
     }
+    
 }

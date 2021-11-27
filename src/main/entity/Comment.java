@@ -17,7 +17,7 @@ public class Comment {
         this.id = UUID.randomUUID().toString();
         this.replies = new HashMap<>();
         this.replyID = 1;
-        this.status = false;
+        this.status = true;
     }
 
     public String getComment() {
