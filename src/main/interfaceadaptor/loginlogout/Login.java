@@ -1,10 +1,14 @@
-package usecase.loginlogout;
+package interfaceadaptor.loginlogout;
 
+import entity.Professor;
+import entity.Student;
 import entity.User;
 import interfaceadaptor.CsvListTransfer;
+import interfaceadaptor.CsvReader;
 import outerlayer.userinterface.MainUI;
 
 import java.util.ArrayList;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Login {
@@ -86,16 +90,17 @@ public class Login {
 
 
     }
-    public static User loggedinUser(){
+
+    public static User loggedinUser() {
         //This function will return the user who is currently logging in.
-        User current_user = new User("No need identifier anymore", Current_username, Current_password) {
-            @Override
-            public String getUserName() {
-                return null;
+        ArrayList<ArrayList<String>> infolist = CsvReader.readCsv(file_path);
+        for (ArrayList<String> user : infolist) {
+            if (Objects.equals(user.get(1), Current_username)) {
+                String user_type = user.get(3);
+                break;
             }
-        };
-        return current_user;
+        }
+        return null;
     }
-
-
 }
+

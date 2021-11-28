@@ -1,5 +1,6 @@
 package outerlayer.userinterface.registeruserinterface;
 
+import entity.Faculty;
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.MainUI;
 import usecase.UserRegister;

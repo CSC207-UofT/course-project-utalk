@@ -4,7 +4,7 @@ import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.logoutuserinterface.LogoutUI;
 import outerlayer.userinterface.registeruserinterface.RegisterUI;
 import usecase.deleteuser.UserDeleter;
-import usecase.loginlogout.Login;
+import interfaceadaptor.loginlogout.Login;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -43,6 +43,11 @@ public class MainUI {
             case "3" -> {
                 System.out.println("Please follow the orders to log out.");
                 LogoutUI.logOutUi();
+            }
+            case "4" -> {
+                System.out.println("Please make actions");
+
+
             }
             case "9" -> {
                 System.out.println("Are you sure you wish to quit? PLease type in 'yes' to quit.");

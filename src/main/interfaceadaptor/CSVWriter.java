@@ -1,4 +1,4 @@
-package interface_adaptor;
+package interfaceadaptor;
 
 import java.io.FileWriter;
 import java.io.IOException;

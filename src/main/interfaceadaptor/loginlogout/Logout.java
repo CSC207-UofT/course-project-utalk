@@ -1,4 +1,4 @@
-package usecase.loginlogout;
+package interfaceadaptor.loginlogout;
 
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.MainUI;

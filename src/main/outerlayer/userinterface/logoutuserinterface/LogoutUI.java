@@ -2,7 +2,7 @@ package outerlayer.userinterface.logoutuserinterface;
 
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.MainUI;
-import usecase.loginlogout.Logout;
+import interfaceadaptor.loginlogout.Logout;
 
 import java.util.ArrayList;
 import java.util.Scanner;
