@@ -4,7 +4,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
-public class RegisterUser {
+public class UserRegister {
     public static String file_path = "data_base.csv";
 
     public static void register_user(String id, String user_name, String password, String type, String status){

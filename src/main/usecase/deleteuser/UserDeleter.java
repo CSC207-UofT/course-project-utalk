@@ -3,7 +3,7 @@ package usecase.deleteuser;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class DeleteUser {
+public class UserDeleter {
     public static String file_path = "data_base.csv";
     public static void deleteAllUser() {
         //This function will delete all recorded users in user database.

@@ -8,7 +8,7 @@ import usecase.javastorage.AllCourses;
 /**
  * CommentPrint prints comment object reasonably
  */
-public class CommentPrint {
+public class CommentPrinter {
     /** Print the comment in a readable way
      * @param comments the comment that will be printed
      * @param indentation the number of indentation

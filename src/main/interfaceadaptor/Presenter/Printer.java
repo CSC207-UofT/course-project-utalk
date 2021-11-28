@@ -9,7 +9,7 @@ import entity.Student;
  * Printer class contains all print function for Student, Professor.
  */
 public class Printer {
-    private final CommentPrint printer = new CommentPrint();
+    private final CommentPrinter printer = new CommentPrinter();
 
     /** Print professor's comments on specific course
      * @param course the name of the course

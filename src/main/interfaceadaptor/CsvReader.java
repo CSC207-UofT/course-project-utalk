@@ -6,7 +6,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ReadCsv {
+public class CsvReader {
     public static ArrayList<String> strToArraylist(String string, String split_by) {
         //This is helper method.
         //This function transfer from str to arraylist.

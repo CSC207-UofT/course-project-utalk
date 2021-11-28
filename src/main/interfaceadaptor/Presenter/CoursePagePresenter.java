@@ -25,7 +25,7 @@ public class CoursePagePresenter {
         System.out.println("Course Information");
         System.out.println(info_map.get("description") + "\n");
         System.out.println(cour.info_added);
-        CommentPrint commentPrint = new CommentPrint();
+        CommentPrinter commentPrint = new CommentPrinter();
         commentPrint.pagePrinter(cour.getPostPage(-1));
     }
 }

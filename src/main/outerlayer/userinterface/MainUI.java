@@ -3,7 +3,7 @@ package outerlayer.userinterface;
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.logoutuserinterface.LogoutUI;
 import outerlayer.userinterface.registeruserinterface.RegisterUI;
-import usecase.deleteuser.DeleteUser;
+import usecase.deleteuser.UserDeleter;
 import usecase.loginlogout.Login;
 
 import java.util.ArrayList;
@@ -83,7 +83,7 @@ public class MainUI {
                                 Scanner scc = new Scanner(System.in);
                                 String result = scc.nextLine();
                                 if (result.equals("yes")) {
-                                    DeleteUser.deleteAllUser();
+                                    UserDeleter.deleteAllUser();
                                     System.out.println("As you wish.");
                                     System.out.println("Database deleted.");
                                     System.out.println("\n================================================================================================================================");

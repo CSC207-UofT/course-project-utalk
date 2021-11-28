@@ -1,15 +1,12 @@
 package outerlayer.userinterface.facultyuserinterface;
 
-import usecase.createupdate.CreateCourse;
-import usecase.createupdate.UpdateCourse;
-
 import java.util.Objects;
 
 public class FacultyUI {
     //TODO: put the relevant stuff here
     public FacultyUI() {
     }
-    static final GetInputIn input_help = new GetInputIn();
+    static final InputGetter input_help = new InputGetter();
 
     public static String[] loadData() {
         System.out.println("Please enter course code: \n");

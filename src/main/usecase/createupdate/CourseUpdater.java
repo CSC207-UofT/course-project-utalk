@@ -7,7 +7,7 @@ import entity.PostPage;
 import java.util.Map;
 import java.util.Objects;
 
-public class UpdateCourse {
+public class CourseUpdater {
     public void updateCourseInfo(String course_code, String course_info, String course_year) {
         Map<String, CoursePage> link_page = AllCourses.coursePageHashMap;
         if (link_page.containsKey(course_code)){
