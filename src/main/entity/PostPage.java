@@ -1,24 +1,40 @@
 package entity;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
+import java.util.HashSet;
 
+public class PostPage{
+    private HashMap<Integer, Comment> commentList;
+    private Integer commentID;
+    private final String semester;
+    private HashSet<String> students;
+    private HashSet<String> professors;
 
-public class PostPage {
-    public Map<Integer, Comment> comments;
-    public ArrayList<Comment> posts;
-
-
-    String semester;
-    public int current_id;
-
-    public PostPage(String semester_1) {
-        this.comments = new HashMap<>();
-        posts = new ArrayList<>();
-        semester = semester_1;
-        current_id = 0;
+    public PostPage(String semester) {
+        this.commentList = new HashMap<>();
+        this.semester = semester;
+        this.professors = new HashSet<>();
+        this.students = new HashSet<>();
+        this.commentID = 1;
     }
 
+    public String getSemester(){
+        return this.semester;
+    }
+
+    public void addComment(Comment c){
+        this.commentList.put(this.commentID, c);
+        this.commentID += 1;
+    }
+
+    public boolean isStudent(String username){
+        return this.students.contains(username);
+    }
+
+    public boolean isProfessor(String username){
+        return this.professors.contains(username);
+    }
+
+    public HashMap<Integer, Comment> getCommentList(){return this.commentList;}
     //TODO: add print comment here.
 }

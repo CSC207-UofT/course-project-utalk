@@ -1,21 +1,29 @@
 package entity;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class CoursePage {
-    public final Course course;
-    public String info_added;
-    public ArrayList<Professor> professor_list;
-    public ArrayList<Student> student_list;
-    public ArrayList<PostPage> post_page_List;
+    private final Course course;
+    private ArrayList<PostPage> postPageList;
+    private HashSet<String> students;
+    private HashSet<String> professors;
 
     public CoursePage(Course course) {
         this.course = course;
-        this.professor_list = new ArrayList<>();
-        this.student_list = new ArrayList<>();
-        this.info_added = "";
-        ArrayList<PostPage> post_lst = new ArrayList<>();
-        post_lst.add(new PostPage(course.course_start_year));
-        this.post_page_List = post_lst;
+        this.postPageList = new ArrayList<>();
+        this.professors = new HashSet<>();
+        this.students = new HashSet<>();
+    }
+        public PostPage getPostPage(int index){
+            return this.postPageList.get(index);
+        }
+
+        public int getLength(){
+            return this.postPageList.size();
+        }
+
+        public boolean isStudent(String username){
+        return this.students.contains(username);
     }
 
     public ArrayList<String> studentList() {
@@ -49,4 +57,11 @@ public class CoursePage {
     public int getLength(){
         return post_page_List.size();
     }
+
+        public boolean isProfessor(String username){
+        return this.professors.contains(username);
+    }
+
+        public Course getCourse(){return this.course;}
+
 }

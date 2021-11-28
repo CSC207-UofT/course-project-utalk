@@ -1,45 +1,33 @@
 package entity;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Student extends CommentableUser{
-    private ArrayList<String> studentCourse = new ArrayList<>();
-    private String password;
-    private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
+    private HashMap<String, String> enrolledcourses;
 
-    public Student(String identifier, String user_name, String password) {
-        super(identifier, user_name, password);
+    public Student(String username, String password){
+        super(username, password);
+        this.enrolledcourses = new HashMap<>();
+        //Key coursename, value semester
+    }
+    public HashMap<String, String> getEnrolledCourses() {
+        return enrolledcourses;
     }
 
     @Override
-    public String getClassString() {
-        return "Student";
-    }
-
-
-
-    @Override
-    public ArrayList<Comment> getCourseComments(String course) {
-        return getStudentComments().get(course);
+    public boolean canAddComment(String courseName, String semester) {
+        boolean b1 = this.enrolledcourses.containsKey(courseName);
+        boolean b2 = this.enrolledcourses.get(courseName).equals(semester);
+        return b1 && b2;
     }
 
     @Override
-    public String getUserName() {
-        return this.user_name;
+    public boolean canDeleteComment(String courseName, String semester, Comment comment) {
+        if (canAddComment(courseName, semester)){
+            return true;
+        }
+        String s = courseName + " " + semester;
+        return this.getComments().get(s).contains(comment);
+
     }
-
-    public ArrayList<String> getStudentCourses() {
-        return studentCourse;
-    }
-
-    public HashMap<String, ArrayList<Comment>> getStudentComments() {
-        return comments;
-    }
-
-    public void setStudentComments(HashMap<String, ArrayList<Comment>> student_comments) {
-        this.comments = student_comments;
-    }
-
-
 }
