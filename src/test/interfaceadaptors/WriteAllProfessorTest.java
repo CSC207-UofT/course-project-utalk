@@ -1,22 +1,24 @@
+
+
 package interfaceadaptors;
 
-import entity.Student;
+import entity.Professor;
 import interfaceadaptor.boundaries.DatabaseWriter;
 import usecase.createupdate.CourseCreator;
 import usecase.enrolldropcourse.CourseEnroller;
 import usecase.javastorage.AllCourses;
-import usecase.javastorage.AllStudents;
+import usecase.javastorage.AllProfessors;
 
-public class WriteAllStudentTest {
+public class WriteAllProfessorTest {
     public static void main(String[] args){
         CourseCreator.createCourse("csc207", "software design", "fall 2021");
         assert AllCourses.coursePageHashMap.containsKey("csc207");
         CourseCreator.createCourse("csc200", "a course", "fall 2021");
         assert AllCourses.coursePageHashMap.size() == 2;
-        Student student = new Student("1", "2", "3");
-        AllStudents.StundetHashMap.put(student.user_name, student);
-        CourseEnroller.enrollCourse("csc207", student);
-        CourseEnroller.enrollCourse("csc200", student);
-        DatabaseWriter.writeStudentCourses();
+        Professor professor = new Professor("16", "Caroline", "207");
+        AllProfessors.ProfessorHashMap.put(professor.user_name, professor);
+        CourseEnroller.teachingCourse("csc207", professor);
+        CourseEnroller.teachingCourse("csc200", professor);
+        DatabaseWriter.writeProfessorCourses();
     }
 }

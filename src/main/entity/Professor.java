@@ -1,5 +1,6 @@
 package entity;
 
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.HashMap;
 import usecase.javastorage.AllCourses;
@@ -7,7 +8,7 @@ import usecase.javastorage.AllCourses;
 public class Professor extends CommentableUser {
 
 
-    private ArrayList<String> taughtCourses;
+    private ArrayList<String> taughtCourses = new ArrayList<String>();
     private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
 
 
