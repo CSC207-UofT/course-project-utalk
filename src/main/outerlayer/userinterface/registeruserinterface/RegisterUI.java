@@ -1,10 +1,12 @@
 package outerlayer.userinterface.registeruserinterface;
 
-import entity.Faculty;
+import entity.Student;
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.MainUI;
 import usecase.UserRegister;
+import usecase.javastorage.AllStudents;
 
+import java.security.AllPermission;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -53,6 +55,8 @@ public class RegisterUI {
 
                             UserRegister.registerUser(Integer.toString(randomID), username, password1, "student", "false");
                             System.out.println("You have successfully sign up as student \"" + username + "\"");
+                            Student student = new Student(Integer.toString(randomID), username, password1);
+                            AllStudents.StundetHashMap.put(username, student);
                             MainUI.registerSigninUi();
                             break;
                         }
