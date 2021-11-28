@@ -1,6 +1,6 @@
 package entity;
 
-import use_case.JavaStorage.AllCourses;
+import usecase.javastorage.AllCourses;
 import java.util.ArrayList;
 import java.util.HashMap;
 

@@ -1,7 +1,7 @@
 package entity;
 
-import use_case.CreateandUpdate.CreateCourse;
-import use_case.CreateandUpdate.UpdateCourse;
+import usecase.createupdate.CreateCourse;
+import usecase.createupdate.UpdateCourse;
 
 public class Faculty extends User {
     public Faculty(String identifier, String name, String password){
@@ -16,12 +16,12 @@ public class Faculty extends User {
     CreateCourse createCourse = new CreateCourse();
     UpdateCourse updateCourse = new UpdateCourse();
 
-    public void create_course(String course_name, String description, String year)
+    public void createCourse(String course_name, String description, String year)
     {
-        createCourse.create_course(course_name, description, year);
+        createCourse.createCourse(course_name, description, year);
     }
 
-    public void update_course_info(String course_code, String course_info, String course_year) {
-        updateCourse.update_course_info(course_code, course_info, course_year);
+    public void updateCourseInfo(String course_code, String course_info, String course_year) {
+        updateCourse.updateCourseInfo(course_code, course_info, course_year);
     }
 }
