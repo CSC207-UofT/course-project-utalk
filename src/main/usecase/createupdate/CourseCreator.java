@@ -6,7 +6,7 @@ import entity.Course;
 import usecase.javastorage.AllCourses;
 import entity.CoursePage;
 
-public class CreateCourse {
+public class CourseCreator {
     public void createCourse(String course_name, String description, String year)
     {
          if (AllCourses.coursePageHashMap.containsKey(course_name)){

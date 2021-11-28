@@ -2,7 +2,7 @@ package outerlayer.userinterface.registeruserinterface;
 
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.MainUI;
-import usecase.RegisterUser;
+import usecase.UserRegister;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -50,7 +50,7 @@ public class RegisterUI {
 
                             //This code does not check whether this ID existed before or not.
 
-                            RegisterUser.register_user(Integer.toString(randomID), username, password1, "student", "false");
+                            UserRegister.register_user(Integer.toString(randomID), username, password1, "student", "false");
                             System.out.println("You have successfully sign up as student \"" + username + "\"");
                             MainUI.registerSigninUi();
                             break;
@@ -61,7 +61,7 @@ public class RegisterUI {
                             int randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
-                            RegisterUser.register_user(Integer.toString(randomID), username, password1, "professor", "false");
+                            UserRegister.register_user(Integer.toString(randomID), username, password1, "professor", "false");
                             System.out.println("You have successfully sign up as professor \"" + username + "\"");
                             MainUI.registerSigninUi();
                             break;
@@ -72,7 +72,7 @@ public class RegisterUI {
                             int randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
-                            RegisterUser.register_user(Integer.toString(randomID), username, password1, "Faculty", "false");
+                            UserRegister.register_user(Integer.toString(randomID), username, password1, "Faculty", "false");
                             System.out.println("You have successfully sign up as faculty \"" + username + "\"");
                             MainUI.registerSigninUi();
                             break;

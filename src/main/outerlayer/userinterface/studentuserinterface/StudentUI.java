@@ -1,8 +1,8 @@
 package outerlayer.userinterface.studentuserinterface;
 
-import outerlayer.userinterface.GetMethod;
+import outerlayer.userinterface.MethodGetter;
 
-public class StudentUI implements GetMethod {
+public class StudentUI implements MethodGetter {
     @Override
     public void getMethod() {
 

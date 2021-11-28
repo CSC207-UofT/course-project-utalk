@@ -1,7 +1,7 @@
 package interfaceadaptor;
 
-import usecase.RegisterUser;
-import usecase.deleteuser.DeleteUser;
+import usecase.UserRegister;
+import usecase.deleteuser.UserDeleter;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
@@ -52,13 +52,13 @@ public class CsvListTransfer {
         /*
         This function will renew the database file by that List<List<String>>.
          */
-        DeleteUser.deleteAllUser();
+        UserDeleter.deleteAllUser();
         int i = 0;
         if (list == null || list.size() == 0) {
             System.out.println("This list is empty or null.");
         } else {
             while (i < list.size()) {
-                RegisterUser.register_user(list.get(i).get(0), list.get(i).get(1), list.get(i).get(2), list.get(i).get(3), list.get(i).get(4));
+                UserRegister.register_user(list.get(i).get(0), list.get(i).get(1), list.get(i).get(2), list.get(i).get(3), list.get(i).get(4));
                 i += 1;
             }
         }

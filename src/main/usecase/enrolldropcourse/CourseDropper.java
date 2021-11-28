@@ -3,7 +3,7 @@ package usecase.enrolldropcourse;
 import entity.Professor;
 import entity.Student;
 
-public class Dropcourses {
+public class CourseDropper {
 
 
     /**
