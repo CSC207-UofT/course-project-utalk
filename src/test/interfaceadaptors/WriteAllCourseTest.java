@@ -1,6 +1,6 @@
 package interfaceadaptors;
 
-import interfaceadaptor.boundaries.WriteIntoDatabase;
+import interfaceadaptor.boundaries.DatabaseWriter;
 import usecase.createupdate.CourseCreator;
 import usecase.javastorage.AllCourses;
 
@@ -10,6 +10,6 @@ public class WriteAllCourseTest {
         assert AllCourses.coursePageHashMap.containsKey("csc207");
         CourseCreator.createCourse("csc200", "a course", "fall 2021");
         assert AllCourses.coursePageHashMap.size() == 2;
-        WriteIntoDatabase.writeAllCourses();
+        DatabaseWriter.writeAllCourses();
     }
 }

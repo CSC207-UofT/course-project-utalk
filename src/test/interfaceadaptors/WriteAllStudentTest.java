@@ -1,7 +1,7 @@
 package interfaceadaptors;
 
 import entity.Student;
-import interfaceadaptor.boundaries.WriteIntoDatabase;
+import interfaceadaptor.boundaries.DatabaseWriter;
 import usecase.createupdate.CourseCreator;
 import usecase.enrolldropcourse.CourseEnroller;
 import usecase.javastorage.AllCourses;
@@ -17,6 +17,6 @@ public class WriteAllStudentTest {
         AllStudents.StundetHashMap.put(student.user_name, student);
         CourseEnroller.enrollCourse("csc207", student);
         CourseEnroller.enrollCourse("csc200", student);
-        WriteIntoDatabase.writeStudentCourses();
+        DatabaseWriter.writeStudentCourses();
     }
 }
