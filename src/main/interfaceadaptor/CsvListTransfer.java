@@ -58,7 +58,7 @@ public class CsvListTransfer {
             System.out.println("This list is empty or null.");
         } else {
             while (i < list.size()) {
-                UserRegister.register_user(list.get(i).get(0), list.get(i).get(1), list.get(i).get(2), list.get(i).get(3), list.get(i).get(4));
+                UserRegister.registerUser(list.get(i).get(0), list.get(i).get(1), list.get(i).get(2), list.get(i).get(3), list.get(i).get(4));
                 i += 1;
             }
         }

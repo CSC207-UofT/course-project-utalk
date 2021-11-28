@@ -7,7 +7,7 @@ import usecase.javastorage.AllCourses;
 import entity.CoursePage;
 
 public class CourseCreator {
-    public void createCourse(String course_name, String description, String year)
+    public static void createCourse(String course_name, String description, String year)
     {
          if (AllCourses.coursePageHashMap.containsKey(course_name)){
             System.out.println("Course Already Exist, please do update course");

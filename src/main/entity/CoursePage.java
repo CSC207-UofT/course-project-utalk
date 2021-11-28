@@ -1,7 +1,4 @@
 package entity;
-
-import entity.Course;
-
 import java.util.ArrayList;
 
 public class CoursePage {
@@ -48,6 +45,7 @@ public class CoursePage {
     public PostPage getPostPage(int id) {
         return post_page_List.get(id);
     }
+
     public int getLength(){
         return post_page_List.size();
     }

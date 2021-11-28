@@ -4,7 +4,7 @@ import usecase.javastorage.AllCourses;
 import entity.Professor;
 import entity.Student;
 
-public class CourseEnoller {
+public class CourseEnroller {
 
     /**
      * Add the course to your course list, If it does not exist it will return warning
