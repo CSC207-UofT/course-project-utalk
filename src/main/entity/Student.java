@@ -21,7 +21,7 @@ public class Student extends CommentableUser{
 
     @Override
     public ArrayList<Comment> getCourseComments(String course) {
-        return studentComments.get(course);
+        return getStudentComments().get(course);
     }
 
     @Override
@@ -29,7 +29,7 @@ public class Student extends CommentableUser{
         return this.user_name;
     }
 
-    public ArrayList<String> getstudentCourses() {
+    public ArrayList<String> getStudentCourses() {
         return studentCourse;
     }
 
