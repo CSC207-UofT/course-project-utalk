@@ -12,7 +12,7 @@ public class CourseEnroller {
      * @param course_name the course you want to add to your course list
      * @param professor the name of the current user
      */
-    public void teachingCourse(String course_name, Professor professor)
+    public static void teachingCourse(String course_name, Professor professor)
     {
 
         if (AllCourses.coursePageHashMap.containsKey(course_name)){
