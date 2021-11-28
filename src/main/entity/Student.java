@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Student extends CommentableUser{
-    private ArrayList<String> studentCourse;
+    private ArrayList<String> studentCourse = new ArrayList<>();
     private String password;
     private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
 

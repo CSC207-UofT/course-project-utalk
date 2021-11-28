@@ -29,14 +29,14 @@ public class CourseEnroller {
      * @param course_name the course you want to add to your course list
      * @param student the name of the current user
      */
-    public void enrollCourse(String course_name, Student student)
+    public static void enrollCourse(String course_name, Student student)
     {
 
         if (AllCourses.coursePageHashMap.containsKey(course_name)){
             student.getStudentCourses().add(course_name);
-            System.out.println("Dear" + student.user_name+ "Course:" + course_name + "added successfully");
+            System.out.println("Dear " + student.user_name+ "Course: " + course_name + " added successfully");
         } else{
-            System.out.println("Dear" + student.user_name+ "Course:" + course_name + "did not Exist, please check the course code");
+            System.out.println("Dear " + student.user_name+ "Course: " + course_name + " did not Exist, please check the course code");
         }
     }
 
