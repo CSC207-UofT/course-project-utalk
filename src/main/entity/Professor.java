@@ -2,6 +2,7 @@ package entity;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import usecase.javastorage.AllCourses;
 
 public class Professor extends CommentableUser {
 
@@ -14,6 +15,29 @@ public class Professor extends CommentableUser {
         super(identifier, userName, password);
         HashMap<String, ArrayList<Comment>> comments= new HashMap<>();
         ArrayList<String> taughtCourses = new ArrayList<>();
+    }
+
+    public boolean canDeleteComment(String course_code, int comment_id){
+        if(! taughtCourses.contains(course_code)){
+            return false;
+        }
+        int length = AllCourses.coursePageHashMap.get(course_code).getLength();
+        PostPage postpage = AllCourses.coursePageHashMap.get(course_code).getPostPage(length-1);
+        return postpage.current_id >= comment_id;
+
+    }
+    @Override
+    public void deleteComment(String course_code, int comment_id){
+        if (! canDeleteComment(course_code, comment_id)){
+            System.out.println("can not delete!");
+        }
+        else{
+            CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
+            int length = coursepage.getLength();
+            PostPage postpage = coursepage.post_page_List.get(length - 1);
+            postpage.comments.get(comment_id).deleteComment();
+            System.out.println("succeed");
+        }
     }
 
     /**
