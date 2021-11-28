@@ -4,7 +4,7 @@ import interfaceadaptor.CSVWriter;
 import usecase.javastorage.AllCourses;
 import usecase.javastorage.AllProfessors;
 import usecase.javastorage.AllStudents;
-import usecase.javastorage.AllProfessors;
+
 
 import java.util.ArrayList;
 
@@ -20,6 +20,7 @@ public class DatabaseWriter {
 
     public static void writeProfessorCourses(){
         ArrayList<ArrayList<String>> professorCourse = AllProfessors.recordProfessor();
-        CSVWriter.write_to_csv(professorCourse, "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/students.csv");
+        CSVWriter.write_to_csv(professorCourse, "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/professors.csv");
     }
+
 }

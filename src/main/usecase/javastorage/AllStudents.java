@@ -1,6 +1,5 @@
 package usecase.javastorage;
 
-import entity.CoursePage;
 import entity.Student;
 
 import java.util.ArrayList;

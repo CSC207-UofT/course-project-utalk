@@ -13,7 +13,7 @@ import java.util.Scanner;
 
 public class Login {
 
-    public static String file_path = "data_base.csv";
+    public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";
     public static String Current_username = "Please recheck log in process, you have not recorded username successfully";
     public static String Current_password = "Please recheck log in process, you have not recorded password successfully";
 
