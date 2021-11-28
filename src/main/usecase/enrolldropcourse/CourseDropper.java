@@ -20,8 +20,7 @@ public class CourseDropper {
             System.out.println("Dear" + professor.user_name+ "Course:" + course_name + "removed successfully");
         } else{
             System.out.println("Dear" + professor.user_name+ "Course:" + course_name + "did not Exist in your course " +
-                    "list" +
-                    ", please check the course code");
+                    "list, please check the course code");
         }
     }
 
@@ -40,8 +39,7 @@ public class CourseDropper {
             System.out.println("Dear" + student.user_name+ "Course:" + course_name + "removed successfully");
         } else{
             System.out.println("Dear" + student.user_name+ "Course:" + course_name + "did not Exist in your course " +
-                    "list" +
-                    ", please check the course code");
+                    "list ,please check the course code");
         }
     }
 }
