@@ -1,5 +1,6 @@
 package entity;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CoursePage {
     public final Course course;
@@ -12,7 +13,7 @@ public class CoursePage {
         this.course = course;
         this.professor_list = new ArrayList<>();
         this.student_list = new ArrayList<>();
-        this.info_added = "";
+        this.info_added = "This semester we will go online";
         ArrayList<PostPage> post_lst = new ArrayList<>();
         post_lst.add(new PostPage(course.course_start_year));
         this.post_page_List = post_lst;
@@ -42,11 +43,37 @@ public class CoursePage {
         return std_lst.contains(userName);
     }
 
+    public PostPage getPostPage(String semester) {
+        return this.postPageHashMap().get(semester);
+    }
+
     public PostPage getPostPage(int id) {
-        return post_page_List.get(id);
+        return this.post_page_List.get(id);
     }
 
     public int getLength(){
         return post_page_List.size();
+    }
+
+    /**
+     * @return A hashmap containing all PostPage information in post_page_List,
+     * use semester as the key and PostPage as value
+     */
+    public HashMap<String, PostPage> postPageHashMap(){
+        HashMap<String, PostPage> mp = new HashMap<String, PostPage>();
+        for(PostPage pg: post_page_List) {
+            mp.put(pg.semesterGetter(), pg);
+        }
+        return mp;
+    }
+    /**
+     * @return A list of string containing all semesters of PostPages in post_page_List,
+     */
+    public ArrayList<String> semesterList(){
+        ArrayList<String> lst = new ArrayList<>();
+        for(PostPage pg: post_page_List) {
+            lst.add(pg.semesterGetter());
+        }
+        return lst;
     }
 }
