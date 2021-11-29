@@ -8,7 +8,7 @@ import usecase.javastorage.AllCourses;
 public class Professor extends CommentableUser {
 
 
-    private ArrayList<String> taughtCourses = new ArrayList<String>();
+    private ArrayList<String> taughtCourses = new ArrayList<>();
     private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
 
 
@@ -17,6 +17,7 @@ public class Professor extends CommentableUser {
         HashMap<String, ArrayList<Comment>> comments= new HashMap<>();
         ArrayList<String> taughtCourses = new ArrayList<>();
     }
+
 
     public boolean canDeleteComment(String course_code, int comment_id){
         if(! taughtCourses.contains(course_code)){
@@ -27,19 +28,7 @@ public class Professor extends CommentableUser {
         return postpage.current_id >= comment_id;
 
     }
-    @Override
-    public void deleteComment(String course_code, int comment_id){
-        if (! canDeleteComment(course_code, comment_id)){
-            System.out.println("can not delete!");
-        }
-        else{
-            CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-            int length = coursepage.getLength();
-            PostPage postpage = coursepage.post_page_List.get(length - 1);
-            postpage.comments.get(comment_id).deleteComment();
-            System.out.println("succeed");
-        }
-    }
+
 
     /**
      * @return return professor's taught courses.

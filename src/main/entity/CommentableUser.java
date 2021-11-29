@@ -32,7 +32,7 @@ public abstract class CommentableUser extends User{
     }
 
 
-    public boolean noaccessComment(String course_code, int comment_id) {
+    public boolean canAccessComment(String course_code, int comment_id) {
         if (comments.containsKey(course_code)) {
 
 
@@ -42,24 +42,10 @@ public abstract class CommentableUser extends User{
 
         if (postpage.current_id >= comment_id) {
 
-            return !postpage.comments.get(comment_id).getAuthor().equals(this.user_name);
+            return postpage.comments.get(comment_id).getAuthor().equals(this.user_name);
         }}
 
-        return true;
-
-    }
-
-
-
-    public void addComment(String course_code, String content, Integer replyID ){
-        if (!canAddComment(course_code, replyID)){
-            System.out.println("can't add");
-        }
-        else{
-            Comment comment = new Comment(this.user_name, content, course_code, 0);
-            comment.addComment();
-
-        }
+        return false;
 
     }
 
@@ -70,31 +56,13 @@ public abstract class CommentableUser extends User{
 
 
 
-    public void deleteComment(String course_code, int comment_id){
-        if (noaccessComment(course_code, comment_id)){
-            System.out.println("can not delete!");
-        }
-        else{
-            CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-            int length = coursepage.getLength();
-            PostPage postpage = coursepage.post_page_List.get(length - 1);
-            postpage.comments.get(comment_id).deleteComment();
-            System.out.println("succeed");
-        }
-    }
 
-    public void editComment(String course_code, int comment_id, String content){
-        if (noaccessComment(course_code, comment_id)){
-            System.out.println("can not edit!");
-        }
-        else{
-            CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-            int length = coursepage.getLength();
-            PostPage postpage = coursepage.post_page_List.get(length - 1);
-            postpage.comments.get(comment_id).editComment(content);
-            System.out.println("succeed");
-        }
-    }
+
+
+
+
+
+
 
 
     public abstract String getClassString();

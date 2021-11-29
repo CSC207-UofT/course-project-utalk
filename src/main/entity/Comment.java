@@ -15,12 +15,13 @@ public class Comment {
     private final String author;
     private String comment;
     private HashMap<Integer, Comment> replies;
-    private int replyID;
+    private Integer replyID;
     private boolean status;
     private final String course_code;
     private final Integer replyTo;
+    private Integer replyIDi;
 
-    Comment(String username, String comment, String course_code, Integer replyTo) {
+   public Comment(String username, String comment, String course_code, Integer replyTo) {
         this.author = username;
         this.comment = comment;
         this.course_code = course_code;
@@ -32,10 +33,17 @@ public class Comment {
         this.replyID = 1;
         this.status = true;
         this.replyTo = replyTo;
+
     }
 
     public String getComment() {
         return this.comment;
+    }
+    public String getCourseCode() {
+        return this.course_code;
+    }
+    public Integer getReplyTo() {
+        return this.replyTo;
     }
 
     public void deleteComment() {this.status = false;}
@@ -50,6 +58,7 @@ public class Comment {
     public void addReply(Comment c) {
         this.replies.put(this.replyID, c);
         this.replyID += 1;
+
     }
 
     public boolean hasReply(int index) {
@@ -63,20 +72,7 @@ public class Comment {
         return null;
     }
 
-    public void addComment(){
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        int length = coursepage.getLength();
-        PostPage postpage = coursepage.post_page_List.get(length - 1);
-        postpage.comments.put(this.id, this);
-        if (this.replyTo.equals(0)){
-            postpage.posts.add(this);
-        }
-        else{
-            postpage.comments.get(replyID).addReply(this);
-        }
 
-
-    }
 
     public Integer getId() {
         return this.id;
@@ -101,5 +97,6 @@ public class Comment {
     public int getReplyID() {
         return this.replyID;
     }
+
 }
 
