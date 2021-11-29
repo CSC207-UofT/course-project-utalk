@@ -20,5 +20,10 @@ public class PostPage {
         current_id = 0;
     }
 
-    //TODO: add print comment here.
+    /**
+     * @return the semester of PostPage
+     */
+    public String semesterGetter() {
+        return semester;
+    }
 }
