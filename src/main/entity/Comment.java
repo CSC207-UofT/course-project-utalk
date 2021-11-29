@@ -20,11 +20,11 @@ public class Comment {
     private final String course_code;
     private final Integer replyTo;
 
-    Comment(String username, String comment, String course_code, Integer replyTo) {
+    public Comment(String username, String comment, String course_code, Integer replyTo) {
         this.author = username;
         this.comment = comment;
         this.course_code = course_code;
-        int a = AllCourses.coursePageHashMap.get(course_code).post_page_List.size();
+        int a = AllCourses.coursePageHashMap.get(course_code).getLength();
         PostPage postpage = AllCourses.coursePageHashMap.get(course_code).post_page_List.get(a-1);
         postpage.current_id ++;
         this.id = postpage.current_id;

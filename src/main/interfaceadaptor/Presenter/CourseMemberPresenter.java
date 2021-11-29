@@ -9,21 +9,25 @@ public class CourseMemberPresenter {
     /** Print all professors in the coursePage.
      * @param coursePage The coursePage we attach to.
      */
-    public void professorPresenter(CoursePage coursePage) {
+    public String professorPresenter(CoursePage coursePage) {
+        String result = "";
         for (String prof: coursePage.professorList()) {
-            System.out.print(prof);
-            System.out.print(", ");
+            result = result.concat(prof);
+            result = result.concat(",");
         }
+        return result;
     }
 
-    /** Print all students in the coursePage
-     * @param coursePage The coursePage we attach to.
+    /**
+     * @return a long string containing all students
      */
-    public void studentPresenter(CoursePage coursePage) {
+    public String studentPresenter(CoursePage coursePage) {
+        String result = "";
         for (String std: coursePage.studentList()) {
-            System.out.print(std);
-            System.out.print(", ");
+            result = result.concat(std);
+            result = result.concat(",");
         }
+        return result;
     }
 
 }
