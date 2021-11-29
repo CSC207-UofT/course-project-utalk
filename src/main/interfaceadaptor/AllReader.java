@@ -1,9 +1,7 @@
 package interfaceadaptor;
 
-import entity.Faculty;
 import entity.Professor;
 import entity.Student;
-import entity.User;
 import usecase.createupdate.CourseCreator;
 import usecase.enrolldropcourse.CourseEnroller;
 import usecase.javastorage.AllProfessors;
@@ -32,12 +30,14 @@ public class AllReader {
         }
         for (ArrayList<String> student: students){
             String studentName = student.get(0);
+            student.remove(0);
             for (String course:student){
                 CourseEnroller.enrollCourse(course, AllStudents.StundetHashMap.get(studentName));
             }
         }
         for (ArrayList<String> professor: professors){
             String professorName = professor.get(0);
+            professor.remove(0);
             for (String course: professor){
                 CourseEnroller.teachingCourse(course, AllProfessors.ProfessorHashMap.get(professorName));
             }

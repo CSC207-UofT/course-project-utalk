@@ -1,9 +1,11 @@
 package outerlayer.userinterface.registeruserinterface;
 
+import entity.Professor;
 import entity.Student;
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.MainUI;
 import usecase.UserRegister;
+import usecase.javastorage.AllProfessors;
 import usecase.javastorage.AllStudents;
 
 import java.security.AllPermission;
@@ -68,6 +70,8 @@ public class RegisterUI {
 
                             UserRegister.registerUser(Integer.toString(randomID), username, password1, "professor", "false");
                             System.out.println("You have successfully sign up as professor \"" + username + "\"");
+                            Professor professor = new Professor(Integer.toString(randomID), username, password1);
+                            AllProfessors.ProfessorHashMap.put(username,professor);
                             MainUI.registerSigninUi();
                             break;
 

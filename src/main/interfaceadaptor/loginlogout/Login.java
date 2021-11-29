@@ -1,5 +1,6 @@
 package interfaceadaptor.loginlogout;
 
+import entity.Faculty;
 import entity.Professor;
 import entity.Student;
 import entity.User;
@@ -97,8 +98,15 @@ public class Login {
         for (ArrayList<String> user : infolist) {
             if (Objects.equals(user.get(1), Current_username)) {
                 String user_type = user.get(3);
-                break;
-            }
+                String user_id = user.get(0);
+                if (user_type.equals("student")){
+                    return new Student(user_id,Current_username, Current_password);
+                } else if(user_type.equals("professor")){
+                    return new Professor(user_id, Current_username, Current_password);
+                } else{
+                    return new Faculty(user_id, Current_username, Current_password);
+                }
+            } break;
         }
         return null;
     }

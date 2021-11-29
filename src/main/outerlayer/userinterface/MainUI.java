@@ -1,5 +1,6 @@
 package outerlayer.userinterface;
 
+import entity.Faculty;
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.logoutuserinterface.LogoutUI;
 import outerlayer.userinterface.registeruserinterface.RegisterUI;
@@ -39,15 +40,15 @@ public class MainUI {
             case "2" -> {
                 System.out.println("PLease follow the orders to log in.");
                 Login.logIn();
+                if (Login.loggedinUser() instanceof Faculty){
+
+                } else{
+
+                }
             }
             case "3" -> {
                 System.out.println("Please follow the orders to log out.");
                 LogoutUI.logOutUi();
-            }
-            case "4" -> {
-                System.out.println("Please make actions");
-
-
             }
             case "9" -> {
                 System.out.println("Are you sure you wish to quit? PLease type in 'yes' to quit.");
