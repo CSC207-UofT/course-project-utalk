@@ -1,33 +1,26 @@
 package interfaceadaptor;
-
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class CsvReader {
     public static ArrayList<String> strToArraylist(String string, String split_by) {
         //This is helper method.
         //This function transfer from str to arraylist.
         ArrayList<String> result = new ArrayList<>();
-        for (String item : string.split(split_by)) {
-            result.add(item);
-        }
+        result.addAll(Arrays.asList(string.split(split_by)));
         return result;
     }
-
     public static ArrayList<ArrayList<String>> readCsv(String file_path) {
         //Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
         String line = "";
         ArrayList<ArrayList<String>> result = new ArrayList<>();
-
         try {
             BufferedReader br = new BufferedReader(new FileReader(file_path));
             while ((line = br.readLine()) != null) {
                 result.add(strToArraylist(line, ","));
-                //result.add(Collections.singletonList(line));
-
             }
         } catch (IOException e) {
             e.printStackTrace();
