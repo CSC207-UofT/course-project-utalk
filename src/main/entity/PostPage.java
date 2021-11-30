@@ -10,7 +10,7 @@ public class PostPage {
     public ArrayList<Comment> posts;
 
 
-    String semester;
+    public String semester;
     public int current_id;
 
     public PostPage(String semester_1) {

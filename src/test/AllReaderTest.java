@@ -1,4 +1,4 @@
-import interfaceadaptor.AllReader;
+import interfaceadaptor.readers.AllReader;
 import usecase.javastorage.AllCourses;
 import usecase.javastorage.AllProfessors;
 import usecase.javastorage.AllStudents;

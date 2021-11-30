@@ -15,7 +15,11 @@ public class AllCourses {
             Course course1 = AllCourses.coursePageHashMap.get(course).course;
             String courseInfo = (String) course1.courseInfoGetter().get("description");
             String courseStartYear = course1.course_start_year;
-            ArrayList<String> currentCourse = new ArrayList<>(Arrays.asList(course,courseInfo, courseStartYear));
+            String addedInfo = AllCourses.coursePageHashMap.get(course).info_added;
+            String currentYear = AllCourses.coursePageHashMap.get(course).
+                    post_page_List.get(AllCourses.coursePageHashMap.get(course).post_page_List.size()-1).semester;
+            ArrayList<String> currentCourse = new ArrayList<>(Arrays.asList(course,courseInfo, courseStartYear,
+                    addedInfo, currentYear));
             courses.add(currentCourse);
         }
         return courses;

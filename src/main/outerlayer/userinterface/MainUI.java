@@ -49,6 +49,7 @@ public class MainUI {
             case "3" -> {
                 System.out.println("Please follow the orders to log out.");
                 LogoutUI.logOutUi();
+
             }
             case "9" -> {
                 System.out.println("Are you sure you wish to quit? PLease type in 'yes' to quit.");
