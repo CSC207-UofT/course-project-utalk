@@ -12,8 +12,6 @@ Faculty: add course, update course
 
 Professor: add comment, delete comment, enroll course, drop course, present course page, present postpage 
 
-
-
-
+Please set the absolute path in the file everytime you pull the main to your own computer. (Will be using relative path or set up configurations to resolve this in the future). 
 
 There is a branch for our past document just for storage. 
