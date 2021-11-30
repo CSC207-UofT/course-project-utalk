@@ -2,8 +2,10 @@ package outerlayer.userinterface;
 
 import entity.Faculty;
 import interfaceadaptor.CsvListTransfer;
+import outerlayer.userinterface.facultyuserinterface.FacultyUI;
 import outerlayer.userinterface.logoutuserinterface.LogoutUI;
 import outerlayer.userinterface.registeruserinterface.RegisterUI;
+import outerlayer.userinterface.studentprofessorinterface.StudentProfessorUI;
 import usecase.deleteuser.UserDeleter;
 import interfaceadaptor.loginlogout.Login;
 
@@ -41,9 +43,9 @@ public class MainUI {
                 System.out.println("PLease follow the orders to log in.");
                 Login.logIn();
                 if (Login.loggedinUser() instanceof Faculty){
-
+                    FacultyUI.facultyPage();
                 } else{
-
+                    StudentProfessorUI.StuProPage();
                 }
             }
             case "3" -> {

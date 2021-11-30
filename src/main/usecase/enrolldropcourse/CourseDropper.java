@@ -12,7 +12,7 @@ public class CourseDropper {
      * @param course_name the course you want to remove from your course list
      * @param professor the name of the current user
      */
-    public void dropCourse(String course_name, Professor professor)
+    public static void dropCourse(String course_name, Professor professor)
     {
 
         if (professor.getTaughtCourses().contains(course_name)){
@@ -31,7 +31,7 @@ public class CourseDropper {
      * @param course_name the course you want to remove from your course list
      * @param student the name of the current user
      */
-    public void dropCourse(String course_name, Student student)
+    public static void dropCourse(String course_name, Student student)
     {
 
         if (student.getStudentCourses().contains(course_name)){
