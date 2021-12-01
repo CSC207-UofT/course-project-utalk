@@ -46,6 +46,11 @@ public class CoursePage {
     public PostPage getPostPage(int id) {
         return post_page_List.get(id);
     }
+    
+    public PostPage getPostPage(String semester) {
+        return this.postPageHashMap().get(semester);
+    }
+
 
     public int getLength(){
         return post_page_List.size();
