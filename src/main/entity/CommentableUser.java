@@ -6,64 +6,17 @@ import java.util.HashMap;
 
 public abstract class CommentableUser extends User{
     private HashMap<String, ArrayList<Comment>> comments;
+    private ArrayList<String> courses;
 
     public CommentableUser(String identifier, String username, String password) {
         super(identifier, username, password);
         this.comments = new HashMap<>();
+        this.courses = new ArrayList<>();
     }
 
     public HashMap<String, ArrayList<Comment>> getComments(){
         return this.comments;
     }
-
-    public boolean canAddComment(String course_code, Integer reply_to){
-
-
-        if (reply_to.equals(0)){
-            return this.comments.containsKey(course_code);
-        }
-        else {
-            CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-            int length = coursepage.getLength();
-            PostPage postpage = coursepage.post_page_List.get(length - 1);
-            return postpage.current_id >= reply_to;
-        }
-
-    }
-
-
-    public boolean canAccessComment(String course_code, int comment_id) {
-        if (comments.containsKey(course_code)) {
-
-
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        int length = coursepage.getLength();
-        PostPage postpage = coursepage.post_page_List.get(length - 1);
-
-        if (postpage.current_id >= comment_id) {
-
-            return postpage.comments.get(comment_id).getAuthor().equals(this.user_name);
-        }}
-
-        return false;
-
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     public abstract String getClassString();
 
@@ -83,5 +36,14 @@ public abstract class CommentableUser extends User{
      */
     public String getUserName() {
         return this.user_name;
+    }
+    public ArrayList<String> getCourseList(){
+        return this.courses;
+    }
+    public void addCommentToList(String courseCode, Comment comment){
+        if (!comments.containsKey(courseCode)){
+            comments.put(courseCode, new ArrayList<>());
+        }
+        comments.get(courseCode).add(comment);
     }
 }

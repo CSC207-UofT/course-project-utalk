@@ -1,5 +1,6 @@
 package entity;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CoursePage {
     public final Course course;
@@ -48,5 +49,30 @@ public class CoursePage {
 
     public int getLength(){
         return post_page_List.size();
+    }
+
+    /**
+     * @return A hashmap containing all PostPage information in post_page_List,
+     * use semester as the key and PostPage as value
+     */
+    public HashMap<String, PostPage> postPageHashMap(){
+        HashMap<String, PostPage> mp = new HashMap<>();
+        for(PostPage pg: post_page_List) {
+            mp.put(pg.semesterGetter(), pg);
+        }
+        return mp;
+    }
+    /**
+     * @return A list of string containing all semesters of PostPages in post_page_List,
+     */
+    public ArrayList<String> semesterList(){
+        ArrayList<String> lst = new ArrayList<>();
+        for(PostPage pg: post_page_List) {
+            lst.add(pg.semesterGetter());
+        }
+        return lst;
+    }
+    public ArrayList<PostPage> getPost_page_List(){
+        return this.post_page_List;
     }
 }

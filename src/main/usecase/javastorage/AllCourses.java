@@ -20,5 +20,8 @@ public class AllCourses {
         }
         return courses;
     }
+    public static HashMap<String, CoursePage> getCoursePageHashMap(){
+        return coursePageHashMap;
+    }
 
 }

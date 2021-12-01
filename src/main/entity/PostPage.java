@@ -9,7 +9,7 @@ import java.util.Map;
 
 
 public class PostPage {
-    public Map<Integer, Comment> comments;
+    public HashMap<Integer, Comment> comments;
     public ArrayList<Comment> posts;
 
 
@@ -23,7 +23,19 @@ public class PostPage {
         current_id = 0;
     }
 
+    public String semesterGetter() {
+        return semester;
+    }
+
+    public HashMap<Integer, Comment> getComments() {
+        return this.comments;
+    }
     //TODO: add print comment here.
+
+    public void refreshID(){current_id++;}
+    public int getCurrentID(){
+        return current_id;
+    }
 
     public ArrayList<ArrayList<String>> recordComments(){
         ArrayList<ArrayList<String>> comments = new ArrayList<>();
