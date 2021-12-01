@@ -63,20 +63,6 @@ public class Comment {
         return null;
     }
 
-    public void addComment(){
-        CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
-        int length = coursepage.getLength();
-        PostPage postpage = coursepage.post_page_List.get(length - 1);
-        postpage.comments.put(this.id, this);
-        if (this.replyTo.equals(0)){
-            postpage.posts.add(this);
-        }
-        else{
-            postpage.comments.get(replyID).addReply(this);
-        }
-
-
-    }
 
     public Integer getId() {
         return this.id;
