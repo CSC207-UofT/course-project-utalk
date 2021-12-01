@@ -76,4 +76,8 @@ public class CoursePage {
         }
         return lst;
     }
+    public ArrayList<PostPage> getPost_page_List(){
+        return this.post_page_List;
+    }
+}
 }
