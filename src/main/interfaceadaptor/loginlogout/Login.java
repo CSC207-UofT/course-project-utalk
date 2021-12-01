@@ -4,7 +4,6 @@ import entity.Faculty;
 import entity.Professor;
 import entity.Student;
 import entity.User;
-import interfaceadaptor.CsvListTransfer;
 import interfaceadaptor.CsvReader;
 import outerlayer.userinterface.MainUI;
 
@@ -17,10 +16,12 @@ public class Login {
     public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";
     public static String Current_username = "Please recheck log in process, you have not recorded username successfully";
     public static String Current_password = "Please recheck log in process, you have not recorded password successfully";
-
+    public static String Current_id = "Does not exist yet";
+    public static String currentType = "Does not exist yet";
+    public static User loggedInUser = null;
 
     public static void logIn() {
-        ArrayList<ArrayList<String>> current_file = CsvListTransfer.csvToList();
+        ArrayList<ArrayList<String>> current_file = CsvReader.readCsv(file_path);
         System.out.println("What is your username?");
         Scanner scan = new Scanner(System.in);
         String username = scan.nextLine();
@@ -36,51 +37,29 @@ public class Login {
             for (ArrayList<String> user : current_file) {
                 if (user.get(1).equals(username)) {
                     //we have found this user.
-                    if (user.get(2).equals(password)) {
-                        //password correct. change status.
-                        ArrayList<ArrayList<String>> current_list = CsvListTransfer.csvToList();
-                        for (int i = 0; i < current_list.size(); i += 1) {
-                            if (current_list.get(i).get(1).equals(user.get(1))) {
-                                //found this person.
-                                current_list.get(i).set(4, "true");
-                            }
-                        }
-                        CsvListTransfer.listToCsv(current_list);
-                        System.out.println("Log in successfully");
-                        Current_password = password;// Password matched. Record this password.
-                    } else {
-                        //password incorrect
-                        System.out.println("Sorry, password incorrect. Please type in password again or type '\\q' to go back to main menu.");
-                        String password2 = scan.nextLine();
-                        do {
-                            System.out.println("Sorry, password incorrect. Please type in password again or type '\\q' to go back to main menu.");
-                            password2 = scan.nextLine();
-                        }
-                        while ((!password2.equals(user.get(2))) && (!password2.equals("\\q")));
-                        if (password2.equals("\\q")) {
-                            MainUI.registerSigninUi();
-                        } else if (password2.equals(user.get(2))) {
-                            // password correct at last.
-                            Current_password = password2;//Record this password into th csv file.
-                            ArrayList<ArrayList<String>> current_list = CsvListTransfer.csvToList();
-                            for (int i = 0; i < current_list.size(); i += 1) {
-                                if (current_list.get(i).get(1).equals(user.get(1))) {
-                                    //found this person.
-                                    current_list.get(i).set(4, "true");
-                                }
-                            }
-                            //save this list to current file
-                            CsvListTransfer.listToCsv(current_list);
-
-                            System.out.println("Log in successfully");
-
-
-                        }
-
-
+                    String requiredPassword = user.get(2);
+                    while (!(Objects.equals(requiredPassword, password))&&(!(Objects.equals(password, "q")))){
+                        System.out.println("Please reenter your password.");
+                        password = scan.nextLine();
                     }
-                }
-            }
+                    if (Objects.equals(requiredPassword, password)){
+                        Current_password = requiredPassword;
+                        Current_id = user.get(0);
+                        currentType = user.get(3);
+                        if (Objects.equals(currentType, "student")){
+                            loggedInUser = new Student(Current_id, Current_username, Current_password);
+                        } else if  (Objects.equals(currentType, "professor")){
+                            loggedInUser = new Professor(Current_id, Current_username, Current_password);
+                        } else{
+                            loggedInUser = new Faculty(Current_id, Current_username, Current_password);
+                        }
+                        System.out.println("logged in successfully");
+                        MainUI.registerSigninUi();
+                    } else{
+                        MainUI.registerSigninUi();
+                    }
+                    }}
+
 
         } else {
             //This user has not registered before.
@@ -90,25 +69,6 @@ public class Login {
         }
 
 
-    }
-
-    public static User loggedinUser() {
-        //This function will return the user who is currently logging in.
-        ArrayList<ArrayList<String>> infolist = CsvReader.readCsv(file_path);
-        for (ArrayList<String> user : infolist) {
-            if (Objects.equals(user.get(1), Current_username)) {
-                String user_type = user.get(3);
-                String user_id = user.get(0);
-                if (user_type.equals("student")){
-                    return new Student(user_id,Current_username, Current_password);
-                } else if(user_type.equals("professor")){
-                    return new Professor(user_id, Current_username, Current_password);
-                } else{
-                    return new Faculty(user_id, Current_username, Current_password);
-                }
-            } break;
-        }
-        return null;
     }
 }
 

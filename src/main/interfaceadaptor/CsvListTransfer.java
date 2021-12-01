@@ -17,7 +17,7 @@ public class CsvListTransfer {
     I have renewed the functions there.
      */
 
-    public static String file_path = "data_base.csv";
+    public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";
 
     public static ArrayList<String> strToArraylist(String string, String split_by) {
         //This is helper method.
@@ -45,7 +45,7 @@ public class CsvListTransfer {
 
     public static ArrayList<ArrayList<String>> csvToList() {
         //Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
-        String line = "";
+        String line;
         ArrayList<ArrayList<String>> result = new ArrayList<>();
 
         try {
