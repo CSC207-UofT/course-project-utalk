@@ -1,5 +1,6 @@
 package outerlayer.userinterface.facultyuserinterface;
 
+import interfaceadaptor.contollers.Controller;
 import outerlayer.userinterface.MainUI;
 
 import java.util.Objects;
@@ -27,10 +28,11 @@ public class FacultyUI {
         if (input_str.equals("quit")){
             MainUI.registerSigninUi();
         }
-        while (!(input_str.equals("1")||input_str.equals("2")||input_str.equals("quit"))){
+        while (!input_str.matches("[12]") && !input_str.equals("quit")){
             System.out.println("Please enter 1 or 2, or type quit to quit");
             input_str = input_help.getInput(System.in).nextLine();
         }
+        Controller.control(input_str, FacultyUI.loadData());
         if (Objects.equals(input_str, "quit")) {
             MainUI.registerSigninUi();
         }
