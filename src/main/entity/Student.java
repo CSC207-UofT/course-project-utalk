@@ -1,12 +1,7 @@
 package entity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 public class Student extends CommentableUser{
-    private ArrayList<String> studentCourse = new ArrayList<>();
-    private String password;
-    private HashMap<String, ArrayList<Comment>> comments = new HashMap<>();
+
 
     public Student(String identifier, String user_name, String password) {
         super(identifier, user_name, password);
@@ -19,27 +14,5 @@ public class Student extends CommentableUser{
 
 
 
-    @Override
-    public ArrayList<Comment> getCourseComments(String course) {
-        return getStudentComments().get(course);
-    }
-
-    @Override
-    public String getUserName() {
-        return this.user_name;
-    }
-
-    public ArrayList<String> getStudentCourses() {
-        return studentCourse;
-    }
-
-    public HashMap<String, ArrayList<Comment>> getStudentComments() {
-        return comments;
-    }
-
-    public void setStudentComments(HashMap<String, ArrayList<Comment>> student_comments) {
-        this.comments = student_comments;
-    }
-
-
 }
+    
