@@ -2,7 +2,8 @@ package outerlayer.userinterface.registeruserinterface;
 
 import entity.Professor;
 import entity.Student;
-import interfaceadaptor.CsvListTransfer;
+import interfaceadaptor.CsvReader;
+import outerlayer.userinterface.FilePathHelper;
 import outerlayer.userinterface.MainUI;
 import usecase.UserRegister;
 import usecase.javastorage.AllProfessors;
@@ -13,11 +14,11 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RegisterUI {
-    public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";
+    public static String file_path = FilePathHelper.FILEPATH + "/user.csv";
     static int ID = 0;
     public static void registerUi() {
         ID = ID + 1;
-        ArrayList<ArrayList<String>> current_list = CsvListTransfer.csvToList();
+        ArrayList<ArrayList<String>> current_list = CsvReader.readCsv(file_path);
         System.out.println("Please enter your new user name. or enter 'quit' to go back to main menu.");
         Scanner scan = new Scanner(System.in);
         String username = scan.nextLine();

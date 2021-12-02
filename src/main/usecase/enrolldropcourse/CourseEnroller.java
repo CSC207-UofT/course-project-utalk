@@ -20,7 +20,7 @@ public class CourseEnroller {
     {
 
         if (AllCourses.coursePageHashMap.containsKey(course_name)){
-            if(! user.getCourseList().contains(course_name)){
+            if(user.getCourseList().contains(course_name)){
             user.getCourseList().add(course_name);
             ArrayList<Comment> empty = new ArrayList<>();
             user.getComments().put(course_name, empty);

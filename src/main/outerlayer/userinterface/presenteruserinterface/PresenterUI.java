@@ -14,16 +14,17 @@ import java.util.Objects;
  */
 public class PresenterUI {
     static final InputGetter input_help = new InputGetter();
-    public void coursePagePresenterUI() {
+    public static String courseCode = null;
+    public static void coursePagePresenterUI() {
         System.out.println("Please enter course code: \n");
-        String code = input_help.getInput(System.in).nextLine();
+        courseCode = input_help.getInput(System.in).nextLine();
         CoursePagePresenter cpp = new CoursePagePresenter();
-        cpp.semesterPresenter();
+        cpp.coursePresenter(courseCode);
         System.out.println("Please enter the semester information: \n");
         String semester = input_help.getInput(System.in).nextLine();
         cpp.pagePresenter(semester);
     }
-    public void commentPresenterUI(CommentableUser commentableUser) {
+    public static void commentPresenterUI(CommentableUser commentableUser) {
         System.out.println("Please enter course code: \n");
         String code = input_help.getInput(System.in).nextLine();
         Printer cp = new Printer();

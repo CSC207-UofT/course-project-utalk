@@ -2,10 +2,7 @@ package outerlayer.userinterface.studentprofessorinterface;
 
 import interfaceadaptor.contollers.Controller;
 import outerlayer.userinterface.MainUI;
-import outerlayer.userinterface.facultyuserinterface.FacultyUI;
 import outerlayer.userinterface.facultyuserinterface.InputGetter;
-
-import java.util.Arrays;
 import java.util.Objects;
 
 public class CommentUI {
@@ -65,18 +62,22 @@ public class CommentUI {
         if (Objects.equals(input_str, "5")) {
             String[] input = CommentUI.loadForAdd();
             Controller.control(input_str, CommentUI.loadHelper(input,CourseCode));
+            StudentProfessorUI.StuProPage();
         }
         if (Objects.equals(input_str, "6")) {
             String[] input = CommentUI.loadForEdit();
             Controller.control(input_str, CommentUI.loadHelper(input,CourseCode));
+            StudentProfessorUI.StuProPage();
         }
         if (Objects.equals(input_str, "7")) {
             String[] input = CommentUI.loadForDelete();
             Controller.control(input_str, CommentUI.loadHelper(input,CourseCode));
+            StudentProfessorUI.StuProPage();
         }
         if (Objects.equals(input_str, "8")) {
             String[] input = new String[0];
             Controller.control(input_str, CommentUI.loadHelper(input,CourseCode));
+            StudentProfessorUI.StuProPage();
         }
         CommentPage(CourseCode);
 
