@@ -27,11 +27,8 @@ public class Printer {
      * @param commentableUser the commentableUser
      */
     public void commentableUserCourseListPresenter(CommentableUser commentableUser) {
-        if (commentableUser.getClassString().equals("Professor")) {
             for (String course : commentableUser.getCourseList()) {
                 System.out.print(course);
             }
-        }
     }
-
 }
