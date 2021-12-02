@@ -31,8 +31,8 @@ public class DatabaseWriter {
             for(PostPage postpage: coursepage.post_page_List){
                 ArrayList<ArrayList<String>> comment = postpage.recordComments();
                 comments.addAll(comment);}
-            CSVWriter.write_to_csv(comments, "comments.csv");
-        }
+
+        } CSVWriter.write_to_csv(comments, "comments.csv");
 
 
     }

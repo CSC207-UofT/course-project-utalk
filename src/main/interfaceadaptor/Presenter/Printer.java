@@ -15,7 +15,7 @@ public class Printer {
      * @param course the name of the course
      * @param commentableUser the commentableUser
      */
-    public void commentableUserCommentPresenter(String course, CommentableUser commentableUser) {
+    public static void commentableUserCommentPresenter(String course, CommentableUser commentableUser) {
         if (commentableUser.getCourseComments(course) != null) {
             for (Comment comment : commentableUser.getCourseComments(course)) {
                 CommentPrinter print = new CommentPrinter();

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/Printer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/boundaries/DatabaseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/boundaries/DatabaseWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/usecase/adddeleteeditcomment/CommentEditer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/usecase/adddeleteeditcomment/CommentEditer.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="21ibfyuHMpx8OSCeK5vPdN7tXKa" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="" />
+      <created>1638426964639</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1638426964639</updated>
+      <workItem from="1638426972390" duration="500000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

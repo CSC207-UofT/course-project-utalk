@@ -8,7 +8,7 @@ import entity.Professor;
 
 public class CommentEditer {
 
-    public static void editComment(CommentableUser user, String course_code, int comment_id, String content){
+    public static void editComment(CommentableUser user, String course_code, String content, int comment_id){
         if (canChange.canAccessComment(course_code, comment_id, user)){
             System.out.println("can not edit!");
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
