@@ -1,34 +1,36 @@
 package interfaceadaptor.Presenter;
 
 import entity.Comment;
-import entity.Professor;
-import entity.Student;
+import entity.CommentableUser;
+
 
 
 /**
- * Printer class contains all print function for Student, Professor.
+ * Printer class contains all print function for Commentable User.
  */
 public class Printer {
     private final CommentPrinter printer = new CommentPrinter();
 
-    /** Print professor's comments on specific course
+    /** Print commentableUser's comments on specific course
      * @param course the name of the course
-     * @param professor the professor variable
+     * @param commentableUser the commentableUser
      */
-    public void professorCommentPresenter(String course, Professor professor) {
-        if (professor.getCourseComments(course) != null) {
-            for (Comment comment : professor.getCourseComments(course)) {
-                printer.commentPrinter(comment, 0);
+    public void commentableUserCommentPresenter(String course, CommentableUser commentableUser) {
+        if (commentableUser.getCourseComments(course) != null) {
+            for (Comment comment : commentableUser.getCourseComments(course)) {
+                CommentPrinter print = new CommentPrinter();
+                print.commentPrinter(comment, 0);
             }
         }
     }
-    /** Print student's comments on specific course
-     * @param course the name of the course
-     * @param student the student variable
+    /** Print commentableUser's courses list.
+     * @param commentableUser the commentableUser
      */
-    public void studentCommentPresenter(String course, Student student) {
-        for(Comment comment: student.getCourseComments(course)) {
-            printer.commentPrinter(comment, 0);
+    public void commentableUserCourseListPresenter(CommentableUser commentableUser) {
+        if (commentableUser.getClassString().equals("Professor")) {
+            for (String course : commentableUser.getCourseList()) {
+                System.out.print(course);
+            }
         }
     }
 

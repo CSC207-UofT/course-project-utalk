@@ -17,21 +17,18 @@ public class PresenterUI {
     public void coursePagePresenterUI() {
         System.out.println("Please enter course code: \n");
         String code = input_help.getInput(System.in).nextLine();
-        CoursePagePresenter.semesterPresenter(code);
+        CoursePagePresenter cpp = new CoursePagePresenter();
+        cpp.semesterPresenter();
         System.out.println("Please enter the semester information: \n");
         String semester = input_help.getInput(System.in).nextLine();
-        CoursePagePresenter cpp = new CoursePagePresenter();
-        cpp.coursePresenter(code, semester);
+        cpp.pagePresenter(semester);
     }
     public void commentPresenterUI(CommentableUser commentableUser) {
         System.out.println("Please enter course code: \n");
         String code = input_help.getInput(System.in).nextLine();
         Printer cp = new Printer();
-        if (Objects.equals(commentableUser.getClassString(), "professor")){
-            cp.professorCommentPresenter(code, (Professor) commentableUser);
-        } else {
-            cp.studentCommentPresenter(code, (Student) commentableUser);
+        cp.commentableUserCommentPresenter(code, commentableUser);
         }
-    }
-    // work need to do: testing and connection between other UI
 }
+    // work need to do: testing and connection between other UI
+
