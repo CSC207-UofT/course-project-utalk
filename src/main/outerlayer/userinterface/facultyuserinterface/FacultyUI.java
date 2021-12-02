@@ -20,10 +20,9 @@ public class FacultyUI {
         return new String[]{code, info, year};
     }
     public static void facultyPage(){
-        System.out.println("""
-                 Choose which operation you want to make:
-                 1: add course 2: update course Please enter 1 or 2,\s
-                enter quit to return to the main menu""");
+        System.out.println(" Choose which operation you want to make: \n" +
+                        "1: add course 2: update course Please enter 1 or 2,\n " +
+                "enter quit to return to the main menu");
         String input_str = input_help.getInput(System.in).nextLine();
         if (input_str.equals("quit")){
             MainUI.registerSigninUi();
