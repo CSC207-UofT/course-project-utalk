@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class CourseReader {
     public static void readCourse(){
         ArrayList<ArrayList<String>> courses = CsvReader.readCsv(
-                "/Users/hanqizhang/Desktop/CSC207/course-project-utalk0/src/main/outerlayer/database/courses.csv");
+                "courses.csv");
         for (ArrayList<String> course: courses){
             CourseCreator.createCourse(course.get(0), course.get(1), course.get(2));
             CourseUpdater.updateCourseInfo(course.get(0), course.get(3), course.get(4));

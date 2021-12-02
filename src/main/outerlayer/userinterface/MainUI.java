@@ -80,21 +80,19 @@ public class MainUI {
                     //The line below eliminates infinite loop warning. Please don't remove it.
                     //noinspection InfiniteLoopStatement
                     while (true) {
-                        System.out.println("""
-                                administrator privileges:
-                                  1: check all users
-                                  2: delete whole database
-                                  10: back to main menu""");
+                        System.out.println(" administrator privileges: \n " +
+                                        "1: check all users\n " +
+                                        "2: delete whole database\n " +
+                                "10: back to main menu");
                         Scanner b = new Scanner(System.in);
                         String number = b.nextLine();
                         switch (number) {
                             case "1" -> {
                                 System.out.println("[id, username, password, type, status]");
                                 for (ArrayList<String> item : CsvListTransfer.csvToList()) {System.out.println(item);}
-                                System.out.println("""
-
-                                        ================================================================================================================================
-                                        """);
+                                System.out.println(" " +
+                                                "================================================================================================================================ " +
+                                        "");
                                 System.out.println("What would you like to do next?");
                             }
                             case "2" -> {

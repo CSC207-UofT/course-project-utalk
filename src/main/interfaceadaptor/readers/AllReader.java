@@ -14,11 +14,11 @@ import java.util.Objects;
 
 public class AllReader {
     public static void readAll(){
-        ArrayList<ArrayList<String>> users = CsvReader.readCsv("/Users/hanqizhang/Desktop/CSC207/course-project-utalk0/src/main/outerlayer/database/user.csv");
-        ArrayList<ArrayList<String>> courses = CsvReader.readCsv("/Users/hanqizhang/Desktop/CSC207/course-project-utalk0/src/main/outerlayer/database/courses.csv");
-        ArrayList<ArrayList<String>> students = CsvReader.readCsv("/Users/hanqizhang/Desktop/CSC207/course-project-utalk0/src/main/outerlayer/database/students.csv");
-        ArrayList<ArrayList<String>> professors = CsvReader.readCsv("/Users/hanqizhang/Desktop/CSC207/course-project-utalk0/src/main/outerlayer/database/professors.csv");
-        ArrayList<ArrayList<String>> comments = CsvReader.readCsv("/Users/hanqizhang/Desktop/CSC207/course-project-utalk0/src/main/outerlayer/database/comments.csv");
+        ArrayList<ArrayList<String>> users = CsvReader.readCsv("user.csv");
+        ArrayList<ArrayList<String>> courses = CsvReader.readCsv("courses.csv");
+        ArrayList<ArrayList<String>> students = CsvReader.readCsv("students.csv");
+        ArrayList<ArrayList<String>> professors = CsvReader.readCsv("professors.csv");
+        ArrayList<ArrayList<String>> comments = CsvReader.readCsv("comments.csv");
         for (ArrayList<String> user: users){
             if (Objects.equals(user.get(3), "student")){
                 Student student = new Student(user.get(0), user.get(1), user.get(2));
