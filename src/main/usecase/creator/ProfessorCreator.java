@@ -11,7 +11,7 @@ public class ProfessorCreator {
             String professorName = professor.get(0);
             professor.remove(0);
             for (String course: professor){
-                CourseEnroller.teachingCourse(course, AllProfessors.ProfessorHashMap.get(professorName));
+                CourseEnroller.enrollCourse(course, AllProfessors.ProfessorHashMap.get(professorName));
             }
         }
     }

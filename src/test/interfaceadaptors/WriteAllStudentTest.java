@@ -14,7 +14,7 @@ public class WriteAllStudentTest {
         CourseCreator.createCourse("csc200", "a course", "fall 2021");
         assert AllCourses.coursePageHashMap.size() == 2;
         Student student = new Student("1", "2", "3");
-        AllStudents.StundetHashMap.put(student.user_name, student);
+        AllStudents.StudentHashMap.put(student.user_name, student);
         CourseEnroller.enrollCourse("csc207", student);
         CourseEnroller.enrollCourse("csc200", student);
         DatabaseWriter.writeStudentCourses();

@@ -80,4 +80,3 @@ public class CoursePage {
         return this.post_page_List;
     }
 }
-}

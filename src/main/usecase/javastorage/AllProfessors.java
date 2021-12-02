@@ -11,7 +11,7 @@ public class AllProfessors {
         ArrayList<ArrayList<String>> wholeList = new ArrayList<>();
         for (String name: AllProfessors.ProfessorHashMap.keySet()){
             Professor currProfessor = AllProfessors.ProfessorHashMap.get(name);
-            ArrayList<String> enrolledCourse = currProfessor.getTaughtCourses();
+            ArrayList<String> enrolledCourse = currProfessor.getCourseList();
             enrolledCourse.add(0, name);
             wholeList.add(enrolledCourse);
         }

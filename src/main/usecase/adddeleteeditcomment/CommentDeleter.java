@@ -21,7 +21,7 @@ public class CommentDeleter {
         }
     }
 
-    public static void deleteComment(Professor user, String course_code, Integer comment_id){
+    public static void deleteComment(Professor user, String course_code, int comment_id){
         if (canChange.canDeleteComment(course_code, comment_id, user)){
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
             int length = coursepage.getLength();

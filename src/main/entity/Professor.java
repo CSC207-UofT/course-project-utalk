@@ -1,5 +1,7 @@
 package entity;
 
+import usecase.javastorage.AllCourses;
+
 public class Professor extends CommentableUser {
 
 
@@ -8,6 +10,11 @@ public class Professor extends CommentableUser {
     public Professor(String identifier, String userName, String password) {
         super(identifier, userName, password);
     }
+
+
+
+
+
 
     /**
      * @return String "Professor" as an indicator of this class.
@@ -18,3 +25,4 @@ public class Professor extends CommentableUser {
     }
 
 
+}

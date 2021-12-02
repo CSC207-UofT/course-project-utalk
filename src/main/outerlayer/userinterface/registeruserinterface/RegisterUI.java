@@ -56,7 +56,7 @@ public class RegisterUI {
                             UserRegister.registerUser(Integer.toString(randomID), username, password1, "student", "false");
                             System.out.println("You have successfully sign up as student \"" + username + "\"");
                             Student student = new Student(Integer.toString(randomID), username, password1);
-                            AllStudents.StundetHashMap.put(username, student);
+                            AllStudents.StudentHashMap.put(username, student);
                             MainUI.registerSigninUi();
                         }
                         case "2", "professor" -> {

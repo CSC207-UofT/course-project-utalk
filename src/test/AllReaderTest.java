@@ -8,6 +8,7 @@ public class AllReaderTest {
         AllReader.readAll();
         assert ! AllCourses.coursePageHashMap.isEmpty();
         assert ! AllProfessors.ProfessorHashMap.isEmpty();
-        assert ! AllStudents.StundetHashMap.isEmpty();
+        assert ! AllStudents.StudentHashMap.isEmpty();
+        assert ! AllCourses.coursePageHashMap.get("csc207").getPost_page_List().get(0).comments.isEmpty();
     }
 }
