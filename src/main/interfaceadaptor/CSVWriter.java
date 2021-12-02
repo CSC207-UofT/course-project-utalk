@@ -6,6 +6,19 @@ import java.util.ArrayList;
 
 public class CSVWriter {
 
+   public static void write_to_csv(ArrayList<ArrayList<String>> list, String file_path){
+        String need = List_to_string(list);
+        try {
+            FileWriter myWriter = new FileWriter(file_path);
+            myWriter.write(need);
+            myWriter.close();
+            System.out.println("recorded successfully");
+        }
+        catch (IOException e) {
+            e.printStackTrace();
+
+        }
+    }
     public static String List_to_string(ArrayList<ArrayList<String>> need_to_convert){
         //This is a helper method that convert an arraylist of arraylist of String into string,
         String result = "";
@@ -22,23 +35,5 @@ public class CSVWriter {
         return result;
     }
 
-    public static void write_to_csv(ArrayList<ArrayList<String>> list, String file_path){
-        //This function takes in an arraylist of arraylist of string and save it to location "file_path" as csv
-        // or txt file.
-        //This function is tested.
-        String need = List_to_string(list);
-        try {
-            FileWriter myWriter = new FileWriter(file_path);
-            myWriter.write(need);
-            myWriter.close();
-            System.out.println("recorded successfully");
-        }
-        catch (IOException e) {
-
-            e.printStackTrace();
-
-        }
-
-    }
 
 }

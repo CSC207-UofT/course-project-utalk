@@ -18,7 +18,7 @@ public class Printer {
     public void professorCommentPresenter(String course, Professor professor) {
         if (professor.getCourseComments(course) != null) {
             for (Comment comment : professor.getCourseComments(course)) {
-                printer.CommentPrinter(comment, 0);
+                printer.commentPrinter(comment, 0);
             }
         }
     }
@@ -28,8 +28,8 @@ public class Printer {
      */
     public void studentCommentPresenter(String course, Student student) {
         for(Comment comment: student.getCourseComments(course)) {
-            printer.CommentPrinter(comment, 0);
+            printer.commentPrinter(comment, 0);
         }
     }
-    
+
 }

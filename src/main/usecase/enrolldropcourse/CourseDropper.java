@@ -13,7 +13,7 @@ public class CourseDropper {
      * @param course_name the course you want to remove from your course list
      * @param user the name of the current user
      */
-    public void dropCourse(String course_name, CommentableUser user)
+    public static void dropCourse(String course_name, CommentableUser user)
     {
 
         if (user.getCourseList().contains(course_name)){

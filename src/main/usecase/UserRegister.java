@@ -3,7 +3,6 @@ package usecase;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 
 public class UserRegister {
     public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";

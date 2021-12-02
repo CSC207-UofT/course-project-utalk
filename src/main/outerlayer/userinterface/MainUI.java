@@ -1,8 +1,11 @@
 package outerlayer.userinterface;
 
+import entity.Faculty;
 import interfaceadaptor.CsvListTransfer;
+import outerlayer.userinterface.facultyuserinterface.FacultyUI;
 import outerlayer.userinterface.logoutuserinterface.LogoutUI;
 import outerlayer.userinterface.registeruserinterface.RegisterUI;
+import outerlayer.userinterface.studentprofessorinterface.StudentProfessorUI;
 import usecase.deleteuser.UserDeleter;
 import interfaceadaptor.loginlogout.Login;
 
@@ -26,7 +29,7 @@ public class MainUI {
     public static void registerSigninUi() {
         //this is command UI function for register and sign in and different functions are adding.
         System.out.println("================================================================================================================================");
-        System.out.println("What would you like to do next? \n 1: register \n 2: log in \n 3: log out\n 9: quit program. \n10: administrator privileges");
+        System.out.println("What would you like to do next? \n 1: register \n 2: log in \n 3: log out \n 4: make actions \n 9: quit program. \n10: administrator privileges");
         Scanner scan = new Scanner(System.in);
         String enter = scan.nextLine();
         switch (enter) {
@@ -39,15 +42,22 @@ public class MainUI {
             case "2" -> {
                 System.out.println("PLease follow the orders to log in.");
                 Login.logIn();
+                System.out.println("Which action you want to make? ");
             }
             case "3" -> {
                 System.out.println("Please follow the orders to log out.");
                 LogoutUI.logOutUi();
+
             }
-            case "4" -> {
-                System.out.println("Please make actions");
-
-
+            case "4" ->{
+                if (Login.loggedInUser == null){
+                    System.out.println("Please register first.");
+                }
+                if (Login.loggedInUser instanceof Faculty){
+                    FacultyUI.facultyPage();
+                } else{
+                    StudentProfessorUI.StuProPage();
+                }
             }
             case "9" -> {
                 System.out.println("Are you sure you wish to quit? PLease type in 'yes' to quit.");
@@ -70,17 +80,21 @@ public class MainUI {
                     //The line below eliminates infinite loop warning. Please don't remove it.
                     //noinspection InfiniteLoopStatement
                     while (true) {
-                        System.out.println("administrator privileges:\n  1: check all users\n  " +
-                                "2: delete whole database\n  10: back to main menu");
+                        System.out.println("""
+                                administrator privileges:
+                                  1: check all users
+                                  2: delete whole database
+                                  10: back to main menu""");
                         Scanner b = new Scanner(System.in);
                         String number = b.nextLine();
                         switch (number) {
                             case "1" -> {
                                 System.out.println("[id, username, password, type, status]");
                                 for (ArrayList<String> item : CsvListTransfer.csvToList()) {System.out.println(item);}
-                                System.out.println("\n========================================" +
-                                        "==========================================================" +
-                                        "==============================\n");
+                                System.out.println("""
+
+                                        ================================================================================================================================
+                                        """);
                                 System.out.println("What would you like to do next?");
                             }
                             case "2" -> {

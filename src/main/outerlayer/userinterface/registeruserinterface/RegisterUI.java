@@ -1,18 +1,19 @@
 package outerlayer.userinterface.registeruserinterface;
 
+import entity.Professor;
 import entity.Student;
 import interfaceadaptor.CsvListTransfer;
 import outerlayer.userinterface.MainUI;
 import usecase.UserRegister;
+import usecase.javastorage.AllProfessors;
 import usecase.javastorage.AllStudents;
 
-import java.security.AllPermission;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class RegisterUI {
-    public static String file_path = "data_base.csv";
+    public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";
     static int ID = 0;
     public static void registerUi() {
         ID = ID + 1;
@@ -47,8 +48,7 @@ public class RegisterUI {
                     Scanner sc = new Scanner(System.in);
                     String type = sc.nextLine();
                     switch (type) {
-                        case "1":
-                        case "student": {
+                        case "1", "student" -> {
                             int randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
 
                             //This code does not check whether this ID existed before or not.
@@ -56,34 +56,30 @@ public class RegisterUI {
                             UserRegister.registerUser(Integer.toString(randomID), username, password1, "student", "false");
                             System.out.println("You have successfully sign up as student \"" + username + "\"");
                             Student student = new Student(Integer.toString(randomID), username, password1);
-                            AllStudents.StundetHashMap.put(username, student);
+                            AllStudents.StudentHashMap.put(username, student);
                             MainUI.registerSigninUi();
-                            break;
                         }
-
-                        case "2":
-                        case "professor": {
+                        case "2", "professor" -> {
                             int randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
                             UserRegister.registerUser(Integer.toString(randomID), username, password1, "professor", "false");
                             System.out.println("You have successfully sign up as professor \"" + username + "\"");
+                            Professor professor = new Professor(Integer.toString(randomID), username, password1);
+                            AllProfessors.ProfessorHashMap.put(username, professor);
                             MainUI.registerSigninUi();
-                            break;
 
                         }
-                        case "3":
-                        case "faculty": {
+                        case "3", "faculty" -> {
                             int randomID = ThreadLocalRandom.current().nextInt(0, 10000000 + 1);
                             //This code does not check whether this ID existed before or not.
 
                             UserRegister.registerUser(Integer.toString(randomID), username, password1, "Faculty", "false");
                             System.out.println("You have successfully sign up as faculty \"" + username + "\"");
                             MainUI.registerSigninUi();
-                            break;
 
                         }
-                        default: {
+                        default -> {
                             System.out.println("this is not a valid input. please re-enter.");
                             System.out.println("\n================================================================================================================================");
                         }

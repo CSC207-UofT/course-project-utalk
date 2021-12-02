@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class CsvListTransfer {
     /*
@@ -16,35 +17,13 @@ public class CsvListTransfer {
     I have renewed the functions there.
      */
 
-    public static String file_path = "data_base.csv";
-
+    public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";
 
     public static ArrayList<String> strToArraylist(String string, String split_by) {
         //This is helper method.
         //This function transfer from str to arraylist.
         ArrayList<String> result = new ArrayList<>();
-        for (String item : string.split(",")) {
-            result.add(item);
-        }
-        return result;
-    }
-
-
-    public static ArrayList<ArrayList<String>> csvToList() {
-        //Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
-        String line = "";
-        ArrayList<ArrayList<String>> result = new ArrayList<>();
-
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(file_path));
-            while ((line = br.readLine()) != null) {
-                result.add(strToArraylist(line, ","));
-                //result.add(Collections.singletonList(line));
-
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        Collections.addAll(result, string.split(","));
         return result;
     }
 
@@ -62,7 +41,23 @@ public class CsvListTransfer {
                 i += 1;
             }
         }
+    }
 
+    public static ArrayList<ArrayList<String>> csvToList() {
+        //Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
+        String line;
+        ArrayList<ArrayList<String>> result = new ArrayList<>();
 
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(file_path));
+            while ((line = br.readLine()) != null) {
+                result.add(strToArraylist(line, ","));
+                //result.add(Collections.singletonList(line));
+
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return result;
     }
 }

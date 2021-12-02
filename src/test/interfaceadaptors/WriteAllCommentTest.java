@@ -1,6 +1,5 @@
 package interfaceadaptors;
 
-import entity.CoursePage;
 import entity.Professor;
 import interfaceadaptor.boundaries.DatabaseWriter;
 import usecase.adddeleteeditcomment.CommentAdder;
@@ -8,7 +7,6 @@ import usecase.createupdate.CourseCreator;
 import usecase.enrolldropcourse.CourseEnroller;
 import usecase.javastorage.AllCourses;
 
-import java.util.HashMap;
 
 public class WriteAllCommentTest {
     public static void main(String[] args){
