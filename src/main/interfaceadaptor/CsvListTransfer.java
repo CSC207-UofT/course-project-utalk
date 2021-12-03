@@ -1,5 +1,6 @@
 package interfaceadaptor;
 
+import outerlayer.userinterface.FilePathHelper;
 import usecase.UserRegister;
 import usecase.deleteuser.UserDeleter;
 
@@ -17,7 +18,7 @@ public class CsvListTransfer {
     I have renewed the functions there.
      */
 
-    public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";
+    public static String file_path = FilePathHelper.FILEPATH + "/user.csv";
 
     public static ArrayList<String> strToArraylist(String string, String split_by) {
         //This is helper method.
