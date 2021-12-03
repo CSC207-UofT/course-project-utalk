@@ -4,6 +4,8 @@ import interfaceadaptor.TextFileCreator;
 import usecase.javastorage.AllCourses;
 import java.util.Map;
 
+import static outerlayer.userinterface.FilePathHelper.FILEPATH;
+
 /**
  * Present the CoursePage
  */
@@ -11,7 +13,7 @@ public class CoursePagePresenter {
     static final TextFileCreator tfc = new TextFileCreator();
     static final RecordAndPresent recordPresent = new RecordAndPresent();
     static final CommentPrinter commentPrint = new CommentPrinter();
-    static final String file_name = "course page data.txt";
+    static final String file_name = FILEPATH + "course page data.txt";
     static public CoursePage cour;
 
     /** Present coursePage including course information and comments.

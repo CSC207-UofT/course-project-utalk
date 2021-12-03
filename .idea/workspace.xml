@@ -2,17 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/Printer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/Printer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/readers/CommentReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/FilePathHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1202.iml" beforeDir="false" afterPath="$PROJECT_DIR$/1202.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/entity/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entity/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/AllReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CoursePagePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/boundaries/DatabaseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/boundaries/DatabaseWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/adddeleteeditcomment/CommentEditer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/usecase/adddeleteeditcomment/CommentEditer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/loginlogout/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/loginlogout/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/readers/AllReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/readers/AllReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/readers/CourseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/readers/CourseReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/courses.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/database/courses.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/database/user.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/MainUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/facultyuserinterface/FacultyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/facultyuserinterface/FacultyUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/PresenterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/PresenterUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/registeruserinterface/RegisterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/registeruserinterface/RegisterUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/usecase/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/usecase/UserRegister.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/usecase/creator/StudentCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/usecase/creator/StudentCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/CourseEnroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/CourseEnroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/CommentTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/usecase/enrolldropcourse/CourseEnrollerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/usecase/enrolldropcourse/CourseEnrollerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -30,6 +56,62 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
+  <component name="RunManager" selected="Application.AllReaderTest">
+    <configuration name="AllReaderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AllReaderTest" />
+      <module name="1202" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MainUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="outerlayer.userinterface.MainUI" />
+      <module name="1202" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="outerlayer.userinterface.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WriteAllCommentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interfaceadaptors.WriteAllCommentTest" />
+      <module name="1202" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interfaceadaptors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WriteAllStudentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interfaceadaptors.WriteAllStudentTest" />
+      <module name="1202" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interfaceadaptors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.AllReaderTest" />
+        <item itemvalue="Application.WriteAllStudentTest" />
+        <item itemvalue="Application.MainUI" />
+        <item itemvalue="Application.WriteAllCommentTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -39,10 +121,22 @@
       <option name="presentableId" value="Default" />
       <updated>1638426964639</updated>
       <workItem from="1638426972390" duration="500000" />
+      <workItem from="1638462356149" duration="4099000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/AllReaderTest.java</url>
+          <line>7</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

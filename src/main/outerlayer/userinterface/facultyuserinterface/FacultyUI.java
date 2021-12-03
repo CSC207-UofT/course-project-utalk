@@ -32,6 +32,7 @@ public class FacultyUI {
             input_str = input_help.getInput(System.in).nextLine();
         }
         Controller.control(input_str, FacultyUI.loadData());
+        FacultyUI.facultyPage();
         if (Objects.equals(input_str, "quit")) {
             MainUI.registerSigninUi();
         }

@@ -12,13 +12,15 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Objects;
 
+import static outerlayer.userinterface.FilePathHelper.FILEPATH;
+
 public class AllReader {
     public static void readAll(){
-        ArrayList<ArrayList<String>> users = CsvReader.readCsv("user.csv");
-        ArrayList<ArrayList<String>> courses = CsvReader.readCsv("courses.csv");
-        ArrayList<ArrayList<String>> students = CsvReader.readCsv("students.csv");
-        ArrayList<ArrayList<String>> professors = CsvReader.readCsv("professors.csv");
-        ArrayList<ArrayList<String>> comments = CsvReader.readCsv("comments.csv");
+        ArrayList<ArrayList<String>> users = CsvReader.readCsv(FILEPATH + "/user.csv");
+        ArrayList<ArrayList<String>> courses = CsvReader.readCsv(FILEPATH + "/courses.csv");
+        ArrayList<ArrayList<String>> students = CsvReader.readCsv(FILEPATH + "/students.csv");
+        ArrayList<ArrayList<String>> professors = CsvReader.readCsv(FILEPATH + "/professors.csv");
+        ArrayList<ArrayList<String>> comments = CsvReader.readCsv(FILEPATH + "/comments.csv");
         for (ArrayList<String> user: users){
             if (Objects.equals(user.get(3), "student")){
                 Student student = new Student(user.get(0), user.get(1), user.get(2));
@@ -28,7 +30,7 @@ public class AllReader {
                 AllProfessors.ProfessorHashMap.put(user.get(1), professor);
             }
         }
-        CourseReader.readCourse();
+        CourseReader.readCourse(courses);
         StudentCreator.createStudent(students);
         ProfessorCreator.createProfessor(professors);
         

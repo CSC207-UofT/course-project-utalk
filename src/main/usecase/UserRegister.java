@@ -1,11 +1,13 @@
 package usecase;
 
+import outerlayer.userinterface.FilePathHelper;
+
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 
 public class UserRegister {
-    public static String file_path = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk11/src/main/outerlayer/database/user.csv";
+    public static String file_path = FilePathHelper.FILEPATH + "/user.csv";
 
     public static void registerUser(String id, String user_name, String password, String type, String status){
         //This method register a new user into the database file.
