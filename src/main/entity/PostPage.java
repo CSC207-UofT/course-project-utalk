@@ -36,6 +36,7 @@ public class PostPage {
     public int getCurrentID(){
         return current_id;
     }
+    public void setCurrentID(int a){current_id = a;}
 
     public ArrayList<ArrayList<String>> recordComments(){
         ArrayList<ArrayList<String>> comments = new ArrayList<>();

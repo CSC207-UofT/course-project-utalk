@@ -14,7 +14,7 @@ public class canChange {
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
             int length = coursepage.getLength();
             PostPage postpage = coursepage.post_page_List.get(length - 1);
-            return postpage.current_id >= reply_to;
+            return postpage.getCurrentID() >= reply_to;
         }
         return true;
 
