@@ -16,6 +16,7 @@ import usecase.enrolldropcourse.CourseEnroller;
 
 public class Controller {
     public static void control(String s, String[] args) {
+        CommentableUserPresenter cup = new CommentableUserPresenter();
         switch (s) {
             case "1" -> CourseCreator.createCourse(args[0], args[1], args[2]);
             case "2" -> CourseUpdater.updateCourseInfo(args[0], args[1], args[2]);
@@ -31,7 +32,7 @@ public class Controller {
                 }
 
             }
-            case "8" -> CommentableUserPresenter.commentableUserCommentPresenter(args[0], (CommentableUser) Login.loggedInUser);
+            case "8" -> cup.presenterRequiresUserInfo(args[0], (CommentableUser) Login.loggedInUser);
             case "9" -> StudentProfessorUI.StuProPage();
             case "10" -> CommentableUserPresenter.commentableUserCourseListPresenter((CommentableUser) Login.loggedInUser);
 

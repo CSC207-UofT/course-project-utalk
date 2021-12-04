@@ -12,9 +12,10 @@ public class CoursePagePresenterUI {
     public static String courseCode = null;
 
     public static void coursePagePresenterUI() {
+        CoursePagePresenter cpp = new CoursePagePresenter();
         System.out.println("Please enter course code: \n");
         courseCode = input_help.getInput(System.in).nextLine();
-        CoursePagePresenter.coursePresenter(courseCode);
+        cpp.generalPresenter(courseCode);
         CoursePagePresenter.semesterPresenter();
         System.out.println("Please enter the semester information: \n");
         String semester = input_help.getInput(System.in).nextLine();

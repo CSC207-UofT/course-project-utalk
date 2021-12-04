@@ -1,5 +1,6 @@
 package interfaceadaptor.Presenter;
 
+import entity.CommentableUser;
 import entity.CoursePage;
 import interfaceadaptor.TextFileCreator;
 import usecase.javastorage.AllCourses;
@@ -11,18 +12,39 @@ import static outerlayer.userinterface.FilePathHelper.FILEPATH;
 /**
  * Present the CoursePage
  */
-public class CoursePagePresenter {
+public class CoursePagePresenter implements GeneralPrinter {
     static final TextFileCreator tfc = new TextFileCreator();
     static final String file_name = FILEPATH + "course page data.txt";
     static public CoursePage cour;
+
+    /**
+     * Present all course semesters
+     */
+    public static void semesterPresenter() {
+        for (String semester : cour.semesterList()) {
+            System.out.print(semester);
+        }
+    }
+
+    public static void pagePresenter(String semester) {
+        try {
+            PostPagePresenter.pagePrinter(cour.postPageHashMap().get(semester));
+        } catch (Exception ex) {
+            System.out.print("Please double check the semester.");
+        }
+    }
+
+    @Override
+    public void presenterRequiresUserInfo(String course, CommentableUser commentableUser) {
+    }
 
     /**
      * Present coursePage including course information and comments.
      *
      * @param course The name of course we want to present
      */
-    public static void coursePresenter(String course) {
-
+    @Override
+    public void generalPresenter(String course) {
         cour = AllCourses.coursePageHashMap.get(course);
         if (cour == null) {
             System.out.print("Please first create the course.");
@@ -42,23 +64,6 @@ public class CoursePagePresenter {
             System.out.println("This course have following semesters: \n");
             semesterPresenter();
         }
-    }
 
-
-    /**
-     * Present all course semesters
-     */
-    public static void semesterPresenter() {
-        for (String semester : cour.semesterList()) {
-            System.out.print(semester);
-        }
-    }
-
-    public static void pagePresenter(String semester) {
-        try {
-            PostPagePresenter.pagePrinter(cour.postPageHashMap().get(semester));
-        } catch (Exception ex) {
-            System.out.print("Please double check the semester.");
-        }
     }
 }

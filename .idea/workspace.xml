@@ -1,20 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
-      <change afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentableUserPresenter.java" afterDir="false" />
+    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/GeneralPrinter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentableUserPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentableUserPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CourseMemberPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CourseMemberPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CoursePagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/PostPagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/PostPagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/Printer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/RecordAndPresent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/RecordAndPresent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/boundaries/WriteIntoTxtFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/boundaries/WriteIntoTxtFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/PresenterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +19,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -39,6 +34,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/interfaceadaptor" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -49,6 +45,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\2021Fall\CSC207\IdeaProjects\course-project-utalk-phase2\src\main\interfaceadaptor" />
       <recent name="D:\2021Fall\CSC207\IdeaProjects\course-project-utalk-phase2\src\main\interfaceadaptor\Presenter" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="interfaceadaptor.Presenter" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="outerlayer.userinterface.presenteruserinterface" />
@@ -137,6 +136,14 @@
       <workItem from="1638568455625" duration="4172000" />
       <workItem from="1638585983110" duration="4766000" />
     </task>
+    <task id="LOCAL-00001" summary="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
+      <created>1638650162917</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638650162917</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,6 +164,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Incorporate changes for Zeyuan Li's part: fix the bug for add comment." />
     <MESSAGE value="Revise typo in CommentUI. Revise functions in presenter package and UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revise typo in CommentUI. Revise functions in presenter package and UI" />
+    <MESSAGE value="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem." />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
