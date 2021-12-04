@@ -1,9 +1,8 @@
 package interfaceadaptor.boundaries;
 
 import interfaceadaptor.CSVWriter;
+import usecase.javastorage.AllCommentableUser;
 import usecase.javastorage.AllCourses;
-import usecase.javastorage.AllProfessors;
-import usecase.javastorage.AllStudents;
 import entity.CoursePage;
 import entity.PostPage;
 
@@ -17,16 +16,11 @@ public class DatabaseWriter {
         ArrayList<ArrayList<String>> courses = AllCourses.recordCourses();
         CSVWriter.write_to_csv(courses, FILEPATH + "/courses.csv");
     }
-    public static void writeStudentCourses(){
-        ArrayList<ArrayList<String>> studentCourse = AllStudents.recordStudent();
-        CSVWriter.write_to_csv(studentCourse, FILEPATH + "/students.csv");
-    }
 
-    public static void writeProfessorCourses(){
-        ArrayList<ArrayList<String>> professorCourse = AllProfessors.recordProfessor();
-        CSVWriter.write_to_csv(professorCourse, FILEPATH + "/professors.csv");
+    public static void writeCommentableUser(){
+        ArrayList<ArrayList<String>> userCourse = AllCommentableUser.recordCommentableUser();
+        CSVWriter.write_to_csv(userCourse, FILEPATH + "/commentableuser.csv");
     }
-
 
     public static void writeComment(){
         ArrayList<ArrayList<String>> comments =  new ArrayList<>();
@@ -42,8 +36,7 @@ public class DatabaseWriter {
 
     public static void writeAll(){
         writeAllCourses();
-        writeStudentCourses();
-        writeProfessorCourses();
+        writeCommentableUser();
         writeComment();
     }
 

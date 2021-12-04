@@ -1,8 +1,6 @@
 package usecase.enrolldropcourse;
 
 import entity.CommentableUser;
-import entity.Professor;
-import entity.Student;
 
 public class CourseDropper {
 

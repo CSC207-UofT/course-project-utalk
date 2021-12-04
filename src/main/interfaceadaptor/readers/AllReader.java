@@ -2,11 +2,9 @@ package interfaceadaptor.readers;
 
 import entity.*;
 import interfaceadaptor.CsvReader;
-import usecase.creator.ProfessorCreator;
-import usecase.creator.StudentCreator;
+import usecase.creator.CommentableUserCreater;
+import usecase.javastorage.AllCommentableUser;
 import usecase.javastorage.AllCourses;
-import usecase.javastorage.AllProfessors;
-import usecase.javastorage.AllStudents;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -18,21 +16,22 @@ public class AllReader {
     public static void readAll(){
         ArrayList<ArrayList<String>> users = CsvReader.readCsv(FILEPATH + "/user.csv");
         ArrayList<ArrayList<String>> courses = CsvReader.readCsv(FILEPATH + "/courses.csv");
-        ArrayList<ArrayList<String>> students = CsvReader.readCsv(FILEPATH + "/students.csv");
-        ArrayList<ArrayList<String>> professors = CsvReader.readCsv(FILEPATH + "/professors.csv");
+        ArrayList<ArrayList<String>> commentableUsers = CsvReader.readCsv(FILEPATH + "/commentableuser.csv");
         ArrayList<ArrayList<String>> comments = CsvReader.readCsv(FILEPATH + "/comments.csv");
         for (ArrayList<String> user: users){
+            String name = user.get(1);
+            HashMap<String, CommentableUser> curr = AllCommentableUser.getAllCommentableUsers();
             if (Objects.equals(user.get(3), "student")){
                 Student student = new Student(user.get(0), user.get(1), user.get(2));
-                AllStudents.StudentHashMap.put(user.get(1), student);
+                curr.put(name, student);
             } else if (Objects.equals(user.get(3), "professor")){
                 Professor professor = new Professor(user.get(0), user.get(1), user.get(2));
-                AllProfessors.ProfessorHashMap.put(user.get(1), professor);
+                curr.put(name, professor);
             }
+            AllCommentableUser.setAllCommentableUsers(curr);
         }
         CourseReader.readCourse(courses);
-        StudentCreator.createStudent(students);
-        ProfessorCreator.createProfessor(professors);
+        CommentableUserCreater.readUser(commentableUsers);
         
         HashMap<String, ArrayList<String>> read = new HashMap<>();
 
@@ -62,11 +61,8 @@ public class AllReader {
             newComment.setStatus(status);
             HashMap<String, PostPage> map = coursepage.postPageHashMap();
             map.get(semester).getComments().put(ID, newComment);
-            if (AllProfessors.ProfessorHashMap.containsKey(author)){
-                AllProfessors.ProfessorHashMap.get(author).addCommentToList(courseCode, newComment);
-            }
-            if (AllStudents.StudentHashMap.containsKey(author)){
-                AllStudents.StudentHashMap.get(author).addCommentToList(courseCode, newComment);
+            if (AllCommentableUser.getAllCommentableUsers().containsKey(author)){
+                AllCommentableUser.getAllCommentableUsers().get(author).addCommentToList(courseCode, newComment);
             }
 
         }
