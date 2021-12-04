@@ -1,13 +1,13 @@
 package usecase.adddeleteeditcomment;
 import entity.*;
 import usecase.javastorage.AllCourses;
-import usecase.javastorage.AllCourses;
 public class canChange {
 
     public static boolean canAddComment(String course_code, Integer reply_to, CommentableUser user){
 
 
         if (! user.getCourseList().contains(course_code)){
+            System.out.println("not enrolled");
             return false;
         }
         if (!reply_to.equals(0)){

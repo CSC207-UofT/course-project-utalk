@@ -1,5 +1,6 @@
 package outerlayer.userinterface.facultyuserinterface;
 
+import interfaceadaptor.boundaries.DatabaseWriter;
 import interfaceadaptor.contollers.Controller;
 import outerlayer.userinterface.MainUI;
 
@@ -20,11 +21,13 @@ public class FacultyUI {
         return new String[]{code, info, year};
     }
     public static void facultyPage(){
-        System.out.println(" Choose which operation you want to make: \n" +
-                        "1: add course 2: update course Please enter 1 or 2,\n " +
-                "enter quit to return to the main menu");
+        System.out.println("""
+                 Choose which operation you want to make:\s
+                1: add course 2: update course Please enter 1 or 2,
+                 enter quit to return to the main menu""");
         String input_str = input_help.getInput(System.in).nextLine();
         if (input_str.equals("quit")){
+            DatabaseWriter.writeAll();
             MainUI.registerSigninUi();
         }
         while (!input_str.matches("[12]") && !input_str.equals("quit")){
@@ -34,6 +37,7 @@ public class FacultyUI {
         Controller.control(input_str, FacultyUI.loadData());
         FacultyUI.facultyPage();
         if (Objects.equals(input_str, "quit")) {
+            DatabaseWriter.writeAll();
             MainUI.registerSigninUi();
         }
     }

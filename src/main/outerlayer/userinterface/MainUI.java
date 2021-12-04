@@ -49,6 +49,7 @@ public class MainUI {
             }
             case "3" -> {
                 System.out.println("Please follow the orders to log out.");
+                DatabaseWriter.writeAll();
                 LogoutUI.logOutUi();
 
             }
@@ -69,10 +70,7 @@ public class MainUI {
                 String word = c.nextLine();
                 if (word.equals("yes")) {
                     System.out.println("Quit program successfully");
-                    DatabaseWriter.writeAllCourses();
-                    DatabaseWriter.writeProfessorCourses();
-                    DatabaseWriter.writeStudentCourses();
-                    DatabaseWriter.writeComment();
+                    DatabaseWriter.writeAll();
                     System.exit(0);
                 } else {
                     System.out.println("You did not quit the program.\n");
@@ -88,10 +86,11 @@ public class MainUI {
                     //The line below eliminates infinite loop warning. Please don't remove it.
                     //noinspection InfiniteLoopStatement
                     while (true) {
-                        System.out.println(" administrator privileges: \n " +
-                                        "1: check all users\n " +
-                                        "2: delete whole database\n " +
-                                "10: back to main menu");
+                        System.out.println("""
+                                administrator privileges:\s
+                                1: check all users
+                                2: delete whole database
+                                10: back to main menu""".indent(1));
                         Scanner b = new Scanner(System.in);
                         String number = b.nextLine();
                         switch (number) {

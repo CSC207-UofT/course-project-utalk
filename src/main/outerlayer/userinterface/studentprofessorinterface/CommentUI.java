@@ -40,8 +40,8 @@ public class CommentUI {
     public static String[] loadHelper(String[] input, String CourseCode){
         int a = input.length;
         String[] lst = new String[a+1];
-        System.arraycopy(input, 1, lst, 1, a + 1 - 1);
         lst[0] = CourseCode;
+        System.arraycopy(input, 0, lst, 1, a );
         return lst;
     }
     public static void CommentPage(String CourseCode){
