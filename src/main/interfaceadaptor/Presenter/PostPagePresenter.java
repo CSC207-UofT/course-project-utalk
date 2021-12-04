@@ -3,17 +3,20 @@ package interfaceadaptor.Presenter;
 import entity.Comment;
 import entity.PostPage;
 
+import static outerlayer.userinterface.FilePathHelper.FILEPATH;
+
 public class PostPagePresenter {
-    public final String file_name = "course page data.txt";
-    /** Print all comments in postPage
+    public static final String file_name = FILEPATH + "course page data.txt";
+
+    /**
+     * Print all comments in postPage
+     *
      * @param postPage the postPage that will be printed
      */
-    public void pagePrinter(PostPage postPage) {
+    public static void pagePrinter(PostPage postPage) {
         for (Comment comment : postPage.posts) {
-            CommentPrinter cp = new CommentPrinter();
-            cp.commentPrinter(comment, 0);
+            CommentPrinter.commentPrinter(comment, 0);
         }
-        RecordAndPresent recordAndPresent = new RecordAndPresent();
-        recordAndPresent.recordAndPresent("\n", file_name);
+        RecordAndPresent.recordAndPresent("\n", file_name);
     }
 }

@@ -2,11 +2,10 @@ package outerlayer.userinterface.studentprofessorinterface;
 
 
 import entity.CommentableUser;
-import interfaceadaptor.boundaries.DatabaseWriter;
 import interfaceadaptor.contollers.Controller;
 import interfaceadaptor.loginlogout.Login;
 import outerlayer.userinterface.facultyuserinterface.InputGetter;
-import outerlayer.userinterface.presenteruserinterface.PresenterUI;
+import outerlayer.userinterface.presenteruserinterface.CoursePagePresenterUI;
 
 public class StudentProfessorUI {
     static final outerlayer.userinterface.facultyuserinterface.InputGetter input_help = new InputGetter();
@@ -16,26 +15,34 @@ public class StudentProfessorUI {
                 System.out.println("Please enter the course you want to enroll");
                 EnrollAndDeleteCourse.enrollAndDropCoursePage();
             } else {
-                System.out.println("Which action you want to make? Enter 3 for enroll course, 4 for drop Course, 1 for view pages, add or delete your comment, 9 for back ");
+                System.out.println("""
+                        Which action you want to make?\s
+                         Enter 3 for enroll course, 4 for drop Course,\s
+                         1 for view pages, add or delete your comment, 10 for back\s""");
                 String type = input_help.getInput(System.in).nextLine();
-                while (!type.matches("[1349]")){
-                    System.out.println("Which action you want to make? Enter 3 for enroll course, 4 for drop Course, 1 for view pages, add or delete your comment, 9 for back ");
+                int count = 0;
+                while (!type.matches("[1349]") && count < 10) {
+                    System.out.println("""
+                            Which action you want to make?\s
+                             Enter 3 for enroll course, 4 for drop Course,\s
+                             1 for view pages, add or delete your comment, 10 for back\s""");
                     type = input_help.getInput(System.in).nextLine();
+                    count = count + 1;
                 }
-                if (type.equals("1")){
+                if (type.equals("1")) {
                     System.out.println("Please enter the course code.");
                     String courseCode = input_help.getInput(System.in).nextLine();
                     CommentUI.CommentPage(courseCode);
-                } else if (type.equals("9")){
+                } else if (type.equals("10")) {
                     Controller.control("9", new String[]{});
-                } else{
+                } else {
                     EnrollAndDeleteCourse.enrollAndDropCoursePage();
                 }
             }
         }
         StudentProfessorUI.StuProPage();
-        PresenterUI.coursePagePresenterUI();
-        CommentUI.CommentPage(PresenterUI.courseCode);
+        CoursePagePresenterUI.coursePagePresenterUI();
+        CommentUI.CommentPage(CoursePagePresenterUI.courseCode);
 
     }
 

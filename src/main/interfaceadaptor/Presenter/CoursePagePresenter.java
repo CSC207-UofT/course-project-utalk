@@ -1,7 +1,9 @@
 package interfaceadaptor.Presenter;
+
 import entity.CoursePage;
 import interfaceadaptor.TextFileCreator;
 import usecase.javastorage.AllCourses;
+
 import java.util.Map;
 
 import static outerlayer.userinterface.FilePathHelper.FILEPATH;
@@ -11,42 +13,52 @@ import static outerlayer.userinterface.FilePathHelper.FILEPATH;
  */
 public class CoursePagePresenter {
     static final TextFileCreator tfc = new TextFileCreator();
-    static final RecordAndPresent recordPresent = new RecordAndPresent();
-    static final CommentPrinter commentPrint = new CommentPrinter();
     static final String file_name = FILEPATH + "course page data.txt";
     static public CoursePage cour;
 
-    /** Present coursePage including course information and comments.
+    /**
+     * Present coursePage including course information and comments.
+     *
      * @param course The name of course we want to present
      */
-    public void coursePresenter(String course) {
+    public static void coursePresenter(String course) {
+
         cour = AllCourses.coursePageHashMap.get(course);
-        Map<String, Object> info_map = cour.course.courseInfoGetter();
-        recordPresent.recordAndPresent("Course: " + info_map.get("code") + "\n" + "Year: " + info_map.get("year"), file_name);
-        recordPresent.recordAndPresent("\n======================================================================\n", file_name);
-        CourseMemberPresenter cmp = new CourseMemberPresenter();
-        recordPresent.recordAndPresent("Professor(s): \n", file_name);
-        recordPresent.recordAndPresent(cmp.professorPresenter(cour) + '\n', file_name);
-        recordPresent.recordAndPresent("Student(s): \n", file_name);
-        recordPresent.recordAndPresent(cmp.studentPresenter(cour) + '\n', file_name);
-        recordPresent.recordAndPresent("Course Information: ", file_name);
-        recordPresent.recordAndPresent(info_map.get("description") + "\n", file_name);
-        recordPresent.recordAndPresent(cour.info_added + '\n', file_name);
-        // print the sessions of course page
-        semesterPresenter();
+        if (cour == null) {
+            System.out.print("Please first create the course.");
+        } else {
+            Map<String, Object> info_map = cour.course.courseInfoGetter();
+            RecordAndPresent.recordAndPresent("Course: " + info_map.get("code") + "\n" + "Year: " + info_map.get("year"), file_name);
+            RecordAndPresent.recordAndPresent("\n======================================================================\n", file_name);
+            RecordAndPresent.recordAndPresent("Professor(s): \n", file_name);
+            RecordAndPresent.recordAndPresent(CourseMemberPresenter.professorPresenter(cour) + '\n', file_name);
+            RecordAndPresent.recordAndPresent("Student(s): \n", file_name);
+            RecordAndPresent.recordAndPresent(CourseMemberPresenter.studentPresenter(cour) + '\n', file_name);
+            RecordAndPresent.recordAndPresent("Course Information: ", file_name);
+            RecordAndPresent.recordAndPresent(info_map.get("description") + "\n", file_name);
+            RecordAndPresent.recordAndPresent(cour.info_added + '\n', file_name);
+            RecordAndPresent.recordAndPresent("\n", file_name);
+            // print the sessions of course page
+            System.out.println("This course have following semesters: \n");
+            semesterPresenter();
+        }
     }
 
 
-    /** Present all course semesters
+    /**
+     * Present all course semesters
      */
-    public void semesterPresenter() {
-        for(String semester: cour.semesterList()){
+    public static void semesterPresenter() {
+        for (String semester : cour.semesterList()) {
             System.out.print(semester);
         }
     }
 
-    public void pagePresenter(String semester) {
-        PostPagePresenter pp = new PostPagePresenter();
-        pp.pagePrinter(cour.postPageHashMap().get(semester));
+    public static void pagePresenter(String semester) {
+        try {
+            PostPagePresenter.pagePrinter(cour.postPageHashMap().get(semester));
+        } catch (Exception ex) {
+            System.out.print("Please double check the semester.");
+        }
     }
 }
