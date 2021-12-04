@@ -84,6 +84,7 @@ public class AllReader {
                     }
 
                 }
+                postPage.setCurrentID(postPage.getComments().size());
             }
         }
 
