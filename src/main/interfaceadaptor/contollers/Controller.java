@@ -4,6 +4,8 @@ import entity.CommentableUser;
 import entity.Professor;
 import interfaceadaptor.Presenter.Printer;
 import interfaceadaptor.loginlogout.Login;
+import outerlayer.userinterface.MainUI;
+import outerlayer.userinterface.studentprofessorinterface.StudentProfessorUI;
 import usecase.adddeleteeditcomment.CommentAdder;
 import usecase.adddeleteeditcomment.CommentDeleter;
 import usecase.adddeleteeditcomment.CommentEditer;
@@ -34,6 +36,8 @@ public class Controller {
 
             }
             case "8" -> Printer.commentableUserCommentPresenter(args[0], (CommentableUser)Login.loggedInUser);
+            // TODO:  Need dependency inversion;
+            case "9" -> StudentProfessorUI.StuProPage();
         }
 
     }}

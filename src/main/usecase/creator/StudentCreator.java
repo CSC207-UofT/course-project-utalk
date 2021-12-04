@@ -9,11 +9,9 @@ public class StudentCreator {
     public static void createStudent(ArrayList<ArrayList<String>> students){
         for (ArrayList<String> student: students){
             String studentName = student.get(0);
-            student.remove(0);
-            System.out.println(studentName);
-            for (String course: student){
-                System.out.println(course);
-                CourseEnroller.enrollCourse(course,
+            assert AllStudents.StudentHashMap.get(studentName) == null;
+            for (int i = 1; i < student.size(); i++){
+                CourseEnroller.enrollCourse(student.get(i),
                         AllStudents.StudentHashMap.get(studentName));
             }
         }
