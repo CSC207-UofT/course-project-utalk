@@ -4,7 +4,6 @@ import entity.CoursePage;
 import entity.PostPage;
 import usecase.javastorage.AllCourses;
 import entity.Comment;
-import usecase.javastorage.AllCourses;
 
 public class CommentAdder {
     public static void addHelper(Comment comment ){

@@ -40,4 +40,11 @@ public class DatabaseWriter {
 
     }
 
+    public static void writeAll(){
+        writeAllCourses();
+        writeStudentCourses();
+        writeProfessorCourses();
+        writeComment();
+    }
+
 }
