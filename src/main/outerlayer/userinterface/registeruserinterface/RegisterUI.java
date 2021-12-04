@@ -6,8 +6,7 @@ import interfaceadaptor.CsvReader;
 import outerlayer.userinterface.FilePathHelper;
 import outerlayer.userinterface.MainUI;
 import usecase.UserRegister;
-import usecase.javastorage.AllProfessors;
-import usecase.javastorage.AllStudents;
+import usecase.javastorage.AllCommentableUser;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -57,7 +56,7 @@ public class RegisterUI {
                             UserRegister.registerUser(Integer.toString(randomID), username, password1, "student", "false");
                             System.out.println("You have successfully sign up as student \"" + username + "\"");
                             Student student = new Student(Integer.toString(randomID), username, password1);
-                            AllStudents.StudentHashMap.put(username, student);
+                            AllCommentableUser.getAllCommentableUsers().put(username, student);
                             MainUI.registerSigninUi();
                         }
                         case "2", "professor" -> {
@@ -67,7 +66,7 @@ public class RegisterUI {
                             UserRegister.registerUser(Integer.toString(randomID), username, password1, "professor", "false");
                             System.out.println("You have successfully sign up as professor \"" + username + "\"");
                             Professor professor = new Professor(Integer.toString(randomID), username, password1);
-                            AllProfessors.ProfessorHashMap.put(username, professor);
+                            AllCommentableUser.getAllCommentableUsers().put(username, professor);
                             MainUI.registerSigninUi();
 
                         }
