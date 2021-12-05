@@ -2,7 +2,10 @@
 
 Our group want to make an online discussion forum based on course for students, professors and faculties in the University of Toronto. 
 
-Important: our program needs version 17 JDK to run, also setting language level to 17.
+Important: 
+1. Our program needs version 17 JDK to run, also setting language level to 17.
+2. Please change the path in the FilePathHelper to your absolute path for our program down to the database package, after that it should be able to run.
+3. Please empty the csv files when you run test cases as user and commentable user are written by different functions, therefore running the test cases will cause a misallignment in them.
 
 Basic function include: 
 
@@ -12,4 +15,9 @@ Faculty: add course, update course
 
 Professor: add comment, delete comment, enroll course, drop course, present course page, present postpage 
 
-Caution!!!: Please change the filepath in the FilePathHelper ever time you run the program. 
+Reader and writer: read and write into csvs.
+
+JavaStorage: record all the information stored in it into Arraylists so that we can write them to csvs. 
+
+
+Most of our methods have preconditions, therefore we do not throw exceptions often.
