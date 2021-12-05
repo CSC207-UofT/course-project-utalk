@@ -1,6 +1,8 @@
 package usecase.enrolldropcourse;
 
 import entity.CommentableUser;
+import entity.Professor;
+import entity.Student;
 import usecase.javastorage.AllCourses;
 import entity.Comment;
 
@@ -20,12 +22,17 @@ public class CourseEnroller {
     {
 
         if (AllCourses.coursePageHashMap.containsKey(course_name)){
-            if(!user.getCourseList().contains(course_name)){
-            user.getCourseList().add(course_name);
-            ArrayList<Comment> empty = new ArrayList<>();
-            user.getComments().put(course_name, empty);
-            System.out.println("Dear " + user.user_name+ "Course: " + course_name + " added successfully");}
-            else{
+            if(!user.getCourseList().contains(course_name)) {
+                user.getCourseList().add(course_name);
+                if (user.getClassString().equals("Student")) {
+                    AllCourses.coursePageHashMap.get(course_name).student_list.add((Student) user);
+                    user.courseCommentSetter(course_name);
+                    System.out.println("Dear " + user.user_name + "Course: " + course_name + " added successfully");
+                } else {
+                    AllCourses.coursePageHashMap.get(course_name).professor_list.add((Professor) user);
+                    user.courseCommentSetter(course_name);
+                }
+            } else {
                 System.out.println("Dear " + user.user_name+ "You have already enrolled Course: " + course_name );
             }
         } else{

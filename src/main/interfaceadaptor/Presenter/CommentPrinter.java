@@ -1,10 +1,7 @@
 package interfaceadaptor.Presenter;
 
 import entity.Comment;
-import entity.CoursePage;
-import entity.PostPage;
 import interfaceadaptor.TextFileCreator;
-import usecase.javastorage.AllCourses;
 
 import static outerlayer.userinterface.FilePathHelper.FILEPATH;
 

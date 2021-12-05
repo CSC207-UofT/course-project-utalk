@@ -15,7 +15,9 @@ public abstract class CommentableUser extends User{
     public HashMap<String, ArrayList<Comment>> getComments(){
         return this.comments;
     }
-
+    public void courseCommentSetter(String courseCode){
+        comments.put(courseCode, new ArrayList<>());
+    }
     public abstract String getClassString();
 
     /**
