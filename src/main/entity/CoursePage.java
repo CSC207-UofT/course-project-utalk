@@ -55,6 +55,7 @@ public class CoursePage {
         return post_page_List.size();
     }
 
+
     /**
      * @return A hashmap containing all PostPage information in post_page_List,
      * use semester as the key and PostPage as value

@@ -1,5 +1,6 @@
 package outerlayer.userinterface.studentprofessorinterface;
 
+import interfaceadaptor.Presenter.CoursePagePresenter;
 import interfaceadaptor.contollers.Controller;
 import outerlayer.userinterface.MainUI;
 import outerlayer.userinterface.facultyuserinterface.InputGetter;
@@ -48,6 +49,8 @@ public class CommentUI {
     public static void CommentPage(String CourseCode) {
         int count = 0;
         while (count < 10) {
+            CoursePagePresenter cpp = new CoursePagePresenter();
+            cpp.generalPresenter(CourseCode);
             System.out.println("""
                      Choose which operation you want to make:
                      5: add comment 6: edit comment 7: delete comment 8. view own comment Please enter 5, 6, 7 or 8,\s

@@ -1,6 +1,9 @@
 package usecase.enrolldropcourse;
 
 import entity.CommentableUser;
+import entity.Professor;
+import entity.Student;
+import usecase.javastorage.AllCourses;
 
 public class CourseDropper {
 
@@ -15,6 +18,10 @@ public class CourseDropper {
     {
 
         if (user.getCourseList().contains(course_name)){
+            if (user.getClassString().equals("Student")) {
+                AllCourses.coursePageHashMap.get(course_name).student_list.remove((Student)user);
+            } else{
+                AllCourses.coursePageHashMap.get(course_name).professor_list.remove((Professor) user);}
             user.getCourseList().remove(course_name);
             System.out.println("Dear" + user.user_name+ "Course:" + course_name + "removed successfully");
         } else{
