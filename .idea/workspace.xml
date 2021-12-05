@@ -1,22 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
-      <change afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/GeneralPrinter.java" afterDir="false" />
+    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/CoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entity/CoursePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentableUserPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentableUserPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CourseMemberPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CourseMemberPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CoursePagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/entity/CommentableUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/entity/CommentableUser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/commentableuser.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/database/commentableuser.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/courses.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/database/courses.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/database/user.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/FilePathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/FilePathHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/CourseDropper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/CourseDropper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/CourseEnroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/CourseEnroller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,6 +131,14 @@
       <workItem from="1638568455625" duration="4172000" />
       <workItem from="1638585983110" duration="4766000" />
     </task>
+    <task id="LOCAL-00001" summary="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
+      <created>1638670909301</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1638670909301</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +159,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Incorporate changes for Zeyuan Li's part: fix the bug for add comment." />
     <MESSAGE value="Revise typo in CommentUI. Revise functions in presenter package and UI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revise typo in CommentUI. Revise functions in presenter package and UI" />
+    <MESSAGE value="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem." />
+    <option name="LAST_COMMIT_MESSAGE" value="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem." />
   </component>
 </project>
