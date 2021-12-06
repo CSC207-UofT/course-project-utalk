@@ -3,6 +3,7 @@ import entity.*;
 import usecase.javastorage.AllCourses;
 public class canChange {
 
+
     public static boolean canAddComment(String course_code, Integer reply_to, CommentableUser user){
 
 

@@ -20,6 +20,11 @@ public class CsvListTransfer {
 
     public static String file_path = FilePathHelper.FILEPATH + "/user.csv";
 
+    /**Transfer str to the arraylist, divide by split_by
+     * @param string the string which need to be transfer to the arraylist
+     * @param split_by the divider
+     * @return the arraylist of the string divdied by split_by
+     */
     public static ArrayList<String> strToArraylist(String string, String split_by) {
         //This is helper method.
         //This function transfer from str to arraylist.
@@ -28,6 +33,9 @@ public class CsvListTransfer {
         return result;
     }
 
+    /**transfer the target list to csv document
+     * @param list the target list
+     */
     public static void listToCsv(ArrayList<ArrayList<String>> list) {
         /*
         This function will renew the database file by that List<List<String>>.
@@ -44,6 +52,9 @@ public class CsvListTransfer {
         }
     }
 
+    /**transfer the data in csv document into the list
+     * @return the list of data in csv
+     */
     public static ArrayList<ArrayList<String>> csvToList() {
         //Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
         String line;

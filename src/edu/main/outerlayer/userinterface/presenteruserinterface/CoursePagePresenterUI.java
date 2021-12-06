@@ -3,13 +3,14 @@ package outerlayer.userinterface.presenteruserinterface;
 import interfaceadaptor.presenter.CoursePagePresenter;
 import outerlayer.userinterface.facultyuserinterface.InputGetter;
 
-/**
- * The CoursePagePresenterUI, scan the course code String and semester information, and then output PostPages or quit.
- */
+
 public class CoursePagePresenterUI {
     static final InputGetter input_help = new InputGetter();
     public static String courseCode = null;
 
+    /**
+     * The CoursePagePresenterUI, scan the course code String and semester information, and then output PostPages or quit.
+     */
     public static void coursePagePresenterUI() {
         CoursePagePresenter cpp = new CoursePagePresenter();
         System.out.println("Please enter course code: \n");

@@ -19,6 +19,10 @@ public class Login {
     public static String currentType = null;
     public static User loggedInUser = null;
 
+    /**
+     * the login in step which will ask the user to type in their username and the password. if both information matches
+     * the user will login in with that account, if not we will ask user to check their username and password
+     */
     public static void logIn() {
         ArrayList<ArrayList<String>> current_file = CsvReader.readCsv(file_path);
         System.out.println("What is your username?");

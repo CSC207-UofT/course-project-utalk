@@ -16,6 +16,10 @@ import java.util.concurrent.ThreadLocalRandom;
 public class RegisterUI {
     public static String file_path = FilePathHelper.FILEPATH + "/user.csv";
     static int ID = 0;
+
+    /**
+     * the UI for register
+     */
     public static void registerUi() {
         ID = ID + 1;
         ArrayList<ArrayList<String>> current_list = CsvReader.readCsv(file_path);

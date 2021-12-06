@@ -6,6 +6,10 @@ import java.util.ArrayList;
 
 public class CSVWriter {
 
+    /**Record the data stored in the list to the csv file
+     * @param list the list of the data
+     * @param file_path the storage csv file
+     */
    public static void write_to_csv(ArrayList<ArrayList<String>> list, String file_path){
         String need = List_to_string(list);
         try {
@@ -19,6 +23,11 @@ public class CSVWriter {
 
         }
     }
+
+    /**Transfer list to the string
+     * @param need_to_convert the list which need to be transferred
+     * @return the string which transferred from the list
+     */
     public static String List_to_string(ArrayList<ArrayList<String>> need_to_convert){
         //This is a helper method that convert an arraylist of arraylist of String into string,
         String result = "";

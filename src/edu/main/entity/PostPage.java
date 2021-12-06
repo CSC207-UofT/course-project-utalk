@@ -33,6 +33,9 @@ public class PostPage {
     }
     public void setCurrentID(int a){current_id = a;}
 
+    /**record the comments made by user
+     * @return the comment to the course page with user id and comment id
+     */
     public ArrayList<ArrayList<String>> recordComments(){
         ArrayList<ArrayList<String>> comments = new ArrayList<>();
         for (Integer id : this.comments.keySet()){

@@ -9,6 +9,13 @@ import java.io.PrintWriter;
 public class UserRegister {
     public static String file_path = FilePathHelper.FILEPATH + "/user.csv";
 
+    /**Register a new user with id username password type and status
+     * @param id the id of user
+     * @param user_name the name of user
+     * @param password the user password
+     * @param type the type of user
+     * @param status the login in status of the user
+     */
     public static void registerUser(String id, String user_name, String password, String type, String status){
         //This method register a new user into the database file.
 

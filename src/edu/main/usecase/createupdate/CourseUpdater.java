@@ -8,6 +8,11 @@ import java.util.Map;
 import java.util.Objects;
 
 public class CourseUpdater {
+    /**update information to the course
+     * @param course_code the code of the course
+     * @param course_info the new course information
+     * @param course_year the new course year
+     */
     public static void updateCourseInfo(String course_code, String course_info, String course_year) {
         Map<String, CoursePage> link_page = AllCourses.coursePageHashMap;
         if (link_page.containsKey(course_code)){

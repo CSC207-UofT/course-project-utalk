@@ -12,16 +12,25 @@ import java.util.ArrayList;
 import static outerlayer.userinterface.FilePathHelper.FILEPATH;
 
 public class DatabaseWriter {
+    /**
+     * Record all the course data to the course.csv
+     */
     public static void writeAllCourses(){
         ArrayList<ArrayList<String>> courses = AllCourses.recordCourses();
         CSVWriter.write_to_csv(courses, FILEPATH + "/courses.csv");
     }
 
+    /**
+     * Record all the commentable user data to the commentableuser.csv
+     */
     public static void writeCommentableUser(){
         ArrayList<ArrayList<String>> userCourse = AllCommentableUser.recordCommentableUser();
         CSVWriter.write_to_csv(userCourse, FILEPATH + "/commentableuser.csv");
     }
 
+    /**
+     * Record all the comment data to the comment.csv
+     */
     public static void writeComment(){
         ArrayList<ArrayList<String>> comments =  new ArrayList<>();
         for(CoursePage coursepage : AllCourses.getCoursePageHashMap().values()){

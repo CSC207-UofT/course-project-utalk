@@ -11,6 +11,9 @@ import java.util.Objects;
 import static outerlayer.userinterface.FilePathHelper.FILEPATH;
 
 public class AllReader {
+    /**
+     * read all the information in the user courses commentableuser and comments csv files
+     */
     public static void readAll(){
         ArrayList<ArrayList<String>> users = CsvReader.readCsv(FILEPATH + "/user.csv");
         ArrayList<ArrayList<String>> courses = CsvReader.readCsv(FILEPATH + "/courses.csv");

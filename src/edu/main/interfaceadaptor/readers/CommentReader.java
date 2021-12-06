@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CommentReader {
+    /**read all the comment and store them into the HashMap
+     * @param comments the comment which has the form of ArrayList<ArrayList<String>>
+     */
     public static void readComment(ArrayList<ArrayList<String>> comments) {
         HashMap<String, ArrayList<String>> read = new HashMap<>();
 

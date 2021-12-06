@@ -10,6 +10,9 @@ import java.util.Scanner;
 public class LogoutUI {
 
 
+    /**
+     * the user interface for logout
+     */
     public static void logOutUi(){
         ArrayList<ArrayList<String>> current_list = CsvListTransfer.csvToList();
         System.out.println("please type in your username");

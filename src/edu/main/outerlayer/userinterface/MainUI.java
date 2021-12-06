@@ -17,6 +17,10 @@ import java.util.Scanner;
 
 public class MainUI {
 
+    /**
+     * The inferface of the main UI which will guide the user to register log in, log out, make action, quit program or
+     * login as administrator
+     */
     public static void registerSigninUi() {
         //this is command UI function for register and sign in and different functions are adding.
         System.out.println("================================================================================================================================");
