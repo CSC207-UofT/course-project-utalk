@@ -32,9 +32,8 @@ public class StudentProfessorUI {
                     count = count + 1;
                 }
                 if (type.equals("1")) {
-                    System.out.println("Please enter the course code.");
-                    String courseCode = input_help.getInput(System.in).nextLine();
-                    CommentUI.CommentPage(courseCode);
+
+                    CommentUI.CommentPage(CoursePagePresenterUI.coursePagePresenterUI());
                 } else if (type.equals("9")) {
                     Controller.control("9", new String[]{});
                 } else {

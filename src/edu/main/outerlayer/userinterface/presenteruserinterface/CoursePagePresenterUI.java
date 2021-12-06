@@ -10,7 +10,7 @@ public class CoursePagePresenterUI {
     static final InputGetter input_help = new InputGetter();
     public static String courseCode = null;
 
-    public static void coursePagePresenterUI() {
+    public static String coursePagePresenterUI() {
         CoursePagePresenter cpp = new CoursePagePresenter();
         System.out.println("Please enter course code: \n");
         courseCode = input_help.getInput(System.in).nextLine();
@@ -19,6 +19,7 @@ public class CoursePagePresenterUI {
         System.out.println("Please enter the semester information: \n");
         String semester = input_help.getInput(System.in).nextLine();
         CoursePagePresenter.pagePresenter(semester);
+        return courseCode;
     }
 }
 
