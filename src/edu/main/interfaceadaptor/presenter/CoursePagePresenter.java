@@ -3,6 +3,7 @@ package interfaceadaptor.presenter;
 import entity.CommentableUser;
 import entity.CoursePage;
 import interfaceadaptor.gateways.TextFileCreator;
+import usecase.entityInfroTransfer.CoursePageInfoGenerator;
 import usecase.javastorage.AllCourses;
 
 import java.util.Map;
@@ -21,7 +22,7 @@ public class CoursePagePresenter implements GeneralPrinter {
      * Present all course semesters
      */
     public static void semesterPresenter() {
-        for (String semester : cour.semesterList()) {
+        for (String semester : CoursePageInfoGenerator.semesterList(cour)) {
             System.out.print(semester);
         }
     }
