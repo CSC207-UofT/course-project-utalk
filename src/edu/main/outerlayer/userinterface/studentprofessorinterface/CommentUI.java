@@ -9,6 +9,9 @@ import java.util.Objects;
 public class CommentUI {
     static final outerlayer.userinterface.facultyuserinterface.InputGetter input_help = new InputGetter();
 
+    /**Load the new comment
+     * @return the string with the comment content and user id
+     */
     public static String[] loadForAdd() {
 
         System.out.println("Please enter content: \n");
@@ -19,6 +22,10 @@ public class CommentUI {
 
         return new String[]{content, id};
     }
+
+    /**Edit the comment
+     * @return the string with the comment content and user id
+     */
     public static String[] loadForEdit() {
 
         System.out.println("Please enter content: \n");
@@ -29,6 +36,10 @@ public class CommentUI {
 
         return new String[]{content, id};
     }
+
+    /**Delet the comment
+     * @return the string with the comment id
+     */
     public static String[] loadForDelete() {
 
         System.out.println("Please enter your comment id: \n");
@@ -46,6 +57,9 @@ public class CommentUI {
         return lst;
     }
 
+    /**The UI for course page
+     * @param CourseCode the course code of that page
+     */
     public static void CommentPage(String CourseCode) {
         int count = 0;
         while (count < 10) {

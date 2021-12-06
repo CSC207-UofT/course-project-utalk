@@ -11,6 +11,9 @@ public class FacultyUI {
     }
     static final InputGetter input_help = new InputGetter();
 
+    /**Base on the input data update the course
+     * @return the string with the course code, course information and the year.
+     */
     public static String[] loadData() {
         System.out.println("Please enter course code: \n");
         String code = input_help.getInput(System.in).nextLine();
@@ -20,6 +23,11 @@ public class FacultyUI {
         String year = input_help.getInput(System.in).nextLine();
         return new String[]{code, info, year};
     }
+
+
+    /**
+     * the user interface for the faculty
+     */
     public static void facultyPage(){
         System.out.println("""
                  Choose which operation you want to make:\s

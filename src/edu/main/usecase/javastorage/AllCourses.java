@@ -9,6 +9,10 @@ import entity.CoursePage;
 
 public class AllCourses {
     public static HashMap<String, CoursePage> coursePageHashMap = new HashMap<>();
+
+    /**Record all the course data in to the course list ArrayList<ArrayList<String>>
+     * @return the course list ArrayList<ArrayList<String>>
+     */
     public static ArrayList<ArrayList<String>> recordCourses(){
         ArrayList<ArrayList<String>> courses = new ArrayList<>();
         for (String course : AllCourses.coursePageHashMap.keySet()){
