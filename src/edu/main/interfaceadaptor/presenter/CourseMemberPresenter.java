@@ -1,6 +1,7 @@
 package interfaceadaptor.presenter;
 
 import entity.CoursePage;
+import usecase.entityInfroTransfer.CoursePageInfoGenerator;
 
 import java.util.ArrayList;
 
@@ -15,14 +16,14 @@ public class CourseMemberPresenter {
      * @param coursePage The coursePage we attach to.
      */
     public static String professorPresenter(CoursePage coursePage) {
-        return concatString(coursePage.professorList());
+        return concatString(CoursePageInfoGenerator.professorList(coursePage));
     }
 
     /**
      * @return a long string containing all students
      */
     public static String studentPresenter(CoursePage coursePage) {
-        return concatString(coursePage.studentList());
+        return concatString(CoursePageInfoGenerator.studentList(coursePage));
     }
 
     public static String concatString(ArrayList<String> lst) {

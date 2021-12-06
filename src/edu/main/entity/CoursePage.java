@@ -73,7 +73,9 @@ public class CoursePage {
     public ArrayList<String> semesterList(){
         ArrayList<String> lst = new ArrayList<>();
         for(PostPage pg: post_page_List) {
-            lst.add(pg.semesterGetter());
+            if (! lst.contains(pg.semesterGetter())) {
+                lst.add(pg.semesterGetter());
+            }
         }
         return lst;
     }

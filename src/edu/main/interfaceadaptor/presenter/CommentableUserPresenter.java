@@ -2,6 +2,7 @@ package interfaceadaptor.presenter;
 
 import entity.Comment;
 import entity.CommentableUser;
+import usecase.entityInfroTransfer.CommentableUserInfoTransfer;
 
 
 /**
@@ -15,11 +16,11 @@ public class CommentableUserPresenter implements GeneralPrinter {
      */
     public static void commentableUserCourseListPresenter(CommentableUser commentableUser) {
 
-        if (commentableUser.getCourseList().size() == 0) {
+        if (CommentableUserInfoTransfer.getCourseList(commentableUser).size() == 0) {
             System.out.println("Please first enroll the course");
         } else {
             System.out.println("This is all the courses you have enrolled.");
-            for (String course : commentableUser.getCourseList()) {
+            for (String course : CommentableUserInfoTransfer.getCourseList(commentableUser)) {
                 System.out.print(course);
             }
         }
@@ -34,7 +35,7 @@ public class CommentableUserPresenter implements GeneralPrinter {
     @Override
     public void presenterRequiresUserInfo(String course, CommentableUser commentableUser) {
         if (commentableUser.getCourseComments(course) != null) {
-            for (Comment comment : commentableUser.getCourseComments(course)) {
+            for (Comment comment : CommentableUserInfoTransfer.getCourseComment(course, commentableUser)) {
                 CommentPrinter.commentPrinter(comment, 0);
             }
         } else {
