@@ -20,14 +20,14 @@ public class StudentProfessorUI {
                 System.out.println("""
                         Which action you want to make?\s
                          Enter 3 for enroll course, 4 for drop Course,\s
-                         1 for view pages, add or delete your comment, 10 for back\s""");
+                         1 for view pages, add or delete your comment, 9 for back\s""");
                 String type = input_help.getInput(System.in).nextLine();
                 int count = 0;
                 while (!type.matches("[1349]") && count < 10) {
                     System.out.println("""
                             Which action you want to make?\s
                              Enter 3 for enroll course, 4 for drop Course,\s
-                             1 for view pages, add or delete your comment, 10 for back\s""");
+                             1 for view pages, add or delete your comment, 9 for back\s""");
                     type = input_help.getInput(System.in).nextLine();
                     count = count + 1;
                 }
@@ -35,7 +35,7 @@ public class StudentProfessorUI {
                     System.out.println("Please enter the course code.");
                     String courseCode = input_help.getInput(System.in).nextLine();
                     CommentUI.CommentPage(courseCode);
-                } else if (type.equals("10")) {
+                } else if (type.equals("9")) {
                     Controller.control("9", new String[]{});
                 } else {
                     EnrollAndDeleteCourse.enrollAndDropCoursePage();

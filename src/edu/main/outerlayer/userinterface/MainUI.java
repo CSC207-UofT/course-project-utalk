@@ -23,7 +23,6 @@ public class MainUI {
         System.out.println("What would you like to do next? \n 1: register \n 2: log in \n 3: log out \n 4: make actions \n 9: quit program. \n10: administrator privileges");
         Scanner scan = new Scanner(System.in);
         String enter = scan.nextLine();
-        AllReader.readAll();
         switch (enter) {
             case "1" -> {
                 System.out.println("Please follow the orders to register");
@@ -46,8 +45,7 @@ public class MainUI {
                 AllReader.readAll();
                 if (Login.loggedInUser == null){
                     System.out.println("Please register or login first.");
-                }
-                if (Login.loggedInUser instanceof Faculty){
+                } else if (Login.loggedInUser instanceof Faculty){
                     FacultyUI.facultyPage();
                 } else{
                     StudentProfessorUI.StuProPage();

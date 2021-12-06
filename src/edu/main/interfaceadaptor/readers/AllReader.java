@@ -3,7 +3,6 @@ package interfaceadaptor.readers;
 import entity.*;
 import usecase.creator.CommentableUserCreater;
 import usecase.javastorage.AllCommentableUser;
-import usecase.javastorage.AllCourses;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,11 +1,7 @@
 package entity;
-
-import usecase.javastorage.AllCourses;
-
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.Map;
 
 
 public class PostPage {
@@ -30,7 +26,6 @@ public class PostPage {
     public HashMap<Integer, Comment> getComments() {
         return this.comments;
     }
-    //TODO: add print comment here.
 
     public void refreshID(){current_id++;}
     public int getCurrentID(){
