@@ -12,7 +12,7 @@ public class CSVWriter {
             FileWriter myWriter = new FileWriter(file_path);
             myWriter.write(need);
             myWriter.close();
-            System.out.println("recorded successfully");
+//            System.out.println("recorded successfully");
         }
         catch (IOException e) {
             e.printStackTrace();

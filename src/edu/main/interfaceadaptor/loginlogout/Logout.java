@@ -13,8 +13,8 @@ public class Logout {
         if (current_list.size() == 0){
             return false;
         }
-        for (int i = 0; i < current_list.size(); i += 1){
-            if (current_list.get(i).get(1).equals(username)){
+        for (ArrayList<String> strings : current_list) {
+            if (strings.get(1).equals(username)) {
                 //found this user.
                 return true;
             }
@@ -31,13 +31,18 @@ public class Logout {
             System.out.println("There is no such user. Please re-check your username or sign up first.");
             MainUI.registerSigninUi();
         }
-        for (int i = 0; i < current_list.size(); i += 1){
-            if (current_list.get(i).get(1).equals(username)){
+        for (ArrayList<String> strings : current_list) {
+            if (strings.get(1).equals(username)) {
                 //we located this user.
-                current_list.get(i).set(4, "false");
+                strings.set(4, "false");
             }
         }
         CsvListTransfer.listToCsv(current_list);
+        Login.loggedInUser = null;
+        Login.Current_username = null;
+        Login.Current_password = null;
+        Login.Current_id = null;
+        Login.currentType = null;
         System.out.println("You have successfully logged out");
     }
 }

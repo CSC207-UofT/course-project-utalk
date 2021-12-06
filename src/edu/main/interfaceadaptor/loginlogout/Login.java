@@ -13,10 +13,10 @@ import static outerlayer.userinterface.FilePathHelper.FILEPATH;
 public class Login {
 
     public static String file_path = FILEPATH + "/user.csv";
-    public static String Current_username = "Please recheck log in process, you have not recorded username successfully";
-    public static String Current_password = "Please recheck log in process, you have not recorded password successfully";
-    public static String Current_id = "Does not exist yet";
-    public static String currentType = "Does not exist yet";
+    public static String Current_username = null;
+    public static String Current_password = null;
+    public static String Current_id = null;
+    public static String currentType = null;
     public static User loggedInUser = null;
 
     public static void logIn() {

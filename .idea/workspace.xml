@@ -2,88 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/AllReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/courses.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/user.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/FilePathHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/main/runner/Executer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/StudentProfUITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/enrolldropcourse/EnrollandDropCourseUITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1202.iml" beforeDir="false" afterPath="$PROJECT_DIR$/1202.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/CommentableUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/CommentableUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/Course.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Course.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/CoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Faculty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/PostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/PostPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Professor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Student.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/gateways/CSVWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/CsvListTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/gateways/CsvListTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/CsvReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CsvReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CommentableUserPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentableUserPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CourseMemberPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CourseMemberPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/GeneralPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/GeneralPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/PostPagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/Presenter/RecordAndPresent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/RecordAndPresent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/TextFileCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/gateways/TextFileCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/boundaries/DatabaseWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/boundaries/DatabaseWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/boundaries/WriteIntoTxtFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/boundaries/WriteIntoTxtFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/contollers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/contollers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/loginlogout/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/loginlogout/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Logout.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/readers/AllReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/readers/CommentReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/interfaceadaptor/readers/CourseReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CourseReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/commentableuser.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/commentableuser.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/comments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/comments.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/courses.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/instruction.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/instruction.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/database/user.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/FilePathHelper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/MainUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/facultyuserinterface/FacultyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/facultyuserinterface/FacultyUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/facultyuserinterface/InputGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/facultyuserinterface/InputGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/logoutuserinterface/LogoutUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/logoutuserinterface/LogoutUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/registeruserinterface/RegisterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/registeruserinterface/RegisterUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/EnrollAndDeleteCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/EnrollAndDeleteCourse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/InputGetter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/running/Executer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/UserPrinter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/creator/UserRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/adddeleteeditcomment/CommentAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/adddeleteeditcomment/CommentDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentDeleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/adddeleteeditcomment/CommentEditer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentEditer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/adddeleteeditcomment/canChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/canChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/createupdate/CourseCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/createupdate/CourseCreator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/createupdate/CourseUpdater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/createupdate/CourseUpdater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/creator/CommentableUserCreater.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/creator/CommentableUserCreater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/deleteuser/UserDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/deleteuser/UserDeleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/CourseDropper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/CourseDropper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/CourseEnroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/CourseEnroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/enrolldropcourse/course.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/course.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/javastorage/AllCommentableUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/javastorage/AllCommentableUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/javastorage/AllCourses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/javastorage/AllCourses.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/usecase/javastorage/description.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/javastorage/description.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/AllReaderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/AllReaderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/LoggedInUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/LoggedInUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/ReadCSVTest" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/ReadCSVTest" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/RegisterTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/interfaceadaptors/WriteAllCommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/interfaceadaptors/WriteAllCommentableUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentableUserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/interfaceadaptors/WriteAllCourseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCourseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/usecase/createupdate/CourseCreatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/createupdate/CourseCreatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/usecase/createupdate/CourseUpdatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/createupdate/CourseUpdatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/usecase/enrolldropcourse/CourseDropperTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/usecase/enrolldropcourse/CourseEnrollerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/usecase/javastorage/AllCoursesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/javastorage/AllCoursesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/PostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/PostPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/Professor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Professor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/gateways/CSVWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/gateways/CSVWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Logout.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Logout.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/AllReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/AllReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/commentableuser.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/commentableuser.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/courses.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/courses.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/user.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/MainUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/EnrollAndDeleteCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/EnrollAndDeleteCourse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/runner/Executer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/runner/Executer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/CourseEnroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/CourseEnroller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,7 +151,7 @@
       <workItem from="1638568455625" duration="4172000" />
       <workItem from="1638585983110" duration="4766000" />
       <workItem from="1638720010632" duration="1463000" />
-      <workItem from="1638723466064" duration="9246000" />
+      <workItem from="1638723466064" duration="15240000" />
     </task>
     <task id="LOCAL-00001" summary="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
       <created>1638670909301</created>
@@ -227,7 +160,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638670909301</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed the bug that enrolledCourse not shown in the csv file. &#10;&#10;Move all the packages into edu package for package naming convention.">
+      <created>1638744516730</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1638744516730</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,6 +189,7 @@
     <MESSAGE value="Incorporate changes for Zeyuan Li's part: fix the bug for add comment." />
     <MESSAGE value="Revise typo in CommentUI. Revise functions in presenter package and UI" />
     <MESSAGE value="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem." />
-    <option name="LAST_COMMIT_MESSAGE" value="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem." />
+    <MESSAGE value="Fixed the bug that enrolledCourse not shown in the csv file. &#10;&#10;Move all the packages into edu package for package naming convention." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the bug that enrolledCourse not shown in the csv file. &#10;&#10;Move all the packages into edu package for package naming convention." />
   </component>
 </project>

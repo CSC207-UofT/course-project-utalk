@@ -25,11 +25,11 @@ public class CourseEnroller {
                 if (user.getClassString().equals("Student")) {
                     AllCourses.coursePageHashMap.get(course_name).student_list.add((Student) user);
                     user.courseCommentSetter(course_name);
-                    AllCommentableUser.getAllCommentableUsers().put(user.getUserName(), user);
+                    AllCommentableUser.getAllCommentableUsers().replace(user.getUserName(), user);
                     System.out.println("Dear " + user.user_name + "Course: " + course_name + " added successfully");
                 } else {
                     AllCourses.coursePageHashMap.get(course_name).professor_list.add((Professor) user);
-                    AllCommentableUser.getAllCommentableUsers().put(user.getUserName(), user);
+                    AllCommentableUser.getAllCommentableUsers().replace(user.getUserName(), user);
                     user.courseCommentSetter(course_name);
                 }
             } else {
