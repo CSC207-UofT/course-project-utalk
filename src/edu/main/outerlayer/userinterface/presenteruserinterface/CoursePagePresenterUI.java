@@ -7,7 +7,6 @@ import outerlayer.userinterface.facultyuserinterface.InputGetter;
 public class CoursePagePresenterUI {
     static final InputGetter input_help = new InputGetter();
     public static String courseCode = null;
-
     /**
      * The CoursePagePresenterUI, scan the course code String and semester information, and then output PostPages or quit.
      */
