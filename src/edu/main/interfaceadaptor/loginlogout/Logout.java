@@ -7,9 +7,13 @@ import java.util.ArrayList;
 
 public class Logout {
 
+    /**Helper function, check whether this list contains this username
+     * @param current_list the list of the user
+     * @param username the user name
+     * @return whether this list contains this username
+     */
     public static boolean containsUser(ArrayList<ArrayList<String>> current_list, String username){
-        //helper function
-        //return whether this list contains this username
+
         if (current_list.size() == 0){
             return false;
         }
@@ -23,8 +27,9 @@ public class Logout {
     }
 
 
-
-
+    /**Log out the specific user with the username
+     * @param username the user who want to log out
+     */
     public static void logOutUser(String username){
         ArrayList<ArrayList<String>> current_list = CsvListTransfer.csvToList();
         if (! containsUser(current_list, username)){

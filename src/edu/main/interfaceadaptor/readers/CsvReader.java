@@ -6,15 +6,21 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class CsvReader {
+    /**This is helper method. This function transfer from str to arraylist.
+     * @param string the string with data
+     * @param split_by divider
+     * @return arraylist transferred from str
+     */
     public static ArrayList<String> strToArraylist(String string, String split_by) {
-        //This is helper method.
-        //This function transfer from str to arraylist.
-        ArrayList<String> result = new ArrayList<>();
-        result.addAll(Arrays.asList(string.split(split_by)));
-        return result;
+        return new ArrayList<>(Arrays.asList(string.split(split_by)));
     }
+
+
+    /** Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
+     * @param file_path  the data csv file
+     * @return readable List<List<String>>
+     */
     public static ArrayList<ArrayList<String>> readCsv(String file_path) {
-        //Transfer a csv file into readable List<List<String>>. Each sublist is a row from the csv file.
         String line = "";
         ArrayList<ArrayList<String>> result = new ArrayList<>();
         try {

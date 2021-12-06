@@ -4,6 +4,11 @@ import entity.CoursePage;
 import usecase.javastorage.AllCourses;
 
 public class CourseCreator {
+    /**create a new course with the course name, description and the course year
+     * @param course_name the name of the course
+     * @param description the description of that coures
+     * @param year the course year
+     */
     public static void createCourse(String course_name, String description, String year)
     {
         if (AllCourses.coursePageHashMap.containsKey(course_name)){

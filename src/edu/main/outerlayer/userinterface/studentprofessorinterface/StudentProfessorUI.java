@@ -11,6 +11,11 @@ import outerlayer.userinterface.presenteruserinterface.CoursePagePresenterUI;
 
 public class StudentProfessorUI {
     static final outerlayer.userinterface.facultyuserinterface.InputGetter input_help = new InputGetter();
+
+    /**
+     * The UI for user with identity student and professor, they can enrol course drop course add comment to the
+     * course they enrolled and delete comment
+     */
     public static void StuProPage(){
         if (Login.loggedInUser instanceof CommentableUser){
             if (((CommentableUser) Login.loggedInUser).getCourseList().size() == 0){

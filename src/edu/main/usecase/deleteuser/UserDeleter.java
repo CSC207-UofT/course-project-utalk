@@ -5,8 +5,11 @@ import java.io.IOException;
 
 public class UserDeleter {
     public static String file_path = "data_base.csv";
+
+    /**
+     * This function will delete all recorded users in user database.
+     */
     public static void deleteAllUser() {
-        //This function will delete all recorded users in user database.
         try {
             FileWriter fw = new FileWriter(file_path, false);
         } catch (IOException e) {

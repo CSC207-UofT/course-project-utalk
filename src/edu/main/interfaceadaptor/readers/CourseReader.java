@@ -7,6 +7,9 @@ import java.util.ArrayList;
 
 
 public class CourseReader {
+    /**read the course information and creat Course object
+     * @param courses course information
+     */
     public static void readCourse(ArrayList<ArrayList<String>> courses){
         for (ArrayList<String> course: courses){
             CourseCreator.createCourse(course.get(0), course.get(1), course.get(2));
