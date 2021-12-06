@@ -11,7 +11,7 @@ public class CoursePagePresenterUI {
     /**
      * The CoursePagePresenterUI, scan the course code String and semester information, and then output PostPages or quit.
      */
-    public static void coursePagePresenterUI() {
+    public static String coursePagePresenterUI() {
         CoursePagePresenter cpp = new CoursePagePresenter();
         System.out.println("Please enter course code: \n");
         courseCode = input_help.getInput(System.in).nextLine();
@@ -20,6 +20,7 @@ public class CoursePagePresenterUI {
         System.out.println("Please enter the semester information: \n");
         String semester = input_help.getInput(System.in).nextLine();
         CoursePagePresenter.pagePresenter(semester);
+        return courseCode;
     }
 }
 
