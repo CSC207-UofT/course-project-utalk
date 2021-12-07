@@ -26,19 +26,15 @@ public class CommentPrinter {
         tfc.createTextFile(file_name);
 
         if (comments.getStatus()) {
-            commentPrinterHelper(comments, indentation);
+            HashMap<String, String> mp = CommentInfoTransfer.getInfo(comments);
+            RecordAndPresent.recordAndPresent(" ".repeat(indentation) + mp.get("Id")+ ". " + mp.get("Author") + " posted: " + mp.get("content"), file_name);
             if (comments.existReply()) {
-                for (int id = 1; id < comments.getReplyID(); id++) {
-                    Comment comment = comments.getReply(id);
+                for (int id = 1; id < CommentInfoTransfer.getReplyID(comments); id++) {
+                    Comment comment = CommentInfoTransfer.getReply(id, comments);
                     commentPrinter(comment, indentation + 1);
                 }
             }
         }
         RecordAndPresent.recordAndPresent("\n", file_name);
-    }
-    public static void commentPrinterHelper(Comment comments, int indentation){
-        HashMap<String, String> mp = CommentInfoTransfer.getInfo(comments);
-        RecordAndPresent.recordAndPresent(" ".repeat(indentation) + mp.get("Id")+ ". " + mp.get("Author") + " posted: " + mp.get("content"), file_name);
-
     }
 }

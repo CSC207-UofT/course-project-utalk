@@ -1,4 +1,6 @@
 package entity;
+import usecase.entityInfroTransfer.CourseInfoGetter;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 
