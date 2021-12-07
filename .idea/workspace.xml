@@ -2,16 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentInfoTransfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentableUserInfoTransfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/postContentGenerator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CourseInfoGetter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/contollers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/contollers/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentableUserPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentableUserPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CourseMemberPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CourseMemberPresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentInfoTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentInfoTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/postContentGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/postContentGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638744516730</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="changing dependency">
+      <created>1638822122071</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638822122071</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,6 +193,7 @@
     <MESSAGE value="Revise typo in CommentUI. Revise functions in presenter package and UI" />
     <MESSAGE value="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem." />
     <MESSAGE value="Fixed the bug that enrolledCourse not shown in the csv file. &#10;&#10;Move all the packages into edu package for package naming convention." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed the bug that enrolledCourse not shown in the csv file. &#10;&#10;Move all the packages into edu package for package naming convention." />
+    <MESSAGE value="changing dependency" />
+    <option name="LAST_COMMIT_MESSAGE" value="changing dependency" />
   </component>
 </project>

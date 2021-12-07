@@ -3,6 +3,7 @@ package interfaceadaptor.presenter;
 import entity.CommentableUser;
 import entity.CoursePage;
 import interfaceadaptor.gateways.TextFileCreator;
+import usecase.entityInfroTransfer.CourseInfoGetter;
 import usecase.entityInfroTransfer.CoursePageInfoGenerator;
 import usecase.javastorage.AllCourses;
 
@@ -46,11 +47,12 @@ public class CoursePagePresenter implements GeneralPrinter {
      */
     @Override
     public void generalPresenter(String course) {
-        cour = AllCourses.coursePageHashMap.get(course);
+        cour = CourseInfoGetter.courseGetter(course);
         if (cour == null) {
             System.out.print("Please first create the course.");
         } else {
-            Map<String, Object> info_map = cour.course.courseInfoGetter();
+            CoursePageInfoGenerator cpi = new CoursePageInfoGenerator();
+            Map<String, Object> info_map =cpi.getCourse(cour).courseInfoGetter();
             RecordAndPresent.recordAndPresent("Course: " + info_map.get("code") + "\n" + "Year: " + info_map.get("year"), file_name);
             RecordAndPresent.recordAndPresent("\n======================================================================\n", file_name);
             RecordAndPresent.recordAndPresent("Professor(s): \n", file_name);
@@ -59,7 +61,7 @@ public class CoursePagePresenter implements GeneralPrinter {
             RecordAndPresent.recordAndPresent(CourseMemberPresenter.studentPresenter(cour) + '\n', file_name);
             RecordAndPresent.recordAndPresent("Course Information: ", file_name);
             RecordAndPresent.recordAndPresent(info_map.get("description") + "\n", file_name);
-            RecordAndPresent.recordAndPresent(cour.info_added + '\n', file_name);
+            RecordAndPresent.recordAndPresent(cpi.getInfoAdd(cour) + '\n', file_name);
             RecordAndPresent.recordAndPresent("\n", file_name);
             // print the sessions of course page
             System.out.println("This course have following semesters: \n");

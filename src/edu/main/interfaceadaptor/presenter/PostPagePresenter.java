@@ -2,7 +2,7 @@ package interfaceadaptor.presenter;
 
 import entity.Comment;
 import entity.PostPage;
-
+import usecase.entityInfroTransfer.postContentGenerator;
 import static outerlayer.userinterface.FilePathHelper.FILEPATH;
 
 public class PostPagePresenter {
@@ -14,7 +14,7 @@ public class PostPagePresenter {
      * @param postPage the postPage that will be printed
      */
     public static void pagePrinter(PostPage postPage) {
-        for (Comment comment : postPage.posts) {
+        for (Comment comment : postContentGenerator.commentTransfer(postPage)) {
             CommentPrinter.commentPrinter(comment, 0);
         }
         RecordAndPresent.recordAndPresent("\n", file_name);

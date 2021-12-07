@@ -6,6 +6,8 @@ import entity.PostPage;
 import java.util.ArrayList;
 
 public class postContentGenerator {
-    public static void commentTransfer(PostPage pg) {
+    public static ArrayList<Comment> commentTransfer(PostPage pg) {
+        return pg.posts;
     }
+
 }

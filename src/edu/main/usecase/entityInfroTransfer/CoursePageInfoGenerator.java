@@ -1,8 +1,8 @@
 package usecase.entityInfroTransfer;
 
+import entity.Course;
 import entity.CoursePage;
-import entity.Professor;
-import entity.Student;
+
 
 import java.util.ArrayList;
 
@@ -15,5 +15,11 @@ public class CoursePageInfoGenerator {
     }
     public static ArrayList<String> semesterList(CoursePage cp){
         return cp.semesterList();
+    }
+    public Course getCourse(CoursePage cp){
+        return cp.course;
+    }
+    public String getInfoAdd(CoursePage cp){
+        return cp.info_added;
     }
 }
