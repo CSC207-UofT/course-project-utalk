@@ -57,7 +57,7 @@ public class CommentUI {
         return lst;
     }
 
-    /**The UI for course page
+    /**The UI for comment page
      * @param CourseCode the course code of that page
      */
     public static void CommentPage(String CourseCode) {

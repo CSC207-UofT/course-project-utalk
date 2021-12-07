@@ -3,12 +3,18 @@ import entity.*;
 import usecase.javastorage.AllCourses;
 public class canChange {
 
+    /**
+     *tell whether it is valid to add comment
+     * @param course_code the course code of the comment
+     * @param reply_to the comment if of the comment to reply
+     * @param user user making comment
+     *
+     */
 
     public static boolean canAddComment(String course_code, Integer reply_to, CommentableUser user){
 
 
         if (! user.getCourseList().contains(course_code)){
-            System.out.println("not enrolled");
             return false;
         }
         if (!reply_to.equals(0)){
@@ -20,6 +26,14 @@ public class canChange {
         return true;
 
     }
+
+    /**
+     * tell whether it is valid to edit and for student to delete comment
+     * @param course_code the course_code of comment
+     * @param comment_id comment id
+     * @param user user who want to get access to comment
+     *
+     */
     public static boolean canAccessComment(String course_code, int comment_id, CommentableUser user) {
         if (user.getCourseList().contains(course_code)) {
 
@@ -35,6 +49,13 @@ public class canChange {
         return false;
 
     }
+
+    /**
+     *tell whether a professor can delete specific comment
+     * @param course_code course code of the comment
+     * @param comment_id id of the comment
+     * @param user user making the comment
+     */
     public static boolean canDeleteComment(String course_code, int comment_id, Professor user){
         if(! user.getCourseList().contains(course_code)){
             return false;

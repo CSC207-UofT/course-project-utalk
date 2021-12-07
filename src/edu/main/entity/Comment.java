@@ -57,6 +57,7 @@ public class Comment {
 
     }
 
+
     public boolean hasReply(int index) {
         return this.replies.containsKey(index);
     }
@@ -64,7 +65,7 @@ public class Comment {
 
     /**reply to the comment which have that specific index
      * @param index the index of comment
-     * @return
+     * @return comment with this index
      */
     public Comment getReply(int index) {
         if (hasReply(index)) {

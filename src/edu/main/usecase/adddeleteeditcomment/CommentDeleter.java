@@ -7,30 +7,46 @@ import entity.Professor;
 import usecase.javastorage.AllCourses;
 
 public class CommentDeleter {
-    public static void deleteComment(CommentableUser user, String course_code, int comment_id){
+
+    /**
+     * delete comment for student
+     * @param user user making the comment
+     * @param course_code the course code of
+     * @param comment_id the comment id of comment to delete
+     * @return return the string indicate whether successfully delete
+     */
+    public static String deleteComment(CommentableUser user, String course_code, int comment_id){
         if (canChange.canAccessComment(course_code, comment_id, user)){
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
             int length = coursepage.getLength();
             PostPage postpage = coursepage.post_page_List.get(length - 1);
             postpage.comments.get(comment_id).deleteCommentSetter();
-            System.out.println("succeed");
+            return "succeed";
 
         }
         else{
-            System.out.println("can not delete!");
+            return "can not delete!";
         }
     }
 
-    public static void deleteComment(Professor user, String course_code, int comment_id){
+    /**
+     * delete comment function for professor
+     * @param user professor
+     * @param course_code course code of comment
+     * @param comment_id id of the comment
+     * @return return the string indicate whether successfully delete
+     */
+
+    public static String deleteCommentProf(Professor user, String course_code, int comment_id){
         if (canChange.canDeleteComment(course_code, comment_id, user)){
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
             int length = coursepage.getLength();
             PostPage postpage = coursepage.post_page_List.get(length - 1);
             postpage.comments.get(comment_id).deleteCommentSetter();
-            System.out.println("succeed");
+            return "succeed";
         }
         else{
-            System.out.println("can not delete!");
+            return "can not delete!";
 
         }
     }

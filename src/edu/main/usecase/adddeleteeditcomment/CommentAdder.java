@@ -5,7 +5,13 @@ import entity.PostPage;
 import usecase.javastorage.AllCourses;
 import entity.Comment;
 
+
+
 public class CommentAdder {
+    /**
+     * add comment to the comment list in postpage
+     * @param comment the comment to add
+     */
     public static void addHelper(Comment comment ){
         CoursePage coursepage = AllCourses.coursePageHashMap.get(comment.getCourseCode());
         int length = coursepage.getLength();
@@ -21,9 +27,18 @@ public class CommentAdder {
 
     }
 
-    public static void addComment(CommentableUser user, String course_code, String content, Integer replyto ){
+    /**
+     * add comment
+     * @param user user making comment
+     * @param course_code course code of comment
+     * @param content the content of comment
+     * @param replyto the id of comment user is replying to, if reply to nothing, input is 0
+     * @return string indicate whether they add it successfully
+     */
+
+    public static String addComment(CommentableUser user, String course_code, String content, Integer replyto ){
         if (!canChange.canAddComment(course_code, replyto, user)){
-            System.out.println("can't add");
+            return "can't add";
         }
         else{
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
@@ -37,7 +52,7 @@ public class CommentAdder {
             Comment comment = new Comment(user.getUserName(), content, course_code, 0, a);
             addHelper(comment);
             user.getComments().get(course_code).add(comment);
-            System.out.println("succeed!");
+            return "succeed!";
 
         }
 
