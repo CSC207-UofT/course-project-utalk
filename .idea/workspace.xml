@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="&#10;Add test for UserFactory.&#10;Creat new package for the Test">
-      <change afterPath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/facultyuserinterface/FacultyUITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/registeruserinterface/RegiserUITest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/creator/CreatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/facultyuserinterface/FacultyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/facultyuserinterface/FacultyUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/enrolldropcourse/EnrollandDropCourseUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/studentprofessorinterface/EnrollandDropCourseUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/javastorage/AllCoursesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/javastorage/JavaStorageTest.java" afterDir="false" />
-
+      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,6 +164,7 @@
       <workItem from="1638912245318" duration="2087000" />
       <workItem from="1638971053820" duration="4331000" />
       <workItem from="1638980255123" duration="10503000" />
+      <workItem from="1638994662144" duration="424000" />
     </task>
     <task id="LOCAL-00001" summary="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
       <created>1638670909301</created>

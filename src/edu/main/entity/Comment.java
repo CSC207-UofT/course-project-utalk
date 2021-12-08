@@ -24,24 +24,52 @@ public class Comment {
 
     }
 
+    /**
+     * @return comment content
+     */
     public String getComment() {
         return this.comment;
     }
+
+    /**
+     * @return course code
+     */
     public String getCourseCode() {
         return this.course_code;
     }
+
+    /**
+     * @return the comment id it is replying to
+     */
     public Integer getReplyTo() {
         return this.replyTo;
     }
 
+    /**
+     * deleteComment
+     */
     public void deleteCommentSetter() {this.status = false;}
+
+    /**
+     * change content
+     * @param edit new content
+     */
 
     public void editComment(String edit) {
         this.comment = edit;
     }
+
+    /**
+     * @param i the replyid
+     */
     public void setReplyID(int i) {
         this.replyID = i;
     }
+
+    /**
+     * set status
+     * @param a the status of comment
+     */
 
     public void setStatus(boolean a){
         this.status = a;
@@ -58,25 +86,45 @@ public class Comment {
     }
 
 
+    /**
+     * @return comment id
+     */
+
     public Integer getId() {
         return this.id;
     }
 
+    /**
+     * @return author name
+     */
     public String getAuthor() {
         return this.author;
     }
 
+    /**
+     * @return status of comment
+     */
     public Boolean getStatus() {
         return this.status;
     }
 
+    /**
+     * @return whehther the comment have reply
+     */
     public boolean existReply() {
         return this.replyID != 1;
     }
 
+    /**
+     * @return reply id
+     */
     public int getReplyID() {
         return this.replyID;
     }
+
+    /**
+     * @return replies
+     */
 
     public HashMap<Integer, Comment> getReplies() {
         return this.replies;
