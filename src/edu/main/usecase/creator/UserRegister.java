@@ -23,7 +23,7 @@ public class UserRegister {
             FileWriter fw = new FileWriter(file_path, true);
             BufferedWriter bw = new BufferedWriter(fw);
             PrintWriter pw = new PrintWriter(bw);
-            pw.println(String.valueOf(id) + ',' + user_name + ',' + password + ',' + String.valueOf(type) + ',' + status);
+            pw.println(String.valueOf(id) + ',' + user_name + ',' + password + ',' + type + ',' + status);
             pw.flush();
             pw.close();
 

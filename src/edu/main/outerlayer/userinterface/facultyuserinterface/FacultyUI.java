@@ -12,7 +12,7 @@ public class FacultyUI {
     static final InputGetter input_help = new InputGetter();
 
     /**Base on the input data update the course
-     * @return the string with the course code, course information and the year.
+     * @return the string[] with the course code, course information and the year.
      */
     public static String[] loadData() {
         System.out.println("Please enter course code: \n");

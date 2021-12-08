@@ -3,7 +3,6 @@ package outerlayer.userinterface.studentprofessorinterface;
 
 import entity.CommentableUser;
 import interfaceadaptor.boundaries.DatabaseWriter;
-import interfaceadaptor.contollers.Controller;
 import interfaceadaptor.loginlogout.Login;
 import outerlayer.userinterface.MainUI;
 import outerlayer.userinterface.facultyuserinterface.InputGetter;
@@ -20,7 +19,7 @@ public class StudentProfessorUI {
         if (Login.loggedInUser instanceof CommentableUser){
             if (((CommentableUser) Login.loggedInUser).getCourseList().size() == 0){
                 System.out.println("Please enter the course you want to enroll");
-                EnrollAndDeleteCourse.enrollAndDropCoursePage();
+                EnrollAndDeleteCourseUI.enrollAndDropCoursePage();
             } else {
                 System.out.println("""
                         Which action you want to make?\s
@@ -40,9 +39,9 @@ public class StudentProfessorUI {
 
                     CommentUI.CommentPage(CoursePagePresenterUI.coursePagePresenterUI());
                 } else if (type.equals("9")) {
-                    Controller.control("9", new String[]{});
+                    MainUI.registerSigninUi();
                 } else {
-                    EnrollAndDeleteCourse.enrollAndDropCoursePage();
+                    EnrollAndDeleteCourseUI.enrollAndDropCoursePage();
                     DatabaseWriter.writeCommentableUser();
                 }
             }

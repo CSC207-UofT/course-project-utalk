@@ -3,6 +3,7 @@ package interfaceadaptor.readers;
 import entity.*;
 import usecase.creator.CommentableUserCreater;
 import usecase.javastorage.AllCommentableUser;
+import usecase.userfactory.UserFactory;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,18 +20,14 @@ public class AllReader {
         ArrayList<ArrayList<String>> courses = CsvReader.readCsv(FILEPATH + "/courses.csv");
         ArrayList<ArrayList<String>> commentableUsers = CsvReader.readCsv(FILEPATH + "/commentableuser.csv");
         ArrayList<ArrayList<String>> comments = CsvReader.readCsv(FILEPATH + "/comments.csv");
+        HashMap<String, CommentableUser> curr = new HashMap<>();
         for (ArrayList<String> user: users){
             String name = user.get(1);
-            HashMap<String, CommentableUser> curr = AllCommentableUser.getAllCommentableUsers();
-            if (Objects.equals(user.get(3), "student")){
-                Student student = new Student(user.get(0), user.get(1), user.get(2));
-                curr.put(name, student);
-            } else if (Objects.equals(user.get(3), "professor")){
-                Professor professor = new Professor(user.get(0), user.get(1), user.get(2));
-                curr.put(name, professor);
-            }
-            AllCommentableUser.setAllCommentableUsers(curr);
+            if (!(Objects.equals(user.get(3),"Faculty"))){
+            String[] input = new String[] {user.get(0), user.get(1), user.get(2),user.get(3)};
+            curr.put(name, (CommentableUser) UserFactory.create(input)); }
         }
+        AllCommentableUser.setAllCommentableUsers(curr);
         CourseReader.readCourse(courses);
         CommentableUserCreater.readUser(commentableUsers);
         CommentReader.readComment(comments);

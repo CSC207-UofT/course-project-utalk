@@ -36,19 +36,6 @@ public class CoursePage {
         return prof_lst;
     }
 
-    public Boolean isProfessor(String userName){
-        ArrayList<String> prof_lst = this.professorList();
-        return prof_lst.contains(userName);
-    }
-    public Boolean isStudent(String userName){
-        ArrayList<String> std_lst = this.studentList();
-        return std_lst.contains(userName);
-    }
-
-    public PostPage getPostPage(String semester) {
-        return this.postPageHashMap().get(semester);
-    }
-
     public PostPage getPostPage(int id) {
         return this.post_page_List.get(id);
     }
@@ -63,7 +50,7 @@ public class CoursePage {
      * use semester as the key and PostPage as value
      */
     public HashMap<String, PostPage> postPageHashMap(){
-        HashMap<String, PostPage> mp = new HashMap<String, PostPage>();
+        HashMap<String, PostPage> mp = new HashMap<>();
         for(PostPage pg: post_page_List) {
             mp.put(pg.semesterGetter(), pg);
         }

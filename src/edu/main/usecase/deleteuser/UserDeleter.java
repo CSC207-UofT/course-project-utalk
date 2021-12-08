@@ -1,10 +1,12 @@
 package usecase.deleteuser;
 
+import outerlayer.userinterface.FilePathHelper;
+
 import java.io.FileWriter;
 import java.io.IOException;
 
 public class UserDeleter {
-    public static String file_path = "data_base.csv";
+    public static String file_path = FilePathHelper.FILEPATH + "/user.csv";
 
     /**
      * This function will delete all recorded users in user database.

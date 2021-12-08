@@ -10,6 +10,6 @@ public class InputGetter {
      */
 
     public Scanner getInput(InputStream stream){
-        return new Scanner(System.in);
+        return new Scanner(stream);
     }
 }
