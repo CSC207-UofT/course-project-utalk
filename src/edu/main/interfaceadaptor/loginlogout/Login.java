@@ -3,6 +3,7 @@ package interfaceadaptor.loginlogout;
 import entity.*;
 import interfaceadaptor.readers.CsvReader;
 import outerlayer.userinterface.MainUI;
+import usecase.userfactory.UserFactory;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -13,10 +14,6 @@ import static outerlayer.userinterface.FilePathHelper.FILEPATH;
 public class Login {
 
     public static String file_path = FILEPATH + "/user.csv";
-    public static String Current_username = null;
-    public static String Current_password = null;
-    public static String Current_id = null;
-    public static String currentType = null;
     public static User loggedInUser = null;
 
     /**
@@ -28,7 +25,6 @@ public class Login {
         System.out.println("What is your username?");
         Scanner scan = new Scanner(System.in);
         String username = scan.nextLine();
-        Current_username = username; // This line record username into static string.
         ArrayList<String> current_username = new ArrayList<>();
         for (ArrayList<String> user : current_file) {
             current_username.add(user.get(1));
@@ -46,22 +42,16 @@ public class Login {
                         password = scan.nextLine();
                     }
                     if (Objects.equals(requiredPassword, password)){
-                        Current_password = requiredPassword;
-                        Current_id = user.get(0);
-                        currentType = user.get(3);
-                        if (Objects.equals(currentType, "student")){
-                            loggedInUser = new Student(Current_id, Current_username, Current_password);
-                        } else if  (Objects.equals(currentType, "professor")){
-                            loggedInUser = new Professor(Current_id, Current_username, Current_password);
-                        } else{
-                            loggedInUser = new Faculty(Current_id, Current_username, Current_password);
-                        }
+                        String currId = user.get(0);
+                        String currentType = user.get(3);
+                        String[] input = new String[] {currId, username, password, currentType};
+                        Login.loggedInUser = UserFactory.create(input);
                         System.out.println("logged in successfully");
                         MainUI.registerSigninUi();
                     } else{
                         MainUI.registerSigninUi();
                     }
-                    }}
+                }}
 
 
         } else {
@@ -74,4 +64,5 @@ public class Login {
 
     }
 }
+
 

@@ -1,12 +1,9 @@
 package outerlayer.userinterface;
-
-import entity.CommentableUser;
 import entity.Faculty;
 import interfaceadaptor.gateways.CsvListTransfer;
 import interfaceadaptor.boundaries.DatabaseWriter;
 import interfaceadaptor.readers.AllReader;
 import outerlayer.userinterface.facultyuserinterface.FacultyUI;
-import outerlayer.userinterface.logoutuserinterface.LogoutUI;
 import outerlayer.userinterface.registeruserinterface.RegisterUI;
 import outerlayer.userinterface.studentprofessorinterface.StudentProfessorUI;
 import usecase.deleteuser.UserDeleter;
@@ -40,15 +37,16 @@ public class MainUI {
                 System.out.println("Which action you want to make? ");
             }
             case "3" -> {
-                System.out.println("Please follow the orders to log out.");
                 DatabaseWriter.writeAll();
-                LogoutUI.logOutUi();
-
+                Login.loggedInUser = null;
+                System.out.println("You have successfully log out");
+                MainUI.registerSigninUi();
             }
             case "4" ->{
                 AllReader.readAll();
                 if (Login.loggedInUser == null){
                     System.out.println("Please register or login first.");
+                    MainUI.registerSigninUi();
                 } else if (Login.loggedInUser instanceof Faculty){
                     FacultyUI.facultyPage();
                 } else{

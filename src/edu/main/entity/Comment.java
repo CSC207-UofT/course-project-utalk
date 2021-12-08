@@ -88,10 +88,6 @@ public class Comment {
         return this.status;
     }
 
-    public void changeStatus() {
-        status = !status;
-    }
-
     public boolean existReply() {
         return this.replyID != 1;
     }

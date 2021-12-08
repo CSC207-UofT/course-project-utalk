@@ -5,7 +5,6 @@ import entity.CoursePage;
 import interfaceadaptor.gateways.TextFileCreator;
 import usecase.entityInfroTransfer.CourseInfoGetter;
 import usecase.entityInfroTransfer.CoursePageInfoGenerator;
-import usecase.javastorage.AllCourses;
 
 import java.util.Map;
 
@@ -15,6 +14,7 @@ import static outerlayer.userinterface.FilePathHelper.FILEPATH;
  * Present the CoursePage
  */
 public class CoursePagePresenter implements GeneralPrinter {
+    //TODO: remove unnecesary creators
     static final TextFileCreator tfc = new TextFileCreator();
     static final String file_name = FILEPATH + "course page data.txt";
     static public CoursePage cour;

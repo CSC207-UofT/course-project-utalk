@@ -21,7 +21,7 @@ public class CsvReader {
      * @return readable List<List<String>>
      */
     public static ArrayList<ArrayList<String>> readCsv(String file_path) {
-        String line = "";
+        String line;
         ArrayList<ArrayList<String>> result = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(file_path));

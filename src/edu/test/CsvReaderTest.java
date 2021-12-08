@@ -1,15 +1,10 @@
-package test;
-
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ReadCsvTest {
+public class CsvReaderTest {
 
     public static int a = 0;
-
-    public ReadCsvTest() throws IOException {
-    }
 
     public static void go(){
         a = 10;
