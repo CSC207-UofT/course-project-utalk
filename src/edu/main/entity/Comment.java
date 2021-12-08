@@ -57,21 +57,7 @@ public class Comment {
 
     }
 
-    public boolean hasReply(int index) {
-        return this.replies.containsKey(index);
-    }
 
-
-    /**reply to the comment which have that specific index
-     * @param index the index of comment
-     * @return comment with this index
-     */
-    public Comment getReply(int index) {
-        if (hasReply(index)) {
-            return this.replies.get(index);
-        }
-        return null;
-    }
     public Integer getId() {
         return this.id;
     }

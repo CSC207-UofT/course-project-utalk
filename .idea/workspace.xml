@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="Modify the out put lay out of the CourseEnroller and CourseDropper.&#10;Add new test CourseDropperTest and CourseEnrollerTest.&#10;Creat new package for the Test">
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/userfactory/UserFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/PostPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/PostPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/FilePathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/FilePathHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentInfoTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentInfoTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentableUserInfoTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentableUserInfoTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CourseInfoGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CourseInfoGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -208,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638983926883</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Debug presenter package add more test to test sample output of postpage and coursepage. Revise functions. Additional note: I will add Javadoc very soon and I didn't need to test the entity info transfer class as it served as a data transfer package from entity to presenter package and all functions works well this time!">
+      <created>1638991541549</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638991541549</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -233,6 +227,7 @@
     <MESSAGE value="Fixed the bug that enrolledCourse not shown in the csv file. &#10;&#10;Move all the packages into edu package for package naming convention." />
     <MESSAGE value="changing dependency" />
     <MESSAGE value="Modify the out put lay out of the CourseEnroller and CourseDropper.&#10;Add new test CourseDropperTest and CourseEnrollerTest.&#10;Creat new package for the Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify the out put lay out of the CourseEnroller and CourseDropper.&#10;Add new test CourseDropperTest and CourseEnrollerTest.&#10;Creat new package for the Test" />
+    <MESSAGE value="Debug presenter package add more test to test sample output of postpage and coursepage. Revise functions. Additional note: I will add Javadoc very soon and I didn't need to test the entity info transfer class as it served as a data transfer package from entity to presenter package and all functions works well this time!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Debug presenter package add more test to test sample output of postpage and coursepage. Revise functions. Additional note: I will add Javadoc very soon and I didn't need to test the entity info transfer class as it served as a data transfer package from entity to presenter package and all functions works well this time!" />
   </component>
 </project>

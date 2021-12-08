@@ -1,5 +1,5 @@
 package outerlayer.userinterface;
 
 public class FilePathHelper {
-    public static final String FILEPATH = "/Users/hanqizhang/Desktop/CSC207/course-project-utalk-fighting/src/edu/main/outerlayer/database";
+    public static final String FILEPATH = "D:\\2021Fall\\CSC207\\IdeaProjects\\course-project-utalk-final\\src\\edu\\main\\outerlayer\\database\\";
 }

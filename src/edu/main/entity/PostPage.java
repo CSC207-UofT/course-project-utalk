@@ -50,9 +50,6 @@ public class PostPage {
             String replyTo = comment.getReplyTo().toString();
             ArrayList<String> currentComment = new ArrayList<>(Arrays.asList(courseCode, semester, ID, author, content, replyID, status, replyTo));
             comments.add(currentComment);
-
-
-
         }
         return comments;
     }
