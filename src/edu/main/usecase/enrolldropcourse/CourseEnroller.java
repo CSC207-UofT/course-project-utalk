@@ -26,17 +26,17 @@ public class CourseEnroller {
                     AllCourses.coursePageHashMap.get(course_name).student_list.add((Student) user);
                     user.courseCommentSetter(course_name);
                     AllCommentableUser.getAllCommentableUsers().replace(user.getUserName(), user);
-                    System.out.println("Dear " + user.user_name + "Course: " + course_name + " added successfully");
+                    System.out.println("Dear " + user.user_name + " Course: " + course_name + " has been added successfully.");
                 } else {
                     AllCourses.coursePageHashMap.get(course_name).professor_list.add((Professor) user);
                     AllCommentableUser.getAllCommentableUsers().replace(user.getUserName(), user);
                     user.courseCommentSetter(course_name);
                 }
             } else {
-                System.out.println("Dear " + user.user_name+ "You have already enrolled Course: " + course_name );
+                System.out.println("Dear " + user.user_name+ ", You have already enrolled Course: " + course_name + "," + " please check the course code and try again." );
             }
         } else{
-            System.out.println("Dear " + user.user_name+ "Course: " + course_name + " did not Exist, please check the course code");
+            System.out.println("Dear " + user.user_name+ ", Course: " + course_name + " did not Exist, please check the course code and try again.");
         }
     }
 

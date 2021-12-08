@@ -5,37 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/edu/main/usecase/userfactory/UserFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/CsvReaderTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/enroldropcourse/CourseDropperTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/enroldropcourse/CourseEnrollerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/Faculty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Faculty.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/contollers/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/contollers/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/loginlogout/Logout.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/GeneralPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/GeneralPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/AllReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/AllReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CsvReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CsvReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/courses.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/courses.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/instruction.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/user.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/FilePathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/FilePathHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/MainUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/MainUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/facultyuserinterface/FacultyUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/facultyuserinterface/FacultyUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/facultyuserinterface/InputGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/facultyuserinterface/InputGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/logoutuserinterface/LogoutUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/EnrollAndDeleteCourse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/EnrollAndDeleteCourseUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/creator/UserRegister.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/creator/UserRegister.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/deleteuser/UserDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/deleteuser/UserDeleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/course.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentableUserInfoTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentableUserInfoTransfer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/javastorage/description.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/ReadCSVTest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/enrolldropcourse/EnrollandDropCourseUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/enrolldropcourse/EnrollandDropCourseUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/CourseDropper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/CourseDropper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/CourseEnroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/enrolldropcourse/CourseEnroller.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +72,33 @@
       <recent name="outerlayer.userinterface.presenteruserinterface" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Executer">
+  <component name="RunManager" selected="Application.CourseEnrollerTest">
+    <configuration name="CourseDropperTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="usecase.enroldropcourse.CourseDropperTest" />
+      <module name="1202" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usecase.enroldropcourse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CourseEnrollerTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="usecase.enroldropcourse.CourseEnrollerTest" />
+      <module name="1202" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usecase.enroldropcourse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CsvReaderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="CsvReaderTest" />
       <module name="1202" />
@@ -132,33 +132,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="StudentProfUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StudentProfUITest" />
-      <module name="1202" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WriteAllCommentableUserTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="interfaceadaptors.WriteAllCommentableUserTest" />
-      <module name="1202" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="interfaceadaptors.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CourseEnrollerTest" />
+        <item itemvalue="Application.CourseDropperTest" />
         <item itemvalue="Application.Executer" />
         <item itemvalue="Application.CsvReaderTest" />
         <item itemvalue="Application.EnrollandDropCourseUITest" />
-        <item itemvalue="Application.StudentProfUITest" />
-        <item itemvalue="Application.WriteAllCommentableUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -179,6 +159,7 @@
       <workItem from="1638761331402" duration="4672000" />
       <workItem from="1638912245318" duration="2087000" />
       <workItem from="1638971053820" duration="4331000" />
+      <workItem from="1638980255123" duration="1863000" />
     </task>
     <task id="LOCAL-00001" summary="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
       <created>1638670909301</created>

@@ -23,10 +23,10 @@ public class CourseDropper {
             } else{
                 AllCourses.coursePageHashMap.get(course_name).professor_list.remove((Professor) user);}
             user.getCourseList().remove(course_name);
-            System.out.println("Dear" + user.user_name+ "Course:" + course_name + "removed successfully");
+            System.out.println("Dear " + user.user_name+ ", Course:" + course_name + " has been removed successfully");
         } else{
-            System.out.println("Dear" + user.user_name+ "Course:" + course_name + "did not Exist in your course " +
-                    "list, please check the course code");
+            System.out.println("Dear " + user.user_name+ ", Course:" + course_name + " did not Exist in your course " +
+                    "list, please check the course code and try again.");
         }
     }
 
