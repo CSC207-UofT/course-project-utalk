@@ -3,7 +3,7 @@ import usecase.createupdate.CourseCreator;
 
 import java.util.Objects;
 
-class AllCoursesTest {
+class JavaStorageTest {
     public static void main(String[] args){
         CourseCreator.createCourse("csc207", "software design", "fall 2021");
         assert AllCourses.coursePageHashMap.containsKey("csc207");

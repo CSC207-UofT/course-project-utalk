@@ -33,7 +33,7 @@ public class CoursePagePresenter implements GeneralPrinter {
         try {
             PostPagePresenter.pagePrinter(CoursePageInfoGenerator.postPageHashMap(cour).get(semester));
         } catch (Exception ex) {
-            System.out.print("Please double check the semester.");
+            System.out.print("Please double check the semester information.");
         }
     }
 

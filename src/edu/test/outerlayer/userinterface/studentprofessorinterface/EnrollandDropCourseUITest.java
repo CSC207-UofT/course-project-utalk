@@ -1,4 +1,4 @@
-package enrolldropcourse;
+package outerlayer.userinterface.studentprofessorinterface;
 
 import entity.CommentableUser;
 import entity.Student;
