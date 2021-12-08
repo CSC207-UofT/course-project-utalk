@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="Modify the out put lay out of the CourseEnroller and CourseDropper.&#10;Add new test CourseDropperTest and CourseEnrollerTest.&#10;Creat new package for the Test">
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CanChangeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentAdderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentDeleterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentEditerTest.java" afterDir="false" />
+    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="Modify the output layout of the CommentAdder, CommentDeleter, CommentEditer.&#10;Add test for all the Comment related method in UsaCase.&#10;Creat new package for the Test">
+      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/userfactory/UserFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentDeleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentEditer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentEditer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/canChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CanChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/postContentGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/PostContentGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,20 +70,7 @@
       <recent name="outerlayer.userinterface.presenteruserinterface" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CommentEditerTest">
-    <configuration name="CanChangeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="usecase.adddeleteeditcomment.CanChangeTest" />
-      <module name="1202" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="usecase.adddeleteeditcomment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.UserFactoryTest">
     <configuration name="CommentAdderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="usecase.adddeleteeditcomment.CommentAdderTest" />
       <module name="1202" />
@@ -144,13 +123,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserFactoryTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="usecase.userfactory.UserFactoryTest" />
+      <module name="1202" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="usecase.userfactory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UserFactoryTest" />
         <item itemvalue="Application.CommentEditerTest" />
         <item itemvalue="Application.CommentDeleterTest" />
         <item itemvalue="Application.CommentAdderTest" />
         <item itemvalue="Application.CourseDropperTest" />
-        <item itemvalue="Application.CanChangeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -171,7 +163,7 @@
       <workItem from="1638761331402" duration="4672000" />
       <workItem from="1638912245318" duration="2087000" />
       <workItem from="1638971053820" duration="4331000" />
-      <workItem from="1638980255123" duration="6109000" />
+      <workItem from="1638980255123" duration="7494000" />
     </task>
     <task id="LOCAL-00001" summary="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
       <created>1638670909301</created>
@@ -201,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638983926883</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Modify the output layout of the CommentAdder, CommentDeleter, CommentEditer.&#10;Add test for all the Comment related method in UsaCase.&#10;Creat new package for the Test">
+      <created>1638988226930</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1638988226930</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +225,7 @@
     <MESSAGE value="Fixed the bug that enrolledCourse not shown in the csv file. &#10;&#10;Move all the packages into edu package for package naming convention." />
     <MESSAGE value="changing dependency" />
     <MESSAGE value="Modify the out put lay out of the CourseEnroller and CourseDropper.&#10;Add new test CourseDropperTest and CourseEnrollerTest.&#10;Creat new package for the Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modify the out put lay out of the CourseEnroller and CourseDropper.&#10;Add new test CourseDropperTest and CourseEnrollerTest.&#10;Creat new package for the Test" />
+    <MESSAGE value="Modify the output layout of the CommentAdder, CommentDeleter, CommentEditer.&#10;Add test for all the Comment related method in UsaCase.&#10;Creat new package for the Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modify the output layout of the CommentAdder, CommentDeleter, CommentEditer.&#10;Add test for all the Comment related method in UsaCase.&#10;Creat new package for the Test" />
   </component>
 </project>

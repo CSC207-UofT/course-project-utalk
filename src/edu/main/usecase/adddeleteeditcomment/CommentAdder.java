@@ -41,7 +41,7 @@ public class CommentAdder {
 
     public static String addComment(CommentableUser user, String course_code, String content, Integer replyto ){
         if (!CanChange.canAddComment(course_code, replyto, user)){
-            return "can't add";
+            return "Sorry, you can't add that comment.";
         }
         else{
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
