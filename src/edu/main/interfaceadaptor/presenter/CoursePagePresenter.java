@@ -29,6 +29,9 @@ public class CoursePagePresenter implements GeneralPrinter {
             }
     }
 
+    /** Print and save post page of specific semester
+     * @param semester the semester of Post Page
+     */
     public static void pagePresenter(String semester) {
         try {
             PostPagePresenter.pagePrinter(CoursePageInfoGenerator.postPageHashMap(cour).get(semester));
@@ -53,7 +56,7 @@ public class CoursePagePresenter implements GeneralPrinter {
             System.out.print("Please first create the course.");
         } else {
             CoursePageInfoGenerator cpi = new CoursePageInfoGenerator();
-            Map<String, Object> info_map =cpi.getCourse(cour).courseInfoGetter();
+            Map<String, Object> info_map = cpi.getCourse(cour).courseInfoGetter();
             RecordAndPresent.recordAndPresent("Course: " + info_map.get("code") + "\n" + "Year: " + info_map.get("year"), file_name);
             RecordAndPresent.recordAndPresent("\n======================================================================\n", file_name);
             RecordAndPresent.recordAndPresent("Professor(s): \n", file_name);
@@ -66,7 +69,7 @@ public class CoursePagePresenter implements GeneralPrinter {
             RecordAndPresent.recordAndPresent("This year's current post page:", file_name);
             // print the sessions of course page
             pagePresenter(CoursePageInfoGenerator.semesterList(cour).get(CoursePageInfoGenerator.getLength(cour)-1));
-            System.out.println("This course have following semesters: \n");
+            System.out.println("This course have following semesters: ");
         }
 
     }

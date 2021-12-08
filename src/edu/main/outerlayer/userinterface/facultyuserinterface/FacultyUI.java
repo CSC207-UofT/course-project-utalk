@@ -15,11 +15,11 @@ public class FacultyUI {
      * @return the string[] with the course code, course information and the year.
      */
     public static String[] loadData() {
-        System.out.println("\nPlease enter course code: ");
+        System.out.println("Please enter course code: ");
         String code = input_help.getInput(System.in).nextLine();
-        System.out.println("\nPlease enter course description: ");
+        System.out.println("Please enter course description: ");
         String info = input_help.getInput(System.in).nextLine();
-        System.out.println("\nPlease enter course start year: ");
+        System.out.println("Please enter course start year: ");
         String year = input_help.getInput(System.in).nextLine();
         return new String[]{code, info, year};
     }
@@ -30,7 +30,7 @@ public class FacultyUI {
      */
     public static void facultyPage(){
         System.out.println("""
-                 \nChoose which operation you want to make:
+                 Choose which operation you want to make:
                 1: add course 
                 2: update course 
                 Please enter 1 or 2
@@ -41,7 +41,7 @@ public class FacultyUI {
             MainUI.registerSigninUi();
         }
         while (!input_str.matches("[12]") && !input_str.equals("quit")){
-            System.out.println("\nPlease enter 1 or 2, or type quit to quit");
+            System.out.println("Please enter 1 or 2, or type quit to quit");
             input_str = input_help.getInput(System.in).nextLine();
         }
         Controller.control(input_str, FacultyUI.loadData());

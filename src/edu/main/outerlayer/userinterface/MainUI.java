@@ -62,7 +62,7 @@ public class MainUI {
                     DatabaseWriter.writeAll();
                     System.exit(0);
                 } else {
-                    System.out.println("You did not quit the program.\n");
+                    System.out.println("You did not quit the program.");
                     registerSigninUi();
                 }
 
@@ -71,14 +71,14 @@ public class MainUI {
                 System.out.println("Please enter developer password.");
                 Scanner a = new Scanner(System.in);
                 String password = a.nextLine();
-                if ("qiao123".equals(password)) {
+                if ("ADMINISTRATOR".equals(password)) {
                     //The line below eliminates infinite loop warning. Please don't remove it.
                     //noinspection InfiniteLoopStatement
                     while (true) {
                         System.out.println("""
-                                administrator privileges:\s
+                                administrator privileges:
                                 1: check all users
-                                2: delete whole database
+                                2: delete whole user information
                                 10: back to main menu""".indent(1));
                         Scanner b = new Scanner(System.in);
                         String number = b.nextLine();
@@ -98,17 +98,17 @@ public class MainUI {
                                 if (result.equals("yes")) {
                                     UserDeleter.deleteAllUser();
                                     System.out.println("As you wish.");
-                                    System.out.println("Database deleted.");
-                                    System.out.println("\n================================================================================================================================");
+                                    System.out.println("All user information deleted.");
+                                    System.out.println("================================================================================================================================");
                                     System.out.println("What would you like to do next?");
                                 } else {
-                                    System.out.println("You did not delete the database");
-                                    System.out.println("\n================================================================================================================================");
+                                    System.out.println("You did not delete the user information");
+                                    System.out.println("================================================================================================================================");
                                     System.out.println("What would you like to do next?");
                                 }
                             }
                             case "10" -> {
-                                System.out.println("\n================================================================================================================================");
+                                System.out.println("================================================================================================================================");
                                 registerSigninUi();
 
                             }
@@ -121,12 +121,12 @@ public class MainUI {
                     }
                 } else {
                     System.out.println("Password Incorrect!");
-                    System.out.println("Please don't retry if you are not a developer.\n\n");
+                    System.out.println("Please don't retry if you are not a developer.\n");
                     registerSigninUi();
                 }
             }
             default -> {
-                System.out.println("please type in a valid number.\n");
+                System.out.println("please type in a valid number.");
                 registerSigninUi();
             }
         }
