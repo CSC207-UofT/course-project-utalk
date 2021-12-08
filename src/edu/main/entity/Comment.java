@@ -12,7 +12,7 @@ public class Comment {
     private final String course_code;
     private final Integer replyTo;
 
-   public Comment(String username, String comment, String course_code, Integer replyTo, Integer id) {
+    public Comment(String username, String comment, String course_code, Integer replyTo, Integer id) {
         this.author = username;
         this.comment = comment;
         this.course_code = course_code;
@@ -44,7 +44,7 @@ public class Comment {
     }
 
     public void setStatus(boolean a){
-       this.status = a;
+        this.status = a;
     }
 
 
@@ -56,7 +56,6 @@ public class Comment {
         this.replyID += 1;
 
     }
-
 
     public boolean hasReply(int index) {
         return this.replies.containsKey(index);
@@ -73,9 +72,6 @@ public class Comment {
         }
         return null;
     }
-
-
-
     public Integer getId() {
         return this.id;
     }
@@ -96,5 +92,8 @@ public class Comment {
         return this.replyID;
     }
 
+    public HashMap<Integer, Comment> getReplies() {
+        return this.replies;
+    }
 }
 

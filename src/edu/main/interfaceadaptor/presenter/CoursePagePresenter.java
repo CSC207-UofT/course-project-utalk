@@ -2,7 +2,6 @@ package interfaceadaptor.presenter;
 
 import entity.CommentableUser;
 import entity.CoursePage;
-import interfaceadaptor.gateways.TextFileCreator;
 import usecase.entityInfroTransfer.CourseInfoGetter;
 import usecase.entityInfroTransfer.CoursePageInfoGenerator;
 
@@ -14,8 +13,6 @@ import static outerlayer.userinterface.FilePathHelper.FILEPATH;
  * Present the CoursePage
  */
 public class CoursePagePresenter implements GeneralPrinter {
-    //TODO: remove unnecesary creators
-    static final TextFileCreator tfc = new TextFileCreator();
     static final String file_name = FILEPATH + "course page data.txt";
     static public CoursePage cour;
 
@@ -23,14 +20,18 @@ public class CoursePagePresenter implements GeneralPrinter {
      * Present all course semesters
      */
     public static void semesterPresenter() {
-        for (String semester : CoursePageInfoGenerator.semesterList(cour)) {
-            System.out.print(semester);
-        }
+        try {
+            for (String semester : CoursePageInfoGenerator.semesterList(cour)) {
+                System.out.print(semester + ", ");
+            }
+        } catch (Exception e){
+                System.out.print("Please double check semester");
+            }
     }
 
     public static void pagePresenter(String semester) {
         try {
-            PostPagePresenter.pagePrinter(cour.postPageHashMap().get(semester));
+            PostPagePresenter.pagePrinter(CoursePageInfoGenerator.postPageHashMap(cour).get(semester));
         } catch (Exception ex) {
             System.out.print("Please double check the semester.");
         }
@@ -62,10 +63,10 @@ public class CoursePagePresenter implements GeneralPrinter {
             RecordAndPresent.recordAndPresent("Course Information: ", file_name);
             RecordAndPresent.recordAndPresent(info_map.get("description") + "\n", file_name);
             RecordAndPresent.recordAndPresent(cpi.getInfoAdd(cour) + '\n', file_name);
-            RecordAndPresent.recordAndPresent("\n", file_name);
+            RecordAndPresent.recordAndPresent("This year's current post page:", file_name);
             // print the sessions of course page
+            pagePresenter(CoursePageInfoGenerator.semesterList(cour).get(CoursePageInfoGenerator.getLength(cour)-1));
             System.out.println("This course have following semesters: \n");
-            semesterPresenter();
         }
 
     }

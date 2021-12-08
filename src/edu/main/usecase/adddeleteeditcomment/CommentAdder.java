@@ -26,9 +26,6 @@ public class CommentAdder {
 
 
     }
-    public static Comment commentConstructor(String username, String comment, String course_code, Integer replyTo, Integer id){
-        return new Comment(username, comment, course_code, replyTo, id);
-    }
 
     /**
      * add comment
@@ -39,7 +36,7 @@ public class CommentAdder {
      * @return string indicate whether they add it successfully
      */
 
-    public static String addComment(CommentableUser user, String course_code, String content, Integer replyto ){
+    public static String addComment(CommentableUser user, String course_code, String content, Integer replyto){
         if (!CanChange.canAddComment(course_code, replyto, user)){
             return "can't add";
         }
@@ -50,9 +47,7 @@ public class CommentAdder {
             postpage.refreshID();
             Integer a = postpage.getCurrentID();
 
-
-
-            Comment comment = new Comment(user.getUserName(), content, course_code, 0, a);
+            Comment comment = new Comment(user.getUserName(), content, course_code, replyto, a);
             addHelper(comment);
             user.getComments().get(course_code).add(comment);
             return "Your comment has been post.";

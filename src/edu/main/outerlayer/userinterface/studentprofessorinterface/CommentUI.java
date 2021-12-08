@@ -1,13 +1,13 @@
 package outerlayer.userinterface.studentprofessorinterface;
 
-import interfaceadaptor.presenter.CoursePagePresenter;
 import interfaceadaptor.contollers.Controller;
 import outerlayer.userinterface.MainUI;
 import outerlayer.userinterface.facultyuserinterface.InputGetter;
+
 import java.util.Objects;
 
 public class CommentUI {
-    static final outerlayer.userinterface.facultyuserinterface.InputGetter input_help = new InputGetter();
+    static final InputGetter input_help = new InputGetter();
 
     /**Load the new comment
      * @return the string with the comment content and user id
@@ -62,9 +62,7 @@ public class CommentUI {
      */
     public static void CommentPage(String CourseCode) {
         int count = 0;
-        while (count < 10) {
-            CoursePagePresenter cpp = new CoursePagePresenter();
-            cpp.generalPresenter(CourseCode);
+        while (count < 100) {
             System.out.println("""
                      Choose which operation you want to make:
                      5: add comment 6: edit comment 7: delete comment 8. view own comment Please enter 5, 6, 7 or 8,\s

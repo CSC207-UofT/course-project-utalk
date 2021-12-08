@@ -5,17 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="Modify the out put lay out of the CourseEnroller and CourseDropper.&#10;Add new test CourseDropperTest and CourseEnrollerTest.&#10;Creat new package for the Test">
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CanChangeTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentAdderTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentDeleterTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentEditerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/userfactory/UserFactoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/entity/CoursePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CommentPrinter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/FilePathHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/FilePathHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/CommentUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/studentprofessorinterface/StudentProfessorUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentDeleter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentDeleter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentEditer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentEditer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/canChange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CanChange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/postContentGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/PostContentGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentInfoTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentInfoTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentableUserInfoTransfer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CommentableUserInfoTransfer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CourseInfoGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CourseInfoGetter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,24 +79,13 @@
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="usecase.userfactory" />
-      <recent name="interfaceadaptor.contollers" />
-      <recent name="outerlayer.userinterface.presenteruserinterface" />
+      <recent name="interfaceadaptors" />
+      <recent name="usecase.entityInfroTransfer" />
+      <recent name="outerlayer.userinterface.studentprofessorinterface" />
+      <recent name="interfaceadaptor.presenter" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CommentEditerTest">
-    <configuration name="CanChangeTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="usecase.adddeleteeditcomment.CanChangeTest" />
-      <module name="1202" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="usecase.adddeleteeditcomment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.WriteAllCommentTest">
     <configuration name="CommentAdderTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="usecase.adddeleteeditcomment.CommentAdderTest" />
       <module name="1202" />
@@ -144,13 +138,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WriteAllCommentTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="interfaceadaptors.WriteAllCommentTest" />
+      <module name="1202" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="interfaceadaptors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.WriteAllCommentTest" />
         <item itemvalue="Application.CommentEditerTest" />
         <item itemvalue="Application.CommentDeleterTest" />
         <item itemvalue="Application.CommentAdderTest" />
         <item itemvalue="Application.CourseDropperTest" />
-        <item itemvalue="Application.CanChangeTest" />
       </list>
     </recent_temporary>
   </component>
