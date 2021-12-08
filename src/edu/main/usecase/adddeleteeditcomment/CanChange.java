@@ -1,7 +1,7 @@
 package usecase.adddeleteeditcomment;
 import entity.*;
 import usecase.javastorage.AllCourses;
-public class canChange {
+public class CanChange {
 
     /**
      *tell whether it is valid to add comment
@@ -51,7 +51,7 @@ public class canChange {
     }
 
     /**
-     *tell whether a professor can delete specific comment
+     *tell whether a user can delete specific comment
      * @param course_code course code of the comment
      * @param comment_id id of the comment
      * @param user user making the comment

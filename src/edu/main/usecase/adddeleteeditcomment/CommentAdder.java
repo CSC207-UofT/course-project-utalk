@@ -37,7 +37,7 @@ public class CommentAdder {
      */
 
     public static String addComment(CommentableUser user, String course_code, String content, Integer replyto ){
-        if (!canChange.canAddComment(course_code, replyto, user)){
+        if (!CanChange.canAddComment(course_code, replyto, user)){
             return "can't add";
         }
         else{
@@ -52,7 +52,7 @@ public class CommentAdder {
             Comment comment = new Comment(user.getUserName(), content, course_code, 0, a);
             addHelper(comment);
             user.getComments().get(course_code).add(comment);
-            return "succeed!";
+            return "Your comment has been post.";
 
         }
 
