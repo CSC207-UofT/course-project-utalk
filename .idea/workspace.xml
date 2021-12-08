@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="Modify the output layout of the CommentAdder, CommentDeleter, CommentEditer.&#10;Add test for all the Comment related method in UsaCase.&#10;Creat new package for the Test">
-      <change afterPath="$PROJECT_DIR$/src/edu/test/usecase/userfactory/UserFactoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/adddeleteeditcomment/CommentAdder.java" afterDir="false" />
+    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/edu/test/test/usecase" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/interfaceadaptor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/edu/test/interfaceadaptors" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />

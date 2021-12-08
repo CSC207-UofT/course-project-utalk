@@ -3,12 +3,12 @@ package interfaceadaptor.readers;
 import entity.Comment;
 import entity.CoursePage;
 import entity.PostPage;
+import usecase.entityInfroTransfer.CoursePageInfoGenerator;
 import usecase.javastorage.AllCommentableUser;
 import usecase.javastorage.AllCourses;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import usecase.adddeleteeditcomment.CommentAdder;
 
 public class CommentReader {
     /**read all the comment and store them into the HashMap
@@ -25,7 +25,7 @@ public class CommentReader {
             Integer ID = Integer.valueOf(comment.get(2));
             String author = comment.get(3);
             String content = comment.get(4);
-            Integer replyID = Integer.valueOf(comment.get(5));
+            int replyID = Integer.parseInt(comment.get(5));
             boolean status = comment.get(6).equals("true");
             Integer replyTo = Integer.valueOf(comment.get(7));
             CoursePage coursepage = AllCourses.coursePageHashMap.get(courseCode);
@@ -38,10 +38,10 @@ public class CommentReader {
                     coursepage.post_page_List.add(postPage);
                 }
             }
-            Comment newComment = CommentAdder.commentConstructor(author, content, courseCode, replyTo, ID);
+            Comment newComment = new Comment(author, content, courseCode, replyTo, ID);
             newComment.setReplyID(replyID);
             newComment.setStatus(status);
-            HashMap<String, PostPage> map = coursepage.postPageHashMap();
+            HashMap<String, PostPage> map = CoursePageInfoGenerator.postPageHashMap(coursepage);
             map.get(semester).getComments().put(ID, newComment);
             if (AllCommentableUser.getAllCommentableUsers().containsKey(author)) {
                 AllCommentableUser.getAllCommentableUsers().get(author).addCommentToList(courseCode, newComment);
