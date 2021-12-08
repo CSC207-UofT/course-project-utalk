@@ -26,6 +26,9 @@ public class CommentAdder {
 
 
     }
+    public static Comment commentConstructor(String username, String comment, String course_code, Integer replyTo, Integer id){
+        return new Comment(username, comment, course_code, replyTo, id);
+    }
 
     /**
      * add comment

@@ -8,6 +8,7 @@ import usecase.javastorage.AllCourses;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import usecase.adddeleteeditcomment.CommentAdder;
 
 public class CommentReader {
     /**read all the comment and store them into the HashMap
@@ -37,7 +38,7 @@ public class CommentReader {
                     coursepage.post_page_List.add(postPage);
                 }
             }
-            Comment newComment = new Comment(author, content, courseCode, replyTo, ID);
+            Comment newComment = CommentAdder.commentConstructor(author, content, courseCode, replyTo, ID);
             newComment.setReplyID(replyID);
             newComment.setStatus(status);
             HashMap<String, PostPage> map = coursepage.postPageHashMap();
