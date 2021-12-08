@@ -16,16 +16,16 @@ public class CommentDeleter {
      * @return return the string indicate whether successfully delete
      */
     public static String deleteComment(CommentableUser user, String course_code, int comment_id){
-        if (canChange.canAccessComment(course_code, comment_id, user)){
+        if (CanChange.canAccessComment(course_code, comment_id, user)){
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
             int length = coursepage.getLength();
             PostPage postpage = coursepage.post_page_List.get(length - 1);
             postpage.comments.get(comment_id).deleteCommentSetter();
-            return "succeed";
+            return "Comment has been deleted.";
 
         }
         else{
-            return "can not delete!";
+            return "Sorry, you can not delete that comment.";
         }
     }
 
@@ -38,15 +38,15 @@ public class CommentDeleter {
      */
 
     public static String deleteCommentProf(Professor user, String course_code, int comment_id){
-        if (canChange.canDeleteComment(course_code, comment_id, user)){
+        if (CanChange.canDeleteComment(course_code, comment_id, user)){
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
             int length = coursepage.getLength();
             PostPage postpage = coursepage.post_page_List.get(length - 1);
             postpage.comments.get(comment_id).deleteCommentSetter();
-            return "succeed";
+            return "Comment has been deleted.";
         }
         else{
-            return "can not delete!";
+            return "Sorry, you can not delete that comment.";
 
         }
     }

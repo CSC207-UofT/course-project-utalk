@@ -16,15 +16,15 @@ public class CommentEditer {
      * @return return the string indicate whether successfully edit
      */
     public static String editComment(CommentableUser user, String course_code, String content, int comment_id){
-        if (canChange.canAccessComment(course_code, comment_id, user)){
+        if (CanChange.canAccessComment(course_code, comment_id, user)){
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
             int length = coursepage.getLength();
             PostPage postpage = coursepage.post_page_List.get(length - 1);
             postpage.comments.get(comment_id).editComment(content);
-            return "succeed";
+            return "Your comment has been edited.";
         }
         else{
-            return "can not edit!";
+            return "Sorry, you can not delete that comment.";
         }
     }
 
