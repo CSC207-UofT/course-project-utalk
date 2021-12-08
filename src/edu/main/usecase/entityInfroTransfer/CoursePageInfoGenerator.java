@@ -8,12 +8,22 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public class CoursePageInfoGenerator {
+    /**
+     * @param cp CoursePage
+     * @return student list of cp
+     */
     public static ArrayList<String> studentList(CoursePage cp) {
         return cp.studentList();
     }
+
+    /**
+     * @param cp CoursePage
+     * @return professor list of cp
+     */
     public static ArrayList<String> professorList(CoursePage cp) {
         return cp.professorList();
     }
+
     /**
      * @return A list of string containing all semesters of PostPages in post_page_List,
      */
@@ -38,12 +48,27 @@ public class CoursePageInfoGenerator {
         }
         return mp;
     }
+
+    /**
+     * @param cp CoursePage
+     * @return course information of coursePage
+     */
     public Course getCourse(CoursePage cp){
         return cp.course;
     }
+
+    /**
+     * @param cp CoursePage
+     * @return info_added of course page
+     */
     public String getInfoAdd(CoursePage cp){
         return cp.info_added;
     }
+
+    /**
+     * @param cp CoursePage
+     * @return cp's postpage length
+     */
     public static int getLength(CoursePage cp){
         return cp.getLength();
     }

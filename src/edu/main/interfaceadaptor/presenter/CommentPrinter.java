@@ -34,4 +34,13 @@ public class CommentPrinter {
             }
         }
     }
+
+    public static void commentPrinterWithoutReply(Comment comments, int indentation) {
+        tfc.createTextFile(file_name);
+
+        if (CommentInfoTransfer.getStatus(comments)) {
+            HashMap<String, String> mp = CommentInfoTransfer.getInfo(comments);
+            RecordAndPresent.recordAndPresent("  ".repeat(indentation) + mp.get("Id")+ ". " + mp.get("Author") + " posted: " + mp.get("content") , file_name);
+        }
+    }
 }

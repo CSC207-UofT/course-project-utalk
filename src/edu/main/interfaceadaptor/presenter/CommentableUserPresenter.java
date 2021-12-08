@@ -36,7 +36,7 @@ public class CommentableUserPresenter implements GeneralPrinter {
     public void presenterRequiresUserInfo(String course, CommentableUser commentableUser) {
         if (commentableUser.getCourseComments(course) != null) {
             for (Comment comment : CommentableUserInfoTransfer.getCourseComment(course, commentableUser)) {
-                CommentPrinter.commentPrinter(comment, 0);
+                CommentPrinter.commentPrinterWithoutReply(comment, 0);
             }
         } else {
             System.out.println("Please first enroll the course.");

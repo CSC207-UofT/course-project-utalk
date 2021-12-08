@@ -22,14 +22,18 @@ public class CoursePage {
     public ArrayList<String> studentList() {
         ArrayList<String> std_lst = new ArrayList<>();
         for (Student std: student_list) {
-            std_lst.add(std.getUserName());
+            if (! std_lst.contains(std.getUserName())) {
+                std_lst.add(std.getUserName());
+            }
         }
         return std_lst;
     }
     public ArrayList<String> professorList() {
         ArrayList<String> prof_lst = new ArrayList<>();
         for (Professor professor: professor_list) {
-            prof_lst.add(professor.getUserName());
+            if (! prof_lst.contains(professor.getUserName())) {
+                prof_lst.add(professor.getUserName());
+            }
         }
         return prof_lst;
     }

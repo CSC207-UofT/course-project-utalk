@@ -14,9 +14,9 @@ public class CommentUI {
      */
     public static String[] loadForAdd() {
 
-        System.out.println("Please enter content: \n");
+        System.out.println("Please enter content:");
         String content = input_help.getInput(System.in).nextLine();
-        System.out.println("Please enter the id of comment you want to reply, if you are not replying, type 0: \n");
+        System.out.println("Please enter the id of comment you want to reply, if you are not replying, type 0: ");
         String id = input_help.getInput(System.in).nextLine();
 
 
@@ -28,9 +28,9 @@ public class CommentUI {
      */
     public static String[] loadForEdit() {
 
-        System.out.println("Please enter content: \n");
+        System.out.println("Please enter content: ");
         String content = input_help.getInput(System.in).nextLine();
-        System.out.println("Please enter your comment id: \n");
+        System.out.println("Please enter your comment id: ");
         String id = input_help.getInput(System.in).nextLine();
 
 
@@ -42,7 +42,7 @@ public class CommentUI {
      */
     public static String[] loadForDelete() {
 
-        System.out.println("Please enter your comment id: \n");
+        System.out.println("Please enter your comment id: ");
         String id = input_help.getInput(System.in).nextLine();
 
 
@@ -65,7 +65,7 @@ public class CommentUI {
         while (count < 100) {
             System.out.println("""
                      Choose which operation you want to make:
-                     5: add comment 6: edit comment 7: delete comment 8. view own comment Please enter 5, 6, 7 or 8,\s
+                     5: add comment 6: edit comment 7: delete comment 8. view own comment Please enter 5, 6, 7 or 8,
                     enter quit to return to the main menu""");
             String input_str = input_help.getInput(System.in).nextLine();
 

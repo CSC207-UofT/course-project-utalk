@@ -16,10 +16,10 @@ public class AllReader {
      * read all the information in the user courses commentableuser and comments csv files
      */
     public static void readAll(){
-        ArrayList<ArrayList<String>> users = CsvReader.readCsv(FILEPATH + "/user.csv");
-        ArrayList<ArrayList<String>> courses = CsvReader.readCsv(FILEPATH + "/courses.csv");
-        ArrayList<ArrayList<String>> commentableUsers = CsvReader.readCsv(FILEPATH + "/commentableuser.csv");
-        ArrayList<ArrayList<String>> comments = CsvReader.readCsv(FILEPATH + "/comments.csv");
+        ArrayList<ArrayList<String>> users = CsvReader.readCsv(FILEPATH + "user.csv");
+        ArrayList<ArrayList<String>> courses = CsvReader.readCsv(FILEPATH + "courses.csv");
+        ArrayList<ArrayList<String>> commentableUsers = CsvReader.readCsv(FILEPATH + "commentableuser.csv");
+        ArrayList<ArrayList<String>> comments = CsvReader.readCsv(FILEPATH + "comments.csv");
         HashMap<String, CommentableUser> curr = new HashMap<>();
         for (ArrayList<String> user: users){
             String name = user.get(1);

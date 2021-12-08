@@ -42,7 +42,11 @@ public class CommentDeleter {
             CoursePage coursepage = AllCourses.coursePageHashMap.get(course_code);
             int length = coursepage.getLength();
             PostPage postpage = coursepage.post_page_List.get(length - 1);
-            postpage.comments.get(comment_id).deleteCommentSetter();
+            try {
+                postpage.comments.get(comment_id).deleteCommentSetter();
+            } catch (Exception ex) {
+                System.out.print("Comment not exist, please double check.");
+            }
             return "Comment has been deleted.";
         }
         else{
