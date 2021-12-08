@@ -19,22 +19,19 @@ public class CommentPrinter {
      * Print the comment in a readable way
      *
      * @param comments    the comment that will be printed
-     * @param indentation the number of indentation
      */
     public static void commentPrinter(Comment comments, int indentation) {
 
         tfc.createTextFile(file_name);
 
-        if (comments.getStatus()) {
+        if (CommentInfoTransfer.getStatus(comments)) {
             HashMap<String, String> mp = CommentInfoTransfer.getInfo(comments);
-            RecordAndPresent.recordAndPresent(" ".repeat(indentation) + mp.get("Id")+ ". " + mp.get("Author") + " posted: " + mp.get("content"), file_name);
-            if (comments.existReply()) {
-                for (int id = 1; id < CommentInfoTransfer.getReplyID(comments); id++) {
-                    Comment comment = CommentInfoTransfer.getReply(id, comments);
+            RecordAndPresent.recordAndPresent("  ".repeat(indentation) + mp.get("Id")+ ". " + mp.get("Author") + " posted: " + mp.get("content") , file_name);
+            if (CommentInfoTransfer.existsReply(comments)) {
+                for (Comment comment: CommentInfoTransfer.getReplies(comments).values()) {
                     commentPrinter(comment, indentation + 1);
                 }
             }
         }
-        RecordAndPresent.recordAndPresent("\n", file_name);
     }
 }

@@ -15,6 +15,7 @@
       <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/test/enrolldropcourse/EnrollandDropCourseUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/studentprofessorinterface/EnrollandDropCourseUITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/javastorage/AllCoursesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/javastorage/JavaStorageTest.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +50,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/edu/test/test/usecase" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/interfaceadaptor" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/edu/test/interfaceadaptors" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
