@@ -8,6 +8,8 @@ Important:
 3. Please empty the csv files when you run test cases as user and commentable user are written by different functions, therefore running the test cases will cause a misallignment in them.
 4. our specification is the first section of our design document, our project accessibility report is included just before our progress report in our design document, and our progress report is the last section. 
 5. Please run the executer to compile our codes. 
+6. Add "JUnit4" to classpath to run the junit test
+
 
 Basic function include: 
 
