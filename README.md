@@ -4,9 +4,11 @@ Our group want to make an online discussion forum based on course for students, 
 
 Important: 
 1. Our program needs version 17 JDK to run 
-   File -> Project Structure -> Project -> Project SDK set to 17
-                                           Project language level 17 - Sealed types, always-strict floating-point semantics
+
+   File -> Project Structure -> Project -> Project SDK set to 17 & Project language level 17 - Sealed types, always-strict floating-point semantics   
+                                         
    setting language level to 17
+   
    File -> Project Structure -> Modules -> language level set to 17
    
 2. Please change the path in the FilePathHelper to your absolute path for our program down to the database package, after that it should be able to run.
