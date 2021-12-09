@@ -2,16 +2,26 @@ package outerlayer.userinterface.studentprofessorinterface;
 
 import entity.CommentableUser;
 import entity.Student;
-import interfaceadaptor.loginlogout.Login;
-import outerlayer.userinterface.studentprofessorinterface.EnrollAndDeleteCourseUI;
 import usecase.createupdate.CourseCreator;
 import usecase.javastorage.AllCommentableUser;
+import org.junit.Before;
+import org.junit.Test;
 
-public class EnrollandDropCourseUITest {
-    public static void main(String[] agrs){
-        Login.loggedInUser = new Student("hello", "1", "1");
+
+public class EnrollandDropCourseUITest
+{
+    private CommentableUser cmu;
+
+    @Before
+    public void setUp() {
+        cmu = new Student("hello", "1", "1");
+    }
+
+    @Test
+    public void testSample() {
+        setUp();
         CourseCreator.createCourse("csc207", "hello", "hello");
-        AllCommentableUser.getAllCommentableUsers().put("hello", (CommentableUser) Login.loggedInUser);
+        AllCommentableUser.getAllCommentableUsers().put("hello", cmu);
         EnrollAndDeleteCourseUI.enrollAndDropCoursePage();
     }
 }

@@ -7,6 +7,9 @@ import entity.PostPage;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * Generate CoursePage information
+ */
 public class CoursePageInfoGenerator {
     /**
      * @param cp CoursePage

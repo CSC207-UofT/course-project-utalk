@@ -4,7 +4,6 @@ import entity.CommentableUser;
 import entity.CoursePage;
 import usecase.entityInfroTransfer.CourseInfoGetter;
 import usecase.entityInfroTransfer.CoursePageInfoGenerator;
-
 import java.util.Map;
 
 import static outerlayer.userinterface.FilePathHelper.FILEPATH;

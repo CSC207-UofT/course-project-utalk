@@ -7,6 +7,5 @@ import entity.CommentableUser;
  */
 public interface GeneralPrinter {
     void presenterRequiresUserInfo(String course, CommentableUser commentableUser);
-
     void generalPresenter(String course);
 }

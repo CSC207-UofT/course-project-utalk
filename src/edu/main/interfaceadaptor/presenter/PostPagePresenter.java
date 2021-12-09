@@ -6,7 +6,7 @@ import usecase.entityInfroTransfer.PostContentGenerator;
 import static outerlayer.userinterface.FilePathHelper.FILEPATH;
 
 public class PostPagePresenter {
-    public static final String file_name = FILEPATH + "course page data.txt";
+    public static final String file_name = FILEPATH + "/course page data.txt";
 
     /**
      * Print all comments in postPage

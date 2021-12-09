@@ -4,6 +4,9 @@ import entity.CoursePage;
 import usecase.javastorage.AllCourses;
 
 
+/**
+ * Transfer course information to outerlayer
+ */
 public class CourseInfoGetter {
     /**
      * @param course course name
