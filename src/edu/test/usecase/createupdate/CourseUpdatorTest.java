@@ -1,7 +1,5 @@
 package usecase.createupdate;
 
-import usecase.createupdate.CourseCreator;
-import usecase.createupdate.CourseUpdater;
 import usecase.javastorage.AllCourses;
 
 public class CourseUpdatorTest {

@@ -1,9 +1,7 @@
 package interfaceadaptors;
 
 import entity.Professor;
-import entity.Student;
 import interfaceadaptor.boundaries.DatabaseWriter;
-import interfaceadaptor.presenter.CoursePagePresenter;
 import usecase.adddeleteeditcomment.CommentAdder;
 import usecase.createupdate.CourseCreator;
 import usecase.enrolldropcourse.CourseEnroller;
