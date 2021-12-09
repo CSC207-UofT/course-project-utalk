@@ -10,8 +10,6 @@ import usecase.enrolldropcourse.CourseEnroller;
 import usecase.javastorage.AllCommentableUser;
 import org.junit.jupiter.api.Assertions;
 
-
-
 public class CanChangeTest {
 
         private Professor professor;

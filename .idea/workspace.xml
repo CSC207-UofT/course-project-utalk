@@ -5,42 +5,9 @@
   </component>
   <component name="ChangeListManager">
 
-    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="Add some miss">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1202.iml" beforeDir="false" afterPath="$PROJECT_DIR$/1202.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CourseMemberPresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CourseMemberPresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/CoursePagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/GeneralPrinter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/GeneralPrinter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/presenter/PostPagePresenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/commentableuser.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/commentableuser.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/comments.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/comments.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/courses.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/courses.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/outerlayer/database/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/outerlayer/database/user.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CourseInfoGetter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CourseInfoGetter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/CoursePageInfoGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/PostContentGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/usecase/entityInfroTransfer/PostContentGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/CommentPresenterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/CommentPresenterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentableUserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentableUserTest.java" afterDir="false" />
-
-    <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="&#10;Add test for UserFactory.&#10;Creat new package for the Test">
-      <change beforePath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/main/interfaceadaptor/readers/CommentReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/CommentPresenterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/CommentPresenterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/interfaceadaptors/WriteAllCommentTest.java" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/presenteruserinterface/CoursePagePresenterUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/registeruserinterface/RegiserUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/registeruserinterface/RegiserUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/studentprofessorinterface/EnrollandDropCourseUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/outerlayer/userinterface/studentprofessorinterface/EnrollandDropCourseUITest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CanChangeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CanChangeTest.java" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentAdderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentAdderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentDeleterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentDeleterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentEditerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentEditerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/enroldropcourse/CourseDropperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/enroldropcourse/CourseDropperTest.java" afterDir="false" />
-
-      <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/createupdate/CourseUpdatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/createupdate/CourseUpdatorTest.java" afterDir="false" />
 
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -119,13 +86,22 @@
     </key>
   </component>
 
-  <component name="RunManager" selected="JUnit.CanChangeTest.testSample">
+  <component name="RunManager" selected="Application.Executer">
+    <configuration name="Executer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runner.Executer" />
+
+      <module name="1202" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runner.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CanChangeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-
-  <component name="RunManager" selected="JUnit.CanChangeTest">
-    <configuration name="CoursePagePresenterUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="outerlayer.userinterface.presenteruserinterface.CoursePagePresenterUITest" />
-
       <module name="1202" />
       <extension name="coverage">
         <pattern>
@@ -172,21 +148,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CommentEditerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="1202" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="usecase.adddeleteeditcomment.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="usecase.adddeleteeditcomment" />
-      <option name="MAIN_CLASS_NAME" value="usecase.adddeleteeditcomment.CommentEditerTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
 
     <configuration name="CommentEditerTest.testSample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
 
@@ -215,17 +176,14 @@
     <recent_temporary>
       <list>
 
+        <item itemvalue="Application.Executer" />
+
+
+
         <item itemvalue="JUnit.CanChangeTest.testSample" />
         <item itemvalue="JUnit.CanChangeTest" />
         <item itemvalue="JUnit.CommentAdderTest.testSample" />
         <item itemvalue="JUnit.CommentEditerTest.testSample" />
-        <item itemvalue="JUnit.CommentEditerTest" />
-
-        <item itemvalue="JUnit.CanChangeTest" />
-        <item itemvalue="Application.RegiserUITest" />
-        <item itemvalue="Application.CoursePagePresenterUITest" />
-        <item itemvalue="Application.FacultyUITest" />
-        <item itemvalue="Application.CreatorTest" />
 
       </list>
     </recent_temporary>
@@ -300,7 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1639007906058</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Final revision of Junit test and Javadoc">
+      <created>1639023660775</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1639023660775</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Forget to change import, sorry!">
+      <created>1639023788709</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1639023788709</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,7 +300,9 @@
     <MESSAGE value="Modify the output layout of the CommentAdder, CommentDeleter, CommentEditer.&#10;Add test for all the Comment related method in UsaCase.&#10;Creat new package for the Test" />
     <MESSAGE value="&#10;Add test for UserFactory.&#10;Creat new package for the Test" />
     <MESSAGE value="UI refinement and add java doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="UI refinement and add java doc" />
+    <MESSAGE value="Final revision of Junit test and Javadoc" />
+    <MESSAGE value="Forget to change import, sorry!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forget to change import, sorry!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -340,7 +314,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CommentAdderTest.java</url>
-          <line>20</line>
+          <line>19</line>
           <properties class="usecase.adddeleteeditcomment.CommentAdderTest" method="testSample">
             <option name="EMULATED" value="true" />
           </properties>
