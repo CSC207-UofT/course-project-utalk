@@ -6,6 +6,7 @@ Important:
 1. Our program needs version 17 JDK to run, also setting language level to 17.
 2. Please change the path in the FilePathHelper to your absolute path for our program down to the database package, after that it should be able to run.
 3. Please empty the csv files when you run test cases as user and commentable user are written by different functions, therefore running the test cases will cause a misallignment in them.
+4. our specification is the first section of our design document, our project accessibility report is included just before our progress report in our design document, and our progress report is the last section. 
 
 Basic function include: 
 
