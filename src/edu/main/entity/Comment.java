@@ -21,7 +21,6 @@ public class Comment {
         this.replyID = 1;
         this.status = true;
         this.replyTo = replyTo;
-
     }
 
     /**
