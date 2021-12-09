@@ -8,8 +8,6 @@ import usecase.enrolldropcourse.CourseEnroller;
 import usecase.javastorage.AllCommentableUser;
 import usecase.javastorage.AllCourses;
 
-
-
 public class CanChangeTest {
         private Professor professor;
 
