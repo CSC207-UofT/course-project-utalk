@@ -11,6 +11,7 @@ import usecase.javastorage.AllCourses;
 public class CommentEditerTest {
     @Test
     public void testEditComment(){
+
         CourseCreator.createCourse("csc207", "software design", "fall 2021");
         CourseCreator.createCourse("csc200", "a course", "fall 2021");
         Professor professor = new Professor("16", "Paul", "207");
