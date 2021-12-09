@@ -13,7 +13,7 @@ import static outerlayer.userinterface.FilePathHelper.FILEPATH;
  */
 public class CommentPrinter {
     static final TextFileCreator tfc = new TextFileCreator();
-    static final String file_name = FILEPATH + "comment data.txt";
+    static final String file_name = FILEPATH + "/comment data.txt";
 
     /**
      * Print the comment in a readable way
