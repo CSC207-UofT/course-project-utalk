@@ -1,17 +1,21 @@
 package usecase.adddeleteeditcomment;
 
 import entity.Professor;
+
 import org.junit.Before;
 import org.junit.Test;
+
 import usecase.createupdate.CourseCreator;
 import usecase.enrolldropcourse.CourseEnroller;
 import usecase.javastorage.AllCommentableUser;
-import usecase.javastorage.AllCourses;
+import org.junit.jupiter.api.Assertions;
 
 
 
 public class CanChangeTest {
+
         private Professor professor;
+
 
         @Before
         public void setUp() {

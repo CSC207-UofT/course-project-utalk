@@ -2,6 +2,9 @@ package outerlayer.userinterface.studentprofessorinterface;
 
 import entity.CommentableUser;
 import entity.Student;
+
+import interfaceadaptor.loginlogout.Login;
+
 import usecase.createupdate.CourseCreator;
 import usecase.javastorage.AllCommentableUser;
 import org.junit.Before;

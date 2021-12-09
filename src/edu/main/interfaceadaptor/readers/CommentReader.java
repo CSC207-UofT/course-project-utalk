@@ -17,7 +17,6 @@ public class CommentReader {
     public static void readComment(ArrayList<ArrayList<String>> comments) {
         HashMap<String, ArrayList<String>> read = new HashMap<>();
 
-// TODO: extract the first part and create a CommentCreator class.
         for (ArrayList<String> comment : comments) {
 
             String courseCode = comment.get(0);
