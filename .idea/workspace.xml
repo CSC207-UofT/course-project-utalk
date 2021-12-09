@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+
     <list default="true" id="1ebcbf6b-3396-46b4-a1a8-365628e7d39f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CanChangeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/test/usecase/adddeleteeditcomment/CanChangeTest.java" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,9 +85,11 @@
       <recent name="outerlayer.userinterface.presenteruserinterface" />
     </key>
   </component>
+
   <component name="RunManager" selected="Application.Executer">
     <configuration name="Executer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="runner.Executer" />
+
       <module name="1202" />
       <extension name="coverage">
         <pattern>
@@ -144,7 +148,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+
     <configuration name="CommentEditerTest.testSample" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+
+    <configuration name="CanChangeTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+
       <module name="1202" />
       <extension name="coverage">
         <pattern>
@@ -153,20 +161,30 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="usecase.adddeleteeditcomment" />
+
       <option name="MAIN_CLASS_NAME" value="usecase.adddeleteeditcomment.CommentEditerTest" />
       <option name="METHOD_NAME" value="testSample" />
       <option name="TEST_OBJECT" value="method" />
+
+      <option name="MAIN_CLASS_NAME" value="usecase.adddeleteeditcomment.CanChangeTest" />
+      <option name="TEST_OBJECT" value="class" />
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+
         <item itemvalue="Application.Executer" />
+
+
+
         <item itemvalue="JUnit.CanChangeTest.testSample" />
         <item itemvalue="JUnit.CanChangeTest" />
         <item itemvalue="JUnit.CommentAdderTest.testSample" />
         <item itemvalue="JUnit.CommentEditerTest.testSample" />
+
       </list>
     </recent_temporary>
   </component>
@@ -189,6 +207,7 @@
       <workItem from="1638971053820" duration="4331000" />
       <workItem from="1638980255123" duration="10503000" />
       <workItem from="1638994662144" duration="424000" />
+      <workItem from="1639013053523" duration="403000" />
     </task>
     <task id="LOCAL-00001" summary="Revise typo in CommentUI. Revise functions in presenter package and UI. Add count to handle infinite loop problem.">
       <created>1638670909301</created>

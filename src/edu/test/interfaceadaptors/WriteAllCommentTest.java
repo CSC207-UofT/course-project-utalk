@@ -1,11 +1,12 @@
 package interfaceadaptors;
 
 import entity.Professor;
-import entity.Student;
 import interfaceadaptor.boundaries.DatabaseWriter;
+
 import interfaceadaptor.presenter.CoursePagePresenter;
 import org.junit.Before;
 import org.junit.Test;
+
 import usecase.adddeleteeditcomment.CommentAdder;
 import usecase.createupdate.CourseCreator;
 import usecase.enrolldropcourse.CourseEnroller;
