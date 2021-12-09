@@ -12,7 +12,7 @@ import static outerlayer.userinterface.FilePathHelper.FILEPATH;
  * Present the CoursePage
  */
 public class CoursePagePresenter implements GeneralPrinter {
-    static final String file_name = FILEPATH + "course page data.txt";
+    static final String file_name = FILEPATH + "/course page data.txt";
     static public CoursePage cour;
 
     /**

@@ -8,7 +8,6 @@ import org.junit.Test;
 import usecase.createupdate.CourseCreator;
 import usecase.enrolldropcourse.CourseEnroller;
 import usecase.javastorage.AllCommentableUser;
-import org.junit.jupiter.api.Assertions;
 import usecase.javastorage.AllCourses;
 
 public class CanChangeTest {
