@@ -11,7 +11,15 @@ Important:
    
    File -> Project Structure -> Modules -> language level set to 17
    
-2. Please change the path in the FilePathHelper to your absolute path for our program down to the database package, after that it should be able to run.
+2. Please follow these steps to change the path in the FilePathHelper to your absolute path for our program down to the database package, after that it should be able to run.
+
+   once download the project 
+   
+   Project -> src -> edu -> main -> outerlayer -> database right click on the database package, Copy Path/Reference, choose Absolute Path
+   
+   Project -> src -> edu -> main -> outerlayer -> userinterface -> FilePathHelper, paste the Absolute Path to FILEPATH
+   
+   Project -> src -> edu -> main -> runner -> Executer Run 'Executer.main()' to compile project
 
 3. Please empty the csv files when you run test cases as user and commentable user are written by different functions, therefore running the test cases will cause a misallignment in them.
 
