@@ -2,7 +2,6 @@ package interfaceadaptor.presenter;
 
 import entity.CoursePage;
 import usecase.entityInfroTransfer.CoursePageInfoGenerator;
-
 import java.util.ArrayList;
 
 

@@ -5,6 +5,9 @@ import entity.PostPage;
 
 import java.util.ArrayList;
 
+/**
+ * Transfer Post content information
+ */
 public class PostContentGenerator {
     /**
      * @param pg PostPage
