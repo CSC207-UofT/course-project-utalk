@@ -81,7 +81,6 @@ public class Comment {
     public void addReply(Comment c) {
         this.replies.put(this.replyID, c);
         this.replyID += 1;
-
     }
 
 
