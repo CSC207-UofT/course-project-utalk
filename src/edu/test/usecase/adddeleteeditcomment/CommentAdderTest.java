@@ -1,7 +1,6 @@
 package usecase.adddeleteeditcomment;
 
 import entity.Professor;
-import entity.Student;
 import org.junit.Before;
 import org.junit.Test;
 import usecase.createupdate.CourseCreator;
