@@ -1,5 +1,7 @@
 package outerlayer.userinterface.registeruserinterface;
 
+import outerlayer.userinterface.FilePathHelper;
+
 public class RegiserUITest {
     public static void main(String[] args){
 
