@@ -1,6 +1,5 @@
 package outerlayer.userinterface.presenteruserinterface;
 
-import outerlayer.userinterface.facultyuserinterface.FacultyUI;
 import usecase.createupdate.CourseCreator;
 import usecase.javastorage.AllCourses;
 

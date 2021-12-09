@@ -3,7 +3,6 @@ package interfaceadaptors;
 import entity.Professor;
 import entity.Student;
 import interfaceadaptor.boundaries.DatabaseWriter;
-import interfaceadaptor.presenter.CommentPrinter;
 import interfaceadaptor.presenter.CommentableUserPresenter;
 import interfaceadaptor.presenter.CoursePagePresenter;
 import usecase.adddeleteeditcomment.CommentAdder;

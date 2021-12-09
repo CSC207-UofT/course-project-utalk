@@ -3,7 +3,6 @@ package outerlayer.userinterface.studentprofessorinterface;
 import entity.CommentableUser;
 import entity.Student;
 import interfaceadaptor.loginlogout.Login;
-import outerlayer.userinterface.studentprofessorinterface.EnrollAndDeleteCourseUI;
 import usecase.createupdate.CourseCreator;
 import usecase.javastorage.AllCommentableUser;
 
